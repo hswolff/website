@@ -2,13 +2,10 @@
 title: Introducing Reptar 2.0.0
 slug: introducing-reptar
 date: 2016-10-21
+category: code
 tags:
-- yarn
-- reptar
-- static site generator
-- javascript
-- open-source
-- github
+  - static site generator
+  - open source
 ---
 
 Introducing Reptar 2.0.0!

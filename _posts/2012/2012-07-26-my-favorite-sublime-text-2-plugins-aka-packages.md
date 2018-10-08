@@ -2,18 +2,10 @@
 title: My Favorite Sublime Text 2 Plugins aka Packages
 slug: my-favorite-sublime-text-2-plugins-aka-packages
 date: 2012-07-26T08:14:01.000Z
-updated: 2013-12-30T20:41:40.020Z
+category: code
 tags:
-- code editor
-- favorites
-- list
-- plugins
-- programming
-- sublime text 2
-- technology
-- text editor
-- editor
-- guide
+  - editor
+  - sublime text
 ---
 
 <p>The current code editor that is widely in vogue amongst programmers is far and above Sublime Text 2. There's many reasons that ST2 usurped this crown previously held by TextMate (it's new and actively maintained) but one of the biggest reasons is its ability to have its core functionality extended via plugins.</p>
@@ -173,4 +165,3 @@ So in a very particular order what follows are my favorite and most appreciated 
 <p>If you have any packages you use that you can't live without please let me know about them in the comments! I'm always on the lookout for that next best package.</p>
 
 <p>Who knows?  Maybe you'll even create it :).</p>
-

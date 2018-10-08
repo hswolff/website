@@ -1,14 +1,13 @@
 ---
 title: React Native ART Presentation
-date: 2016-12-19
 slug: react-native-art-presentation
+date: 2016-12-19
+category: code
 tags:
-- react
-- react-native
-- react-native-art
-- d3
-- javascript
-- speaker
+  - talk
+  - react
+  - react-native
+  - d3
 ---
 
 Earlier this year I had the great opportunity to be a speaker at the [Crater Remote Conference](https://conf.crater.io/). I presented about my experiences with using [React Native ART and D3](/blog/react-native-art-and-d3/), giving a complete walkthrough and explanation of my example application [BetterWeather](https://github.com/hswolff/BetterWeather).

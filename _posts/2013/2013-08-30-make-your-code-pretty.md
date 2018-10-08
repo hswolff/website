@@ -2,14 +2,10 @@
 title: Make Your Code Pretty
 slug: make-your-code-pretty
 date: 2013-08-30T09:32:24.000Z
-updated: 2013-12-30T21:03:51.390Z
+category: code
 tags:
-- code
-- editor
-- packages
-- pretty
-- standards
-- sublime text
+  - editor
+  - sublime text
 ---
 
 <p>All too often I'll see code that'll make me gag.</p>
@@ -44,4 +40,3 @@ Instantaneous linting is a friend you wish you had years ago.  Keeping you hones
 <p>The person who cares is the one reading your code.  They are the one who must hold your code up against an engineer's standard.  If that person has their code editor wired up so that every trailing white space comes ablaze in neon pink they're gonna have a bad time.</p>
 
 <p>Keeping code pretty reflects directly on the programmer.  It shows if they care about what they write.  You're in this gig because you want to be and you care about what you do.  So you should do the same for every piece of code that you write.</p>
-

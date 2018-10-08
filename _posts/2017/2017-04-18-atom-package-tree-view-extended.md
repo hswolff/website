@@ -1,10 +1,10 @@
 ---
-title: "Creating My First Atom Package: tree-view-extended"
+title: 'Creating My First Atom Package: tree-view-extended'
 date: 2017-04-18
 slug: atom-package-tree-view-extended
+category: code
 tags:
-- atom
-- javascript
+  - atom
 ---
 
 A little while ago I decided to play with Facebook's [Nuclide](https://nuclide.io/) project. I was curious what enhancements it added to Atom and if any of them would increase my workflow. I found the project altogether nice, bringing in some nice additions to Atom. However it also adds a lot of other functionality that I will never use. So I ended up disabling Nuclide, with the added features not outweighing the other cruft it added.

@@ -2,12 +2,7 @@
 title: Technical Debt, Organizational Debt
 slug: technical-debt-organizational-debt
 date: 2015-06-19T01:02:06.914Z
-updated: 2015-06-19T01:02:06.914Z
-tags:
-- debt
-- startup
-- business
-- engineering
+category: career
 ---
 
 Debt, in the context of a company, takes on many forms. From the quite literal of owing money to the more abstract concept of [technical debt](https://en.wikipedia.org/wiki/Technical_debt).
@@ -48,6 +43,4 @@ In truth there's limitless types of debt. Anything you put off till tomorrow won
 
 The easiest way to address debt is to be aware of its existence. So long as you know that at some point in the future you'll have to double back to fix some of the shortcuts you took today, then you'll be ok.
 
-
-
-*Thanks to [Jem Young](https://twitter.com/JemYoung) for reviewing this post.*
+_Thanks to [Jem Young](https://twitter.com/JemYoung) for reviewing this post._

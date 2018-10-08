@@ -1,16 +1,11 @@
 ---
-title: "Weekend Project: Bring The Salsa"
+title: 'Weekend Project: Bring The Salsa'
 slug: weekend-project-bring-the-salsa
 date: 2013-07-08T21:48:26.000Z
-updated: 2013-07-08T22:08:31.000Z
+category: personal
 tags:
-- angularjs
-- firebase
-- hack
-- javascript
-- party
-- programming
-- weekend hack
+  - angularjs
+  - firebase
 ---
 
 <p>There's been many times I've read of someone hacking together a project over a weekend.  Appropriately titled a 'weekend hack' these projects have a finite beginning and end. And they've always seemed out of reach for me to accomplish.</p>
@@ -19,8 +14,7 @@ tags:
 
 <p>So what did I make?  A web app I've named <a href="http://bringthesalsa.hswolff.com">Bring The Salsa</a>!</p>
 
-<p>(Here's the part of the post where I wait for the applause to die down before I can continue typing again.  You are thunderously applauding my accomplishment, aren't you!? ;))
-<!--more--></p>
+<p>(Here's the part of the post where I wait for the applause to die down before I can continue typing again.  You are thunderously applauding my accomplishment, aren't you!? ;))</p>
 
 <p>Bring The Salsa is a web app that was built to solve a pain point I've often encountered when hosting a party at my apartment:  I want friends to bring things, however managing who is bringing what is always a manual bloated ordeal.</p>
 
@@ -51,4 +45,3 @@ tags:
 <p>The only thing I regret about creating Bring The Salsa is that it would have been perfect had it existed before this weekend began.  Because truly, that is when it will come in handy the most: for weekends that you're hosting a party and need some organization.</p>
 
 <p>And above all else, when you do use this app, for heaven's sake, don't forget to bring the salsa.</p>
-

@@ -2,14 +2,10 @@
 title: My Experience with Ruby On Rails as a PHP Developer
 slug: my-experience-with-ruby-on-rails-as-a-php-developer
 date: 2012-05-06T20:43:26.000Z
-updated: 2012-05-06T20:48:13.000Z
+category: code
 tags:
-- favorite
-- php
-- programming
-- ruby
-- ruby on rails
-- web
+  - php
+  - ruby on rails
 ---
 
 <p><em>Note:  This post is an extension of my previous post <a href="http://blog.harrywolff.com/my-experience-with-php-frameworks-yii-codeignitor-and-symfony/" title="My Experience with PHP Frameworks – Yii, CodeIgnitor, and Symfony">about developing with PHP frameworks.</a></em></p>
@@ -96,4 +92,3 @@ tags:
 <p>Sure there were times I wanted to run back to the warm and familiar embrace of PHP's dollar signs but the fluidity of Ruby kept me close.</p>
 
 <p>Of course at the end of the day it doesn't matter what language you use.  Just start coding and don't give up.  Everything else is just fluff.</p>
-

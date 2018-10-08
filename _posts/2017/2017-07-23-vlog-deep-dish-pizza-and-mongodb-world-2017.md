@@ -1,13 +1,11 @@
 ---
-title: "Vlog: Deep Dish Pizza and MongoDB World 2017"
-date: 2017-07-23
+title: 'Vlog: Deep Dish Pizza and MongoDB World 2017'
 slug: vlog-deep-dish-pizza-and-mongodb-world-2017
+date: 2017-07-23
+category: personal
 tags:
-- youtube
-- video
-- mongodb
-- chicago
-- vlog
+  - mongodb
+  - vlog
 ---
 
 Last month I had the pleasure to attend MongoDB World 2017. It was my first time attending a conference as an organizer rather than an attendee. It was a lot of fun seeing behind the scenes. Getting a feel for all the work that is required to run a successful conference was a great experience. I always knew it was hard work to run a conference, but to actually see it and live it was an amazing opportunity.

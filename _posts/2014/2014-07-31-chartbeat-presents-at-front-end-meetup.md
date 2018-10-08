@@ -2,14 +2,9 @@
 title: Chartbeat Presents at Front-end Meetup
 slug: chartbeat-presents-at-front-end-meetup
 date: 2014-07-31T17:26:28.763Z
-updated: 2014-07-31T17:26:28.758Z
+category: code
 tags:
-- angularjs
-- chartbeat
-- front-end
-- video
-- youtube
-- presentation
+  - talk
 ---
 
 Last Thursday Chartbeat hosted the [Frontend Innovators Meetup group](http://www.meetup.com/frontend/events/148291772/) at our office. The focus was [Angular.js](https://angularjs.org/), and my co-workers and I had the good fortune of being presenters. Our goal was to share some of the experiences and insights we’ve gained over the past year working with Angular.js.
@@ -46,7 +41,7 @@ I presented first, focusing on how and why Chartbeat began using Angular.js for 
 
 [Jem](https://twitter.com/JemYoung) rounded out the night with a thorough talk on Chartbeat’s test practices and build process. He talked about our testing stack, consisting of [Jasmine](http://jasmine.github.io/2.0/introduction.html), [Karma](http://karma-runner.github.io/), [Protractor](https://github.com/angular/protractor), [Jenkins](http://jenkins-ci.org/), and [Selenium](http://www.seleniumhq.org/), and the best ways to put  these systems to work. Jem also shared some good practices to keep in mind when using these tools. He then turned his focus to how we compile our applications for a production environment, discussing our move from [Grunt](http://gruntjs.com/) to [Gulp](http://gulpjs.com/) and why we're finding it a better fit -- it's cleaner and clearer to work with, as it’s mostly vanilla JavaScript, which makes reasoning with it easier.
 
-* * *
+---
 
 We had a great time presenting and hope everyone learned something from our talks.
 

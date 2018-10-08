@@ -2,13 +2,12 @@
 title: Introducing Yarn
 slug: introducing-yarn
 date: 2016-04-10T21:34:46.217Z
+category: code
 tags:
-- yarn
-- open-source
-- github
+  - open source
 ---
 
-#### *Note! Yarn has been renamed to [Reptar](/blog/introducing-reptar/)*
+#### _Note! Yarn has been renamed to [Reptar](/blog/introducing-reptar/)_
 
 Hello everyone! I want to introduce you to my newest creation, [Yarn](http://yarnjs.github.io/)!
 

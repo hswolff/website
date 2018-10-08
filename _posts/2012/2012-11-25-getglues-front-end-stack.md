@@ -2,21 +2,11 @@
 title: GetGlue's Front End Stack
 slug: getglues-front-end-stack
 date: 2012-11-25T11:53:00.000Z
-updated: 2012-11-27T15:42:42.000Z
+category: code
 tags:
-- backbone
-- code
-- coffeescript
-- compass
-- front-end
-- getglue
-- jquery
-- mustache
-- programming
-- r.js
-- requirejs
-- sass
-- underscore
+  - backbone
+  - coffeescript
+  - sass
 ---
 
 <p>Earlier this year <a href="http://getglue.com/">GetGlue</a> began work on the new GetGlue website.  It was a chance for a clean engineering slate, allowing us to put all our knowledge together to begin a new project on strong footing.  It was a chance to use all of the most powerful client-side technologies to allow us to work efficiently and quickly.</p>
@@ -72,7 +62,7 @@ tags:
 
 <p>Compiles to</p>
 
-<pre><code>-webkit-border-radius: 4px 
+<pre><code>-webkit-border-radius: 4px
 -moz-border-radius: 4px
 -o-border-radius: 4px
 border-radius: 4px
@@ -133,4 +123,3 @@ border-radius: 4px
 <p>RequireJS is a beautiful tool that I wish I had known about years ago.  Its module management is intuitive and its build tool is very powerful.</p>
 
 <p>We've had a great time building the new GetGlue website. We hope you enjoy it as much as we do.</p>
-

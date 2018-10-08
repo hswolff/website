@@ -2,10 +2,9 @@
 title: The Bridge to Teaching Redux
 slug: the-bridge-to-teaching-redux
 date: 2017-03-30
+category: code
 tags:
-- redux
-- teaching
-- javascript
+  - redux
 ---
 
 I've long struggled with teaching Redux. It's such a fundamental different way of thinking. When I search for comparisons to ease the concepts I always find myself sputtering words that never quite bridge that gap.

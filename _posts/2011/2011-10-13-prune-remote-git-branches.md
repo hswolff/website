@@ -2,18 +2,13 @@
 title: Prune Remote Git Branches
 slug: prune-remote-git-branches
 date: 2011-10-13T11:41:06.000Z
-updated: 2012-04-03T10:15:45.000Z
+category: code
 tags:
-- cleanup
-- code
-- favorite
-- git
-- prune
-- technology
-- version control
+  - git
+  - tip
 ---
 
-Git is a wonderful version control system.  It’s light, nimble, and fast.  It makes managing code amongst many developers a dream.
+Git is a wonderful version control system. It’s light, nimble, and fast. It makes managing code amongst many developers a dream.
 
 Unfortunately it has a fair share of quirks.
 

@@ -2,19 +2,14 @@
 title: Building an Entire Product in 6 Weeks (How we built the Chartbeat Paid Content Tool)
 slug: building-an-entire-product-in-6-weeks-how-we-built-the-chartbeat-paid-content-tool
 date: 2014-07-09T14:40:04.938Z
-updated: 2014-07-09T16:34:23.859Z
-tags:
-- chartbeat
-- design
-- development
+category: personal
 ---
 
-A little while ago we released our [Paid Content](https://chartbeat.com/publishing/for-adsales/paid-content) product after two consecutive six week sprints.  The first six weeks were spent creating the [MVP](http://en.wikipedia.org/wiki/Minimum_viable_product), and the second six weeks were spent polishing it up.
+A little while ago we released our [Paid Content](https://chartbeat.com/publishing/for-adsales/paid-content) product after two consecutive six week sprints. The first six weeks were spent creating the [MVP](http://en.wikipedia.org/wiki/Minimum_viable_product), and the second six weeks were spent polishing it up.
 
 This is the breathless tale of those first six weeks.
 
-
-#  Part 1: Research
+# Part 1: Research
 
 This whole thing began because we saw that our clients were struggling. Paid content, sponsored content, native content – whatever you call it – remains a mysterious beast for many folks and there were few options for measuring paid content performance, let alone figuring out what you can do to make it better.
 
@@ -22,12 +17,12 @@ For the first two weeks of our sprint we researched and brainstormed. We huddled
 
 Amidst these debates we talked to existing clients. A lot. We wanted to know how they created paid content campaigns, and what pain points they have experienced. We’d invite them into the office and talk to them on the phone. We’d visit them in their office and pummel them with questions, searching to find what we could do to improve how they analyzed paid content performance.
 
-
 # Part 2: Design
-![](/images/posts/2014/Jul/design.jpg)
-As we were assessing the type of data our clients needed, we also began to design our version of *better*.
 
-[We'd create one mock-up, show it around, gather feedback, and iterate. ](http://tomgermeau.com/2014/02/how-designers-can-create-interactive-prototypes-with-illustrator/) We'd see what worked in a design and what didn’t.  We'd toss out the bad, toss out some of the good, and try again.  We moved swiftly, for time was against us.
+![](/images/posts/2014/Jul/design.jpg)
+As we were assessing the type of data our clients needed, we also began to design our version of _better_.
+
+[We'd create one mock-up, show it around, gather feedback, and iterate. ](http://tomgermeau.com/2014/02/how-designers-can-create-interactive-prototypes-with-illustrator/) We'd see what worked in a design and what didn’t. We'd toss out the bad, toss out some of the good, and try again. We moved swiftly, for time was against us.
 
 Something that proved to be a great success were clickable mocks. Typically a mock is static. With a static mock you can cycle through a list of images to give a sense of what the product will contain, but a clickable mock allows you to simulate how the product will feel when it’s complete.
 
@@ -42,6 +37,7 @@ We wanted to see what the data for a real paid content campaign looked like so w
 To our relief our planning paid off. The data worked and made sense. From there on out it was a sprint to bring all the beautiful designs to life.
 
 # Part 4: Launch
+
 ![](/images/posts/2014/Jul/launch.png)
 With the launch of our MVP looming we knew we’d have to start making some hard decisions. Everything we wanted to include for the first version would not fit, so out came the knife as we looked to see what we could cut away.
 
@@ -57,4 +53,4 @@ Within Chartbeat we managed to create a MVP in record time. We were able to asse
 
 ---
 
-Also posted on: [Chartbeat](http://chart.bt/1jpEDFo ) and [Medium](https://medium.com/@hswolff/building-an-entire-product-in-6-weeks-how-we-built-the-chartbeat-paid-content-tool-1b27b46ff11b)
+Also posted on: [Chartbeat](http://chart.bt/1jpEDFo) and [Medium](https://medium.com/@hswolff/building-an-entire-product-in-6-weeks-how-we-built-the-chartbeat-paid-content-tool-1b27b46ff11b)

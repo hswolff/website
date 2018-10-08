@@ -2,10 +2,9 @@
 title: Airbnb's Management Style
 slug: airbnb-s-management-style
 date: 2015-05-28T02:23:57.306Z
-updated: 2015-05-28T02:23:57.306Z
+category: career
 tags:
-- airbnb
-- management
+  - management
 ---
 
 It's always interesting to hear how other companies are managed. It gives greater context for what I experience every day at work and broadens my idea for what people are doing to improve their company.

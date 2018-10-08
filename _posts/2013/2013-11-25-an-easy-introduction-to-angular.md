@@ -2,12 +2,9 @@
 title: An easy introduction to AngularJS
 slug: what-is-angularjs-and-why-is-it-awesome
 date: 2013-11-25T12:00:39.000Z
-updated: 2014-02-24T15:39:31.053Z
+category: code
 tags:
-- angularjs
-- code
-- introduction
-- programming
+  - angularjs
 ---
 
 <p>AngularJS doesn't do much.  When you take it out of the box (i.e. load it on a webpage) you're only given five things to play with: modules, services, controllers, directives, and filters.</p>
@@ -89,4 +86,3 @@ tags:
 <p>By the fourth week you'll be able to write a blog post just like this.</p>
 
 <p>Get out there super-heroes.  Start writing some super-heroic JavaScript.</p>
-

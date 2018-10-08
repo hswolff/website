@@ -2,10 +2,10 @@
 title: React Native
 slug: react-native
 date: 2016-06-29T01:14:36.432Z
+category: code
 tags:
-- react
-- react-native
-- javascript
+  - react
+  - react-native
 ---
 
 A couple of months ago I wrote a [React Native](http://facebook.github.io/react-native/) application, the new [Chartbeat iOS App](http://blog.chartbeat.com/2016/04/07/say-hello-to-the-all-new-chartbeat-ios-app/). It was a great experience. I got to learn a lot about React Native and was able to create and launch an app. If there's anything I like more than writing software, it's releasing it.
@@ -104,7 +104,6 @@ If you want your app to feel truly native you need to understand how the native 
 
 # Conclusion
 
-I'm dying to write my next React Native application. I had some of the most fun I've had in a long time writing the Chartbeat iOS app. The React Native framework provides an awesome developer experience in an environment that is historically a  cumbersome to develop for.
+I'm dying to write my next React Native application. I had some of the most fun I've had in a long time writing the Chartbeat iOS app. The React Native framework provides an awesome developer experience in an environment that is historically a cumbersome to develop for.
 
 Not only am I itching to write my next React Native application I'm also looking to see if I can obtain the holy grail of write once and have the code work on iOS, Android, and the web (using react-native-web). If that can be accomplished then I'll be as pleased as a peach.
-

@@ -2,20 +2,13 @@
 title: How To Find A Tech Job
 slug: finding-a-job
 date: 2011-08-02T18:33:29.000Z
-updated: 2014-02-25T02:22:28.301Z
-tags:
-- favorite
-- job
-- job boards
-- searches
-- technology
-- Tutorials
+category: career
 ---
 
 I'm helping a friend find a job. I've already gone through the entire job search process and I do not envy the guy. It's a hard, grueling process but one that when successful is such a rush.
 
 Off the top of my head I shared with him a list of job listing websites I used during my search. These sites are mostly geared toward technology jobs but hopefully it'll spark an idea of a place to search for a job you haven't thought of before. Like maybe one of your favorite websites is hiring, or has links towards a website that is hiring.
-<!--more-->
+
 What I've learned from my job hunt is that you have to get creative. You have to look for jobs in places you wouldn't expect to find them.
 
 And of course you have to apply. My philosophy on that matter is: it doesn't hurt to apply but it does take a lot of time.
@@ -35,5 +28,4 @@ Updates:
 <a href="http://www.indeed.com/">Indeed.com</a><br/>
 <a href="http://mandy.com/">Mandy - Film and TV Jobs</a><br/>
 
-
-If you have any other ideas of where to look let me know and I'll update the list.  Good luck!
+If you have any other ideas of where to look let me know and I'll update the list. Good luck!

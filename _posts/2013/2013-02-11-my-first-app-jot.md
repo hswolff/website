@@ -1,20 +1,12 @@
 ---
-title: "My First App: Jot"
+title: 'My First App: Jot'
 slug: my-first-app-jot
 date: 2013-02-11T09:00:47.000Z
-updated: 2013-12-30T11:13:31.000Z
+category: personal
 tags:
-- app
-- app store
-- cocoa touch
-- code
-- coding
-- iphone
-- jot
-- me
-- note
-- objective-c
-- programming
+  - app
+  - iphone
+  - objective-c
 ---
 
 <p>In the middle of last year I began playing around with iOS development. I've long been curious about Objective-C and Cocoa Touch, trying tutorials and reading documentation on and off for a few years. Every so often I'd begin work on an application only to have it end in frustration: either I didn't enjoy what I was working on or more commonly the learning curve proved too steep.</p>
@@ -35,4 +27,3 @@ tags:
 <p>I'd also like to thank all my friends and family for supporting me along the way. Without their help I would still be in development of Jot, continuously tinkering away into oblivion. Also a special thank you to everyone who helped me debug my beta builds. It meant heaps, thank you.</p>
 
 <p>It was a long journey to releasing Jot in the App Store, however the sense of accomplishment I felt when it was released was awesome. To everyone thinking about or working on their first app: keep at it and don't stop. You'll get it done.</p>
-

@@ -1,14 +1,9 @@
 ---
-title: "Taming The Jungle: Working With New Code"
+title: 'Taming The Jungle: Working With New Code'
 slug: taming-the-jungle
 date: 2013-06-27T13:07:05.000Z
 updated: 2013-07-03T09:35:35.000Z
-tags:
-- code
-- essays
-- learning
-- new job
-- programming
+category: work
 ---
 
 <p>An undervalued skill of the common developer lies in their ability to navigate and explore a new code base.  Although not the most glamorous or fun task, it is the one that almost always consumes most of a developers working hours.</p>
@@ -76,4 +71,3 @@ tags:
 <p>So you must enter the jungle that is a new code base.  With or without trepidation, you must plunge in head first, without knowing what you'll find.</p>
 
 <p>And after some time you'll exit the jungle.  You'll come out wiping your hands free of dirt, turn around, and see a playground with a brand new swing set.  It's the same code base, but now you know what's inside, and you know the fun you can have.  Sure you may add some renovations (always need a vomit wheel), but that jungle will have been tamed.  And in taming the jungle, you'll now be free to build your own.</p>
-

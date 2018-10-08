@@ -2,14 +2,7 @@
 title: What I Install After A Fresh OS Installation
 slug: what-i-install-after-a-fresh-os-installation
 date: 2012-09-12T09:26:43.000Z
-updated: 2012-09-12T09:26:43.000Z
-tags:
-- format
-- install
-- mountain lion
-- re-install
-- software
-- technology
+category: personal
 ---
 
 <p>I received a great gift from work last week.  It came in the form of a rectangle, and fit in the palm of my hand.  It has made my life easier and more enjoyable.  In fact it has single handedly changed the way I approach most things throughout my day.</p>
@@ -169,4 +162,3 @@ tags:
 <p>The speed of the SSD drive made installing all my old programs so fast that the once laborious process of setting up my computer from scratch went by in a blink.  Tasks that used to require patience as my HDD read and wrote bytes were done before I was even ready for the next task.</p>
 
 <p>There's no turning back for me now.  I have seen the glory of SSD.  My future has been written.</p>
-

@@ -2,13 +2,10 @@
 title: Essential Atom Packages
 slug: essential-atom-packages
 date: 2015-02-25T04:30:16.059Z
-updated: 2015-02-25T04:30:16.059Z
+category: code
 tags:
-- atom
-- programming
-- editor
-- tutorial
-- guide
+  - atom
+  - editor
 ---
 
 [Atom](https://atom.io/) is a hackable code editor from the fine folks at GitHub. It's written entirely in JavaScript (specifically CoffeeScript) and runs in a self contained Chromium environment. It's new and young, yet slowly growing in popularity and features.
@@ -21,11 +18,9 @@ I've been using Atom as my primary editor for the past month. Overall I've been 
 
 The one true point where Atom is truly lacking compared to ST is in the time it takes from opening the application and being able to code. I know that is a focus of the Atom team, and for now it's tolerable. I'm definitely looking forward to all future speed increases.
 
-So in the vein of my previous post on [my favorite Sublime Text packages](/my-favorite-sublime-text-2-plugins-aka-packages/). I present to you this follow up. My favorite and essential Atom packages.  
-
+So in the vein of my previous post on [my favorite Sublime Text packages](/my-favorite-sublime-text-2-plugins-aka-packages/). I present to you this follow up. My favorite and essential Atom packages.
 
 ---
-
 
 ## [save-session](https://github.com/mpeterson2/save-session)
 
@@ -37,7 +32,6 @@ It also acts as a wonderful light-weight scratch pad. Just open a new tab, jot d
 
 A must have.
 
-
 ## [project-manager](https://github.com/danielbrodin/atom-project-manager)
 
 ![](/images/posts/2015/02/atom/project-manager.gif)
@@ -46,22 +40,19 @@ This package allows you to easily save and switch between projects. It's a real 
 
 This brings Atom to parity with ST's project switcher, so it's a real must have if you use that feature in ST.
 
-
 ## [autocomplete-plus](https://github.com/atom-community/autocomplete-plus)
 
 ![](/images/posts/2015/02/atom/autocomplete-plus.gif)
 
-The built-in Atom autocomplete package is a little lame. It isn't eager in its suggestions and doesn't seem to know that much about your code that it's actually helpful.  This package makes autocomplete in Atom much more usable, with plenty more customization, and a better capacity for finding suggestions.
+The built-in Atom autocomplete package is a little lame. It isn't eager in its suggestions and doesn't seem to know that much about your code that it's actually helpful. This package makes autocomplete in Atom much more usable, with plenty more customization, and a better capacity for finding suggestions.
 
 I have one recommendation that in autocomplete-plus' settings you turn on its `Use Strict Matching For Built-In Provider`. This causes the package to more closely match ST's autocomplete, which I find produces better and more reliable results.
-
 
 ## [atom-ternjs](https://github.com/tststs/atom-ternjs)
 
 ![](/images/posts/2015/02/atom/ternjs.gif)
 
-[Tern](http://ternjs.net/) is a code-analysis engine for JavaScript. This package brings its analysis to autocomplete-plus, which means even *better* autocomplete suggestions. Not only that it also adds context to your JavaScript code such that you can jump to the definition of a function from its usage, a feature you'd normally only see in full IDEs like IntelliJ. Makes developing much easier and pleasant, a definite performance boost.
-
+[Tern](http://ternjs.net/) is a code-analysis engine for JavaScript. This package brings its analysis to autocomplete-plus, which means even _better_ autocomplete suggestions. Not only that it also adds context to your JavaScript code such that you can jump to the definition of a function from its usage, a feature you'd normally only see in full IDEs like IntelliJ. Makes developing much easier and pleasant, a definite performance boost.
 
 ## [highlight-line](https://github.com/richrace/highlight-line)
 
@@ -71,13 +62,11 @@ Simple plug-in but one that I was sorely missing from ST. It does what it says o
 
 This is a personal preference package, but one I can't live without.
 
-
 ## [highlight-selected](https://github.com/richrace/highlight-selected)
 
 ![](/images/posts/2015/02/atom/highlight-selected.gif)
 
 Another personal preference, this package adds the ST feature of highlighting the current word that is selected. So if you were to select the word 'hello' then all other occurrences of the word 'hello' would be highlighted. Makes for much easier navigation through code.
-
 
 ## [linter](https://github.com/AtomLinter/Linter)
 
@@ -87,13 +76,11 @@ The essential linter package. Gives you linting feedback in real-time, letting y
 
 This package relies on plug-in packages to be useful, the one I use daily is [linter-jshint](https://github.com/AtomLinter/linter-jshint) but there are [many linters available](https://github.com/AtomLinter/Linter#available-linters).
 
-
 ## [docblockr](https://github.com/nikhilkalige/docblockr)
 
 ![](/images/posts/2015/02/atom/docblockr.gif)
 
 A nifty little package that makes it easier to write documentation. Since documentation isn't exactly the most exciting part of the developer workflow I'm always looking to find something to make the task faster and easier. This package helps in both those regards. With it there's almost no excuse to skip documenting your code.
-
 
 ## [Sublime-Style-Column-Selection](https://github.com/bigfive/atom-sublime-select)
 
@@ -101,13 +88,11 @@ A nifty little package that makes it easier to write documentation. Since docume
 
 This is another package that brings Atom to parity with ST. With this package you can now hold `alt` while you select text to create multiple cursor selections, allowing you to quickly edit multiple lines from the same same location. It's a little productivity trick I use daily.
 
-
 ## [autoclose-html](https://github.com/mattberkowitz/autoclose-html)
 
 ![](/images/posts/2015/02/atom/autoclose-html.gif)
 
 You wrote an opening `<div>` element? This handles automagically creating the ending tag for you. That was easy.
-
 
 ## [emmet](https://github.com/emmetio/emmet-atom)
 
@@ -147,4 +132,3 @@ What I love most about Atom is that it encourages you to hack it and make it you
 Just the other day I was annoyed at what Atom showed in its title bar. So after a quick search I found the [custom-title](https://github.com/postcasio/custom-title) that allows me to completely customize what is shown. Had I not found that package I know there's an API waiting for me to jump into and use to my hearts content.
 
 I love that Atom is extendable and flexible. It truly can be made into anything you desire, and there's no better time to make the switch than today.
-

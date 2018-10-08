@@ -2,11 +2,11 @@
 title: Experiences With GraphQL
 slug: experiences-with-graphql
 date: 2017-08-13
+category: code
 tags:
-- graphql
-- react
-- redux
-- javascript
+  - graphql
+  - react
+  - redux
 ---
 
 A couple of months ago I started working on a side project called TV Chat. My goal with this project was to create a website where people online could come together to chat about tv shows as they were airing live on TV. I'm a big tv watcher, and I like watching TV shows with friends and family. However my tastes don't always align with theirs. So my hope was to create TV Chat so that I could chat with other fans of the show as it was airing!
@@ -37,10 +37,10 @@ For the TV Chat app I have a [mongo collection called `chatMessages`](https://gi
 
 ```json
 {
-    "user": ObjectId(),
-    "show": ObjectId(),
-    "message": string,
-    "timestamp": Date
+  "user": ObjectId(),
+  "show": ObjectId(),
+  "message": string,
+  "timestamp": Date
 }
 ```
 

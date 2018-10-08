@@ -2,10 +2,9 @@
 title: First Impressions of AngularJS 2.0
 slug: first-impressions-of-angularjs-2-0
 date: 2015-04-21T13:28:54.142Z
-updated: 2015-04-21T13:28:54.142Z
+category: code
 tags:
-- angularjs
-- angularjs2
+  - angularjs
 ---
 
 Over the weekend I created a [clone of Hacker News with Angular2](http://hswolff.github.io/hn-ng2/). I've read a lot about the changes Angular 2 will have and I wanted to see for myself what it would be like to create an app. What would it be like? How will it be better than Angular 1? Will I enjoy writing an Angular 2 app?
@@ -13,6 +12,7 @@ Over the weekend I created a [clone of Hacker News with Angular2](http://hswolff
 Before I delve into my impressions let me preface everything that follows with the obvious: Angular 2.0 is not done. At the time of this writing it's marked as an alpha release, so please keep that in mind when reading. Things are going to change and improve, but I just wanted to share with you my initial impressions on what it's like to create an app with Angular 2.
 
 # No Documentation, but Excellent Comments
+
 I say there's no documentation mostly as a joke because, as I've said before, Angular 2 is not done. However what I'm always impressed by is the level and quality of comments by the Angular team in the source code. This is a great tradition that the Angular team is carrying over from Angular 1, and I would not have been able to create my app if it hadn't been for the source code comments. It's not surprising the Angular team takes such time and care to make sure their code is exhaustively commented. They actually run the source code through the [dgeni documentation generator](https://github.com/angular/dgeni) to produce their API docs. So while it was less pretty than browsing a webpage, all the documentation that will exist there is already accessible.
 
 When I wanted to understand the additional properties that could be set with the `@Component` decorator, I was able to easily [delve into the source code and read the comments](https://github.com/angular/angular/blob/master/modules/angular2/src/core/annotations/annotations.js#L488-523) that contained all the documentation that I could ever need for that particular decorator. This was great when I was curious about the API for a specific object. However the type of documentation that is still very much a work in progress is 'integration' or guide documentation. This is documentation that takes a high level look at how multiple objects work together to create an application, showing you how the `@Component` directive makes use of the `DI` module when you instantiate a class. [There is already a good amount of progress on this type of documentation](https://github.com/angular/angular/tree/master/modules/angular2/docs/core) but there is still a lot left to do.
@@ -43,7 +43,7 @@ In my Angular 1 Hacker News app the JavaScript file size of the final applicatio
 
 In my Angular 2 Hacker News app the JavaScript file size of the final application is 250kb. That only includes the firebase library as a dependency.
 
-Due to Angular 2 being so large it takes a while to parse all the contained JavaScript code. When I created a simple 'Hello World' app before creating the HN app it seemed to take between 2-3 seconds before any content was rendered on the page.   There were some moans on [the Hacker News thread](https://news.ycombinator.com/item?id=9405142) that the application was slow. As far as I can tell, this is why.
+Due to Angular 2 being so large it takes a while to parse all the contained JavaScript code. When I created a simple 'Hello World' app before creating the HN app it seemed to take between 2-3 seconds before any content was rendered on the page. There were some moans on [the Hacker News thread](https://news.ycombinator.com/item?id=9405142) that the application was slow. As far as I can tell, this is why.
 
 I'd be happy to hear from the Angular team about this. I know a lot of work has been done to make sure Angular is performant once its on the page - an entire [benchmarks](https://github.com/angular/angular/tree/master/modules/benchmarks) module has been created for this explicit purpose - but I haven't seen any mention of start-up time.
 
@@ -55,4 +55,4 @@ As I've shown it's already possible to create a fully featured application with 
 
 I'm not exactly sure when the Angular team hopes to release Angular 2 but I wouldn't be surprised if it was later this year - sometime in the fall. It's already way further along than I expected. If this is the alpha, I can't wait to see the first stable release.
 
-*Thanks to Justin Poliey ([@justinpoliey](https://twitter.com/justinpoliey)) and Xavier López ([@xavierelopez](https://twitter.com/xavierelopez)) for reading drafts of this post.*
+_Thanks to Justin Poliey ([@justinpoliey](https://twitter.com/justinpoliey)) and Xavier López ([@xavierelopez](https://twitter.com/xavierelopez)) for reading drafts of this post._

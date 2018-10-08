@@ -2,9 +2,7 @@
 title: Fatherhood
 slug: fatherhood
 date: 2018-05-07
-tags:
-- personal
-- me
+category: personal
 ---
 
 On April 7th, 2018, my son was born and I became a father.

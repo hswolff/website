@@ -2,10 +2,9 @@
 title: CSS3 Rounded Corners On IE
 slug: css3-rounded-corners-on-ie
 date: 2011-03-10T12:53:44.000Z
-updated: 2011-03-10T12:53:44.000Z
+category: code
 tags:
   - css
-  - IE
 ---
 
 One of the coolest new additions to the CSS3 specification is its built-in ability to render rounded corners. Before CSS3 the only semi-humane way to create rounded corners on an element was to create four rounded corner images and use some unwieldy albeit effective <code>display:absolute</code> positioning to get the desired effect. This resulted in bloated code that contained numerous extra <code>&lt;div&gt;</code> tags such as: <code>&lt;div class="topLeftCorner"&gt;&lt;/div&gt;</code> to create the effect, and ultimately bogged down the rendering of the page.

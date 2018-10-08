@@ -2,21 +2,21 @@
 title: React Native ART and D3
 slug: react-native-art-and-d3
 date: 2016-08-05T03:59:27.372Z
+category: code
 tags:
-- react
-- react-native
-- react-native-art
-- d3
-- javascript
+  - react
+  - react-native
+  - d3
+  - tutorial
 ---
 
-*This is a follow up to my previous article about [my experiences using React Native](/blog/react-native/)*
+_This is a follow up to my previous article about [my experiences using React Native](/blog/react-native/)_
 
-*I gave a talk on this topic which [you can watch](/blog/react-native-art-presentation/)*
+_I gave a talk on this topic which [you can watch](/blog/react-native-art-presentation/)_
 
 The most powerful feature of React Native is that it lets you write your native application using React and JavaScript. React is certainly powerful as it greatly simplifies the mental model required when constructing your UI. However what's even more powerful is the ability to use JavaScript. There's a huge ecosystem of JavaScript packages available. There's a package for almost anything that you might need for your web application. And thanks to React Native almost all of them can be used in your mobile application.
 
-One of the most powerful JavaScript package available for graphing is [d3.js](https://d3js.org/). It is battle tested and robust, and the de facto library to use to create a graph on your website.  To get a feeling for how expressive you can be with d3 just [check out its example gallery](https://github.com/d3/d3/wiki/Gallery). I'm always in awe at some of the things you can create with the simple primitives that d3 provides.
+One of the most powerful JavaScript package available for graphing is [d3.js](https://d3js.org/). It is battle tested and robust, and the de facto library to use to create a graph on your website. To get a feeling for how expressive you can be with d3 just [check out its example gallery](https://github.com/d3/d3/wiki/Gallery). I'm always in awe at some of the things you can create with the simple primitives that d3 provides.
 
 For a project I worked on I had to create graphs in a React Native application. To achieve this goal I used D3 within React Native. In this article I'm going to introduce you to how to create D3 graphs in a React Native application.
 
@@ -26,13 +26,11 @@ This article assumes you are already familiar with React Native. If you're not p
 
 There's a few pre-requisites I need to explain before I can get to how to integrate D3 into React Native. Bear with me as I provide some helpful background information before we delve into the meat of things.
 
-
 # D3
 
 Hopefully if you're reading this you have a vague understanding of what D3 is, and what it can do. In brief D3 provides primitive functions that let you easily convert data into graphs. It [provides a suite of modules](https://github.com/d3/d3/blob/master/API.md) that you can use to construct the graphs you want to build.
 
 For our purposes we're going to focus on two modules, [d3-scale](https://github.com/d3/d3-scale) and [d3-shape](https://github.com/d3/d3-shape). These are the only two modules we need to learn to create a graph in our React Native application.
-
 
 ## d3-scale
 
@@ -51,13 +49,14 @@ To graph that with d3-scale we create a continuous linear scale:
 
 ```javascript
 // Create a new linear scale instance, which we'll use as your y-scale.
-const y = d3.scaleLinear()
-    // Set our domain, which is our input data, which is our test scores,
-    // which can be between 0 and 100.
-    .domain([0, 100])
-    // Set our range, which is our output data, which is the height of our
-    // screen, which is 640 pixels.
-    .range([0, 640]);
+const y = d3
+  .scaleLinear()
+  // Set our domain, which is our input data, which is our test scores,
+  // which can be between 0 and 100.
+  .domain([0, 100])
+  // Set our range, which is our output data, which is the height of our
+  // screen, which is 640 pixels.
+  .range([0, 640]);
 
 // Now if we want to know how high a test score of 50 is on our screen
 // we pass the value from our domain and get our range of 320.
@@ -74,11 +73,12 @@ Meaning, that instead of just using numbers for our domain we're going to use da
 
 ```javascript
 // Create our x-scale.
-const x = d3.scaleTime()
-    // Our domain is now a week of time.
-    .domain([new Date(2000, 0, 1), new Date(2000, 0, 8)])
-    // That we're going to show on our screen which is also 640 pixels wide.
-    .range([0, 640]);
+const x = d3
+  .scaleTime()
+  // Our domain is now a week of time.
+  .domain([new Date(2000, 0, 1), new Date(2000, 0, 8)])
+  // That we're going to show on our screen which is also 640 pixels wide.
+  .range([0, 640]);
 
 // We can then get the x position for the second day of the week.
 x(new Date(2000, 0, 2)); // 91.42857142857142
@@ -89,6 +89,7 @@ x(new Date(2000, 0, 7)); // 548.5714285714286
 ## d3-shape
 
 The d3-shape module "provides a variety of shape generators for your convenience" which you use to actually draw your data to a graph. For now d3-shape can render to either SVG or Canvas. For our use case we're going to focus on the SVG rendering capabilities.
+
 - [d3-shape](https://github.com/d3/d3-shape)
 
 The only shape we're going to use is the line generator which is "used to compute the [d attribute](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d) of an [SVG path](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths) element"
@@ -122,7 +123,6 @@ line(data);
 ```
 
 The x and y accessor's that we use are [discussed more in-depth on the documentation](https://github.com/d3/d3-shape#line_x), however the point of them is that D3 uses those functions to compute where to plot every data point on the graph.
-
 
 # How does D3 work with React Native?
 
@@ -168,7 +168,7 @@ function ReactART() {
         <Rectangle width={100} height={100} x={10} y={10} fill="blue" />
       </Group>
     </Surface>
-  )
+  );
 }
 ```
 
@@ -208,7 +208,6 @@ Before you can use React Native ART you need to link the native library. React N
 
 You can also follow this [excellent guide on getting started with React Native ART](http://browniefed.com/blog/getting-react-art-running-on-react-native/).
 
-
 # Example Application
 
 To help show off what we can make with React Native and D3 I created an example application called [BetterWeather](https://github.com/hswolff/BetterWeather). It's hosted on my GitHub account. Each commit is composed so you can read them from start to finish and see what was done to get to the next iteration of the application. I strongly encourage you to read through the source code as its well documented and meant for reading.
@@ -225,29 +224,17 @@ The first is using React Native ART.
 
 ```javascript
 // Snippet based on https://github.com/hswolff/BetterWeather/blob/master/js/weather/WeatherGraph.js
-import React, {
-  Component,
-} from 'react';
-import {
-  ART,
-} from 'react-native';
+import React, { Component } from 'react';
+import { ART } from 'react-native';
 
-const {
-  Group,
-  Shape,
-  Surface,
-} = ART;
+const { Group, Shape, Surface } = ART;
 
 class WeatherGraph extends Component {
   render() {
     return (
       <Surface width={200} height={100}>
         <Group x={0} y={0}>
-          <Shape
-            d={this.props.linePath}
-            stroke="#000"
-            strokeWidth={1}
-          />
+          <Shape d={this.props.linePath} stroke="#000" strokeWidth={1} />
         </Group>
       </Surface>
     );
@@ -284,11 +271,7 @@ export function createLineGraph({
   const lastDatum = data[data.length - 1];
 
   // Create our x-scale.
-  const scaleX = createScaleX(
-    data[0].time,
-    lastDatum.time,
-    width
-  );
+  const scaleX = createScaleX(data[0].time, lastDatum.time, width);
 
   // Collect all y values.
   const allYValues = data.reduce((all, datum) => {
@@ -303,12 +286,13 @@ export function createLineGraph({
   const scaleY = createScaleY(extentY[0], extentY[1], height);
 
   // Use the d3-shape line generator to create the `d={}` attribute value.
-  const lineShape = d3.shape.line()
+  const lineShape = d3.shape
+    .line()
     // For every x and y-point in our line shape we are given an item from our
     // array which we pass through our scale function so we map the domain value
     // to the range value.
-    .x((d) => scaleX(d.time))
-    .y((d) => scaleY(d.temperatureMax));
+    .x(d => scaleX(d.time))
+    .y(d => scaleY(d.temperatureMax));
 
   return {
     // Pass in our array of data to our line generator to produce the `d={}`
@@ -422,21 +406,21 @@ class WeatherGraph extends Component {
         height: 100,
       });
 
-      this.setState({
-        // Create the ART Morph.Tween instance.
-        linePath: Morph.Tween(
-          this.previousGraph,
-          nextLinePath,
-        ),
-      }, () => {
-        // Kick off our animations!
-        this.animate();
-      });
+      this.setState(
+        {
+          // Create the ART Morph.Tween instance.
+          linePath: Morph.Tween(this.previousGraph, nextLinePath),
+        },
+        () => {
+          // Kick off our animations!
+          this.animate();
+        }
+      );
     }
   }
 
   animate(start) {
-    this.animating = requestAnimationFrame((timestamp) => {
+    this.animating = requestAnimationFrame(timestamp => {
       if (!start) {
         start = timestamp;
       }
