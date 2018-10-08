@@ -5,33 +5,27 @@ const { createFullUrl, createTagMap } = require('./src/utils/helpers');
 
 // Lifecycle methods
 
-exports.onCreateNode = function() {
-  return Promise.all([addUrlToBlogPost].map(fn => fn.apply(this, arguments)));
-};
+exports.onCreateNode = function({ node, actions }) {
+  if (node.internal.type === 'MarkdownRemark') {
+    const { createNodeField } = actions;
 
-function addUrlToBlogPost({ node, actions }) {
-  if (node.internal.type !== 'MarkdownRemark') {
-    return;
+    const { slug } = node.frontmatter;
+
+    createNodeField({
+      node,
+      name: 'url',
+      value: createFullUrl(slug),
+    });
+
+    createNodeField({
+      node,
+      name: 'tagsUrls',
+      value: node.frontmatter.tags
+        ? node.frontmatter.tags.map(tag => `/blog/tag/${tag}/`)
+        : [],
+    });
   }
-
-  const { createNodeField } = actions;
-
-  const { slug } = node.frontmatter;
-
-  createNodeField({
-    node,
-    name: 'url',
-    value: createFullUrl(slug),
-  });
-
-  createNodeField({
-    node,
-    name: 'tagsUrls',
-    value: node.frontmatter.tags
-      ? node.frontmatter.tags.map(tag => `/blog/tag/${tag}/`)
-      : [],
-  });
-}
+};
 
 exports.createPages = async function({ actions, graphql }) {
   const results = await Promise.all([
@@ -97,6 +91,7 @@ function getMarkdownQuery({ regex } = {}) {
               title
               slug
               date
+              category
               tags
             }
             fields {
