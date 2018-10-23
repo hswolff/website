@@ -14,7 +14,8 @@ export default function EpisodeTagsTemplate({
     <Layout>
       <Helmet title={`tag: ${tag}`} />
       <h1>
-        {edges.length} link{edges.length === 1 ? '' : 's'} tagged with {tag}
+        {edges.length} link
+        {edges.length === 1 ? '' : 's'} tagged with {tag}
       </h1>
       {edges.map(({ node }) => {
         return <BlogListItem {...node} key={node.fileAbsolutePath} />;
@@ -34,19 +35,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          fileAbsolutePath
-          excerpt(pruneLength: 280)
-          timeToRead
-          frontmatter {
-            title
-            slug
-            date
-            tags
-          }
-          fields {
-            url
-            tagsUrls
-          }
+          ...BlogListItemFragment
         }
       }
     }

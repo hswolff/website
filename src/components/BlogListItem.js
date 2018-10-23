@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import styled from 'react-emotion';
 import { DateTime } from 'luxon';
 import { lighten } from 'polished';
@@ -112,4 +112,23 @@ const BaseTitle = styled('h2')`
 
 const FooterItem = styled('div')`
   flex: 0 0 auto;
+`;
+
+export const query = graphql`
+  fragment BlogListItemFragment on MarkdownRemark {
+    fileAbsolutePath
+    excerpt(pruneLength: 280)
+    timeToRead
+    frontmatter {
+      title
+      slug
+      date
+      category
+      tags
+    }
+    fields {
+      url
+      tagsUrls
+    }
+  }
 `;

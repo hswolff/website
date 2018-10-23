@@ -56,16 +56,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          fileAbsolutePath
-          frontmatter {
-            title
-            slug
-            date
-          }
-          fields {
-            url
-            tagsUrls
-          }
+          ...BlogListItemFragment
         }
       }
     }
