@@ -3,6 +3,12 @@ const _ = require('lodash');
 const createPaginatedPages = require('gatsby-paginate');
 const { createFullUrl, createTagMap } = require('./src/utils/helpers');
 
+const categories = { code: {}, personal: {}, career: {} };
+_.forEach(categories, (catConfig, category) => {
+  catConfig.url = createFullUrl(`category/${category}`);
+  catConfig.category = category;
+});
+
 // Lifecycle methods
 
 exports.onCreateNode = function({ node, actions }) {
@@ -23,6 +29,12 @@ exports.onCreateNode = function({ node, actions }) {
       value: node.frontmatter.tags
         ? node.frontmatter.tags.map(tag => `/blog/tag/${tag}/`)
         : [],
+    });
+
+    createNodeField({
+      node,
+      name: 'categoryUrl',
+      value: _.get(categories, [node.frontmatter.category, 'url']),
     });
   }
 };
@@ -45,6 +57,11 @@ exports.createPages = async function({ actions, graphql }) {
   const pageEdges = pageResults.data.allMarkdownRemark.edges;
 
   createBlogPostPages({
+    createPage,
+    edges: blogPostEdges,
+  });
+
+  createCategoryPages({
     createPage,
     edges: blogPostEdges,
   });
@@ -96,6 +113,7 @@ function getMarkdownQuery({ regex } = {}) {
             }
             fields {
               url
+              categoryUrl
               tagsUrls
             }
           }
@@ -133,6 +151,22 @@ function createPagePages({ edges, createPage }) {
       component,
       context: {
         title,
+      },
+    });
+  });
+}
+
+function createCategoryPages({ createPage }) {
+  const categoryTemplate = path.resolve(
+    'src/templates/CategoryListTemplate.js'
+  );
+
+  _.forEach(categories, ({ category, url }) => {
+    createPage({
+      path: url,
+      component: categoryTemplate,
+      context: {
+        category,
       },
     });
   });

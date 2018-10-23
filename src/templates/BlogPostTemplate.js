@@ -34,18 +34,8 @@ export default function PostTemplate({ data: { markdownRemark } }) {
 export const pageQuery = graphql`
   query PostBySlug($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      ...BlogListItemFragment
       html
-      timeToRead
-      frontmatter {
-        title
-        slug
-        date
-        tags
-      }
-      fields {
-        url
-        tagsUrls
-      }
     }
   }
 `;

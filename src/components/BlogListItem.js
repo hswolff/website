@@ -8,7 +8,7 @@ import { color } from '../utils/css';
 export default function BlogListItem(props) {
   const {
     asPage,
-    frontmatter: { title, date, tags },
+    frontmatter: { title, date, tags, category },
     timeToRead,
     fields,
   } = props;
@@ -52,37 +52,24 @@ export default function BlogListItem(props) {
         `}
       >
         <FooterItem>{DateTime.fromISO(date).toFormat('LLLL d, y')}</FooterItem>
-        <div
-          css={`
-            padding: 0 10px;
-          `}
-        >
-          &bull;
-        </div>
-        <div
-          css={`
-            a {
-              box-shadow: none;
-              &:hover {
-                text-decoration: underline;
-              }
-            }
-          `}
-        >
+        <FooterSeparator />
+        <FooterLinks>
+          {category && (
+            <span key={category}>
+              <Link to={fields.categoryUrl}>{category}</Link>
+            </span>
+          )}
+        </FooterLinks>
+        <FooterSeparator />
+        <FooterLinks>
           {(tags || []).map((tag, index) => (
             <span key={tag}>
               <Link to={fields.tagsUrls[index]}>{tag}</Link>
               {index + 1 !== tags.length && ', '}
             </span>
           ))}
-        </div>
-        <div
-          css={`
-            padding: 0 10px;
-          `}
-        >
-          &bull;
-        </div>
+        </FooterLinks>
+        {tags && <FooterSeparator />}
         <FooterItem>
           Read time {timeToRead} minute
           {timeToRead > 1 && 's'}
@@ -114,6 +101,25 @@ const FooterItem = styled('div')`
   flex: 0 0 auto;
 `;
 
+const FooterLinks = styled('div')`
+  a {
+    box-shadow: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
+const FooterSeparator = () => (
+  <div
+    css={`
+      padding: 0 10px;
+    `}
+  >
+    &bull;
+  </div>
+);
+
 export const query = graphql`
   fragment BlogListItemFragment on MarkdownRemark {
     fileAbsolutePath
@@ -129,6 +135,7 @@ export const query = graphql`
     fields {
       url
       tagsUrls
+      categoryUrl
     }
   }
 `;
