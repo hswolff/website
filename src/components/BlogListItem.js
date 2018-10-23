@@ -6,7 +6,12 @@ import { lighten } from 'polished';
 import { color } from '../utils/css';
 
 export default function BlogListItem(props) {
-  const { asPage, frontmatter, timeToRead, fields } = props;
+  const {
+    asPage,
+    frontmatter: { title, date, tags },
+    timeToRead,
+    fields,
+  } = props;
   const Title = asPage ? BaseTitle.withComponent('h1') : BaseTitle;
   return (
     <div
@@ -23,11 +28,7 @@ export default function BlogListItem(props) {
       `}
     >
       <Title asPage={asPage}>
-        {asPage ? (
-          frontmatter.title
-        ) : (
-          <Link to={fields.url}>{frontmatter.title}</Link>
-        )}
+        {asPage ? title : <Link to={fields.url}>{title}</Link>}
       </Title>
       {!asPage && (
         <div
@@ -50,9 +51,7 @@ export default function BlogListItem(props) {
           }
         `}
       >
-        <FooterItem>
-          {DateTime.fromISO(frontmatter.date).toFormat('LLLL d, y')}
-        </FooterItem>
+        <FooterItem>{DateTime.fromISO(date).toFormat('LLLL d, y')}</FooterItem>
         <div
           css={`
             padding: 0 10px;
@@ -70,10 +69,10 @@ export default function BlogListItem(props) {
             }
           `}
         >
-          {(frontmatter.tags || []).map((tag, index) => (
+          {(tags || []).map((tag, index) => (
             <span key={tag}>
               <Link to={fields.tagsUrls[index]}>{tag}</Link>
-              {index + 1 !== frontmatter.tags.length && ', '}
+              {index + 1 !== tags.length && ', '}
             </span>
           ))}
         </div>
@@ -85,7 +84,8 @@ export default function BlogListItem(props) {
           &bull;
         </div>
         <FooterItem>
-          Read time {timeToRead} minute{timeToRead > 1 && 's'}
+          Read time {timeToRead} minute
+          {timeToRead > 1 && 's'}
         </FooterItem>
       </div>
     </div>
