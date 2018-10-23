@@ -139,14 +139,6 @@ function createPagePages({ edges, createPage }) {
 }
 
 function createTagPages({ createPage, edges }) {
-  const allTagsTemplate = path.resolve('src/templates/AllTagsPageTemplate.js');
-
-  // Create the tags page with the list of tags from our tags object.
-  createPage({
-    path: createFullUrl('tags'),
-    component: allTagsTemplate,
-  });
-
   const tagTemplate = path.resolve('src/templates/TagPageTemplate.js');
 
   const tags = createTagMap(edges);

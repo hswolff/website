@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import { createTagMap } from '../utils/helpers';
-import Layout from '../components/Layout';
+import { createTagMap } from '../../utils/helpers';
+import Layout from '../../components/Layout';
 
 export default function AllTagsPageTemplate({
   data: {
