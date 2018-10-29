@@ -54,7 +54,7 @@ const Header = () => (
         </div>
         <NavRow>
           <NavLink to="/blog/">Blog</NavLink>
-          {/*<NavLink to="/about/">About</NavLink> */}
+          <NavLink to="/about/">About</NavLink>
           <NavLink to="/talks/">Talks</NavLink>
           <NavLink to="/blog/archive/">Archive</NavLink>
           <NavLink href="http://feeds.feedburner.com/harrywolff/zOZJ">

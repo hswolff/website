@@ -1,9 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import Layout from '../components/Layout';
 
 export default function AboutPage() {
   return (
-    <div>
+    <Layout>
       <Helmet title="About" />
       <h1>About</h1>
       <p>Harry Wolff currently lives in New York City.</p>
@@ -43,6 +44,6 @@ export default function AboutPage() {
           <img src="/images/external-networks/google+.png" alt="Google+" />
         </a>
       </div>
-    </div>
+    </Layout>
   );
 }
