@@ -24,7 +24,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={({ site: { siteMetadata } }) => (
-      <div>
+      <React.Fragment>
         <Helmet
           title={siteMetadata.title}
           titleTemplate={`%s | ${siteMetadata.title}`}
@@ -43,7 +43,7 @@ const Layout = ({ children }) => (
           {children}
         </main>
         <Footer />
-      </div>
+      </React.Fragment>
     )}
   />
 );
