@@ -15,7 +15,7 @@ export default ({ pageContext }) => {
     pageCount,
     pathPrefix,
   } = pageContext;
-  const previousUrl = index - 1 == 1 ? '/blog/' : `${pathPrefix}${index - 1}/`;
+  const previousUrl = `${pathPrefix}${index - 1}/`;
   const nextUrl = `${pathPrefix}${index + 1}/`;
 
   const navProps = {
@@ -30,7 +30,7 @@ export default ({ pageContext }) => {
   return (
     <Layout>
       <Helmet title="Blog" />
-      {!isFirstPage && <BlogListNavigation {...navProps} />}
+      <BlogListNavigation {...navProps} />
       {group.map(({ node }) => (
         <BlogListItem key={node.fileAbsolutePath} {...node} />
       ))}

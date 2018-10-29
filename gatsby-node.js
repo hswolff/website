@@ -78,8 +78,7 @@ exports.createPages = async function({ actions, graphql }) {
     pageLength: 6,
     context: {},
     pathPrefix: createFullUrl('page'),
-    buildPath: (index, pathPrefix) =>
-      index > 1 ? `${pathPrefix}${index}` : '/blog/',
+    buildPath: (index, pathPrefix) => `${pathPrefix}${index ? index : 1}`,
   });
 
   createPagePages({
