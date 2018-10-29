@@ -1,5 +1,5 @@
 import { css } from 'emotion';
-import { lighten } from 'polished';
+import { darken, lighten } from 'polished';
 
 export const blogContent = css`
   margin: 0 auto;
@@ -7,11 +7,12 @@ export const blogContent = css`
   padding: 0px 1.0875rem 1.45rem;
 `;
 
-const background = '#212121';
+const background = '#fff';
 export const color = {
   background,
-  divider: lighten(0.8, background),
+  divider: darken(0.1, background),
   title: '#212121',
+  titleLighter: lighten(0.4, '#212121'),
 };
 
 const breakpoints = {

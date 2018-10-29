@@ -3,12 +3,8 @@ import { Link } from 'gatsby';
 import styled from 'react-emotion';
 import Helmet from 'react-helmet';
 import { color } from '../utils/css';
-import { lighten } from 'polished';
-
 import Layout from '../components/Layout';
 import BlogListItem from '../components/BlogListItem';
-
-const lighterBgColor = lighten(0.4, color.title);
 
 export default ({ pageContext }) => {
   const {
@@ -59,7 +55,7 @@ const BlogListNavigation = ({
       align-content: center;
       font-size: 80%;
       &, a {
-        color: ${lighterBgColor};
+        color: ${color.titleLighter};
     `}
   >
     <NavButton style={{ visibility: isFirstPage ? 'hidden' : 'visible' }}>
@@ -89,7 +85,7 @@ const NavLink = ({ test, url, text }) => {
 const NavButton = styled('div')`
   border-width: 1px;
   border-style: solid;
-  border-color: ${lighterBgColor};
+  border-color: ${color.titleLighter};
   padding: 5px 10px;
   border-radius: 4px;
   transition: border-color 0.2s ease-in-out;

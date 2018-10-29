@@ -35,7 +35,7 @@ const Header = () => (
           <Link
             to="/"
             css={{
-              color: 'white',
+              color: color.title,
               textDecoration: 'none',
               fontSize: '3rem',
             }}
@@ -47,7 +47,7 @@ const Header = () => (
           css={`
             margin: 0;
             font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: ${color.titleLighter};
           `}
         >
           You can&apos;t escape my laugh.
@@ -98,11 +98,11 @@ const NavRow = styled('div')`
 const NavLink = props => {
   return React.createElement(props.href ? 'a' : Link, {
     className: css`
-      color: #9eabb3;
+      color: ${color.titleLighter};
       text-decoration: none;
       transition: color ease 0.3s;
       &:hover {
-        color: #fff;
+        opacity: 0.5;
         text-decoration: underline;
       }
     `,
