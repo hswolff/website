@@ -16,7 +16,7 @@ export default function Footer() {
       <br />
       This is not professional medical advice.
       <br />
-      <a href="https://github.com/hswolff/blog">Source Code</a>
+      <a href="https://github.com/hswolff/website">Source</a>
     </footer>
   );
 }
