@@ -8,19 +8,33 @@ import { lighten } from 'polished';
 import Layout from '../components/Layout';
 import BlogListItem from '../components/BlogListItem';
 
-const lighterBgColor = lighten(0.4, color.background);
+const lighterBgColor = lighten(0.4, color.title);
 
 export default ({ pageContext }) => {
-  const { group, index, first, last, pageCount, pathPrefix } = pageContext;
+  const {
+    group,
+    index,
+    first: isFirstPage,
+    last,
+    pageCount,
+    pathPrefix,
+  } = pageContext;
   const previousUrl = index - 1 == 1 ? '/blog/' : `${pathPrefix}${index - 1}/`;
   const nextUrl = `${pathPrefix}${index + 1}/`;
 
-  const navProps = { first, previousUrl, index, pageCount, last, nextUrl };
+  const navProps = {
+    isFirstPage,
+    previousUrl,
+    index,
+    pageCount,
+    last,
+    nextUrl,
+  };
 
   return (
     <Layout>
       <Helmet title="Blog" />
-      {!first && <BlogListNavigation {...navProps} />}
+      {!isFirstPage && <BlogListNavigation {...navProps} />}
       {group.map(({ node }) => (
         <BlogListItem key={node.fileAbsolutePath} {...node} />
       ))}
@@ -30,7 +44,7 @@ export default ({ pageContext }) => {
 };
 
 const BlogListNavigation = ({
-  first,
+  isFirstPage,
   previousUrl,
   index,
   pageCount,
@@ -48,8 +62,12 @@ const BlogListNavigation = ({
         color: ${lighterBgColor};
     `}
   >
-    <NavButton>
-      <NavLink test={first} url={previousUrl} text="Go to Previous Page" />
+    <NavButton style={{ visibility: isFirstPage ? 'hidden' : 'visible' }}>
+      <NavLink
+        test={isFirstPage}
+        url={previousUrl}
+        text="Go to Previous Page"
+      />
     </NavButton>
     <div css={{ marginTop: '5px' }}>
       Page {index} of {pageCount}
@@ -60,11 +78,11 @@ const BlogListNavigation = ({
   </div>
 );
 
-const NavLink = props => {
-  if (!props.test) {
-    return <Link to={props.url}>{props.text}</Link>;
+const NavLink = ({ test, url, text }) => {
+  if (!test) {
+    return <Link to={url}>{text}</Link>;
   } else {
-    return <span>{props.text}</span>;
+    return <span>{text}</span>;
   }
 };
 
@@ -76,9 +94,9 @@ const NavButton = styled('div')`
   border-radius: 4px;
   transition: border-color 0.2s ease-in-out;
   &:hover {
-    border-color: ${color.background};
+    border-color: ${color.title};
     a {
-      color: ${color.background};
+      color: ${color.title};
     }
   }
   a {

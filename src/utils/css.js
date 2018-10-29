@@ -11,6 +11,7 @@ const background = '#212121';
 export const color = {
   background,
   divider: lighten(0.8, background),
+  title: '#212121',
 };
 
 const breakpoints = {

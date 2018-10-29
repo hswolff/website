@@ -47,7 +47,7 @@ export default function BlogListItem(props) {
           font-size: 0.82rem;
           &,
           a {
-            color: ${lighten(0.3, color.background)};
+            color: ${lighten(0.3, color.title)};
           }
         `}
       >
@@ -86,7 +86,7 @@ BlogListItem.defaultProps = {
 const BaseTitle = styled('h2')`
   margin: 0;
   a {
-    color: ${color.background};
+    color: ${color.title};
     box-shadow: none;
     transition: opacity ease-in 0.2s;
     ${({ asPage }) => !asPage && 'opacity: 0.8;'};
