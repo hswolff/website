@@ -1,10 +1,9 @@
 import { css } from 'emotion';
 import { darken, lighten } from 'polished';
 
-export const blogContent = css`
+export const mainContent = css`
   margin: 0 auto;
   max-width: 720px;
-  padding: 0px 1.0875rem 1.45rem;
 `;
 
 const background = '#fff';

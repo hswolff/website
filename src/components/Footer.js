@@ -1,11 +1,11 @@
 import React from 'react';
-import { blogContent, color } from '../utils/css';
+import { mainContent, color } from '../utils/css';
 
 export default function Footer() {
   return (
     <footer
       css={`
-        ${blogContent};
+        ${mainContent};
         padding-top: 1.45rem;
         font-size: 0.7rem;
         text-align: center;

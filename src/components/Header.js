@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'react-emotion';
 import { css } from 'emotion';
-import { blogContent, color, mediaQueries } from '../utils/css';
+import { mainContent, color, mediaQueries } from '../utils/css';
 
 const Header = () => (
   <div
@@ -69,7 +69,7 @@ const Header = () => (
 export default Header;
 
 const Inner = styled('div')`
-  ${blogContent};
+  ${mainContent};
   padding-top: 1.45rem;
   padding-bottom: 0;
   display: flex;

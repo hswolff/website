@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import 'prismjs/themes/prism.css';
 
 import '../utils/analytics';
-import { blogContent } from '../utils/css';
+import { mainContent } from '../utils/css';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -34,14 +34,7 @@ const Layout = ({ children }) => (
           ]}
         />
         <Header />
-        <main
-          className={blogContent}
-          css={{
-            paddingTop: 0,
-          }}
-        >
-          {children}
-        </main>
+        <main className={mainContent}>{children}</main>
         <Footer />
       </React.Fragment>
     )}
