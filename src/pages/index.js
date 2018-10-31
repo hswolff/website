@@ -17,12 +17,18 @@ const IndexPage = props => {
         <a href="http://mongodb.com/">MongoDB</a>.
       </p>
       <p>
-        I have my own weekly YouTube show called{' '}
-        <a href="http://theconsolelog.com/">The Console Log</a> where I talk
-        about JavaScript and the web.
+        I have a <a href="https://www.youtube.com/user/hswolff">YouTube</a>{' '}
+        channel that is updated weekly. I make videos about JavaScript, React,
+        and everything related to the web. I&apos;ve been told it&apos;s
+        entertaining.
       </p>
       <p>
-        I also <Link to="/blog/">blog</Link>! Have a look at my latest posts.
+        I also host a weekly podcast called{' '}
+        <a href="http://theconsolelog.com/">The Console Log</a>. We talk about
+        news from the past week and what it means for you.
+      </p>
+      <p>
+        I also <Link to="/blog/">blog</Link>! Have a look at my latest post:
       </p>
       <ul>
         {edges.map(({ node }) => (
@@ -50,7 +56,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query AllPosts {
     allMarkdownRemark(
-      limit: 5
+      limit: 1
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fileAbsolutePath: { regex: "/_posts/" } }
     ) {

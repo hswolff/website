@@ -7,8 +7,26 @@ export default function AboutPage() {
     <Layout>
       <Helmet title="About" />
       <h1>About</h1>
-      <p>Harry Wolff currently lives in New York City.</p>
-      <p>Find him online at the following social networks.</p>
+      <p>Hello! This page is all about me. Written by me. Quite meta.</p>
+      <p>
+        I currently live in New York City with my wife and son. We&apos;ve been
+        in NYC for over 6 years now and have enjoyed every minute. Sure,
+        it&apos;s the city that never sleeps, but that works for us.
+      </p>
+      <p>
+        During the day I{' '}
+        <a href="http://www.linkedin.com/in/hswolff" title="LinkedIn">
+          work
+        </a>{' '}
+        at <a href="http://mongodb.com/">MongoDB</a> where I&apos;m a Lead
+        Engineer, leading a team of engineers to make coffee into code.
+        It&apos;s an overused expression, but some days it truly feels as simple
+        as that.
+      </p>
+      <p>
+        I&apos;m pretty damn social, so you can find me on most social networks.
+        Such as:
+      </p>
       <div
         css={`
           a {
@@ -39,9 +57,6 @@ export default function AboutPage() {
         </a>
         <a href="http://www.linkedin.com/in/hswolff" title="LinkedIn">
           <img src="/images/external-networks/linkedin.png" alt="LinkedIn" />
-        </a>
-        <a href="https://plus.google.com/+HarryWolff" title="Google+">
-          <img src="/images/external-networks/google+.png" alt="Google+" />
         </a>
       </div>
     </Layout>

@@ -15,7 +15,7 @@ export default function ProjectsIndexPage() {
         <a href="https://www.youtube.com/user/hswolff">YouTube</a>
       </h2>
       <p>
-        Right now I&quot;m focusing on growing my collection of{' '}
+        Right now I&apos;m focusing on growing my collection of{' '}
         <a href="https://www.youtube.com/user/hswolff">YouTube</a> videos. I
         keep it updated weekly, posting a new video every Monday morning.
       </p>
@@ -31,7 +31,7 @@ export default function ProjectsIndexPage() {
       </h2>
       <p>
         I also created a podcast called{' '}
-        <a href="https://theconsolelog.com/">The Console Log</a>. It&quot;s a
+        <a href="https://theconsolelog.com/">The Console Log</a>. It&apos;s a
         weekly news show about...you guessed it, JavaScript!
       </p>
       <p>
@@ -46,7 +46,7 @@ export default function ProjectsIndexPage() {
       <p>
         I also love creating open source software on{' '}
         <a href="https://github.com/hswolff">GitHub</a>. You can click through
-        to see some projects I&quot;ve created. Hopefully they may be of use to
+        to see some projects I&apos;e created. Hopefully they may be of use to
         you!
       </p>
     </Layout>

@@ -1,11 +1,6 @@
 import { css } from 'emotion';
 import { darken, lighten } from 'polished';
 
-export const mainContent = css`
-  margin: 0 auto 30px;
-  max-width: 720px;
-`;
-
 const background = '#fff';
 export const color = {
   background,
@@ -23,6 +18,15 @@ const breakpoints = {
   // String values will be used as is
   phone: 'only screen and (max-width: 500px)',
 };
+
+export const mainContent = css`
+  margin: 0 auto 30px;
+  max-width: 720px;
+  @media ${breakpoints.phone} {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+`;
 
 export const mediaQueries = Object.keys(breakpoints).reduce(
   (accumulator, label) => {
