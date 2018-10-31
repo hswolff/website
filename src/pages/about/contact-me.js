@@ -50,7 +50,7 @@ class ContactForm extends React.Component {
       return <span>Success. Thank you!</span>;
     }
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} netlify={true}>
         <p>
           <label>
             Name:{' '}
