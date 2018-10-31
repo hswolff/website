@@ -54,11 +54,8 @@ const Header = () => (
         </div>
         <NavRow>
           <NavLink to="/blog/">Blog</NavLink>
+          <NavLink to="/projects/">Projects</NavLink>
           <NavLink to="/about/">About</NavLink>
-          <NavLink to="/blog/archive/">Archive</NavLink>
-          <NavLink href="http://feeds.feedburner.com/harrywolff/zOZJ">
-            RSS Feed
-          </NavLink>
         </NavRow>
       </Right>
     </Inner>
