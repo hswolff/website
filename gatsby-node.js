@@ -42,7 +42,6 @@ exports.onCreateNode = function({ node, actions }) {
 exports.createPages = async function({ actions, graphql }) {
   const results = await Promise.all([
     graphql(getMarkdownQuery({ regex: '/_posts/' })),
-    graphql(getMarkdownQuery({ regex: '/_pages/' })),
   ]);
 
   const error = results.filter(r => r.errors);
@@ -50,11 +49,10 @@ exports.createPages = async function({ actions, graphql }) {
     return Promise.reject(error[0].errors);
   }
 
-  const [blogPostResults, pageResults] = results;
+  const [blogPostResults] = results;
 
   const { createPage } = actions;
   const blogPostEdges = blogPostResults.data.allMarkdownRemark.edges;
-  const pageEdges = pageResults.data.allMarkdownRemark.edges;
 
   createBlogPostPages({
     createPage,
@@ -79,11 +77,6 @@ exports.createPages = async function({ actions, graphql }) {
     context: {},
     pathPrefix: createFullUrl('page'),
     buildPath: (index, pathPrefix) => `${pathPrefix}${index ? index : 1}`,
-  });
-
-  createPagePages({
-    createPage,
-    edges: pageEdges,
   });
 };
 
@@ -133,23 +126,6 @@ function createBlogPostPages({ edges, createPage }) {
       component,
       context: {
         slug,
-      },
-    });
-  });
-}
-
-function createPagePages({ edges, createPage }) {
-  const component = path.resolve('src/templates/PageTemplate.js');
-
-  edges.forEach(({ node }) => {
-    const { slug, title } = node.frontmatter;
-    const pagePath = slug || _.kebabCase(title);
-
-    createPage({
-      path: pagePath,
-      component,
-      context: {
-        title,
       },
     });
   });

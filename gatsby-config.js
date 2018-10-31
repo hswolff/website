@@ -33,13 +33,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'pages',
-        path: path.join(__dirname, '_pages'),
-      },
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: ['gatsby-remark-autolink-headers', 'gatsby-remark-prismjs'],
