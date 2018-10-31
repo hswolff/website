@@ -2,7 +2,7 @@ import { css } from 'emotion';
 import { darken, lighten } from 'polished';
 
 export const mainContent = css`
-  margin: 0 auto;
+  margin: 0 auto 30px;
   max-width: 720px;
 `;
 

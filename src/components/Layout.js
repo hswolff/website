@@ -9,7 +9,7 @@ import { mainContent } from '../utils/css';
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout = ({ children }) => (
+const Layout = ({ children, fullWidth = false }) => (
   <StaticQuery
     query={graphql`
       query LayoutData {
@@ -34,7 +34,7 @@ const Layout = ({ children }) => (
           ]}
         />
         <Header />
-        <main className={mainContent}>{children}</main>
+        <main className={fullWidth ? '' : mainContent}>{children}</main>
         <Footer />
       </React.Fragment>
     )}

@@ -13,10 +13,11 @@ export default function CategoryListTemplate({
   return (
     <Layout>
       <Helmet title={`category: ${category}`} />
-      <h1>
+      <h1>Category: {category}</h1>
+      <h3>
         {edges.length} link
-        {edges.length === 1 ? '' : 's'} in {category}
-      </h1>
+        {edges.length === 1 ? '' : 's'}
+      </h3>
       {edges.map(({ node }) => {
         return <BlogListItem {...node} key={node.fileAbsolutePath} />;
       })}
