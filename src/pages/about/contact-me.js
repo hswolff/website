@@ -28,7 +28,7 @@ class ContactForm extends React.Component {
   state = { name: '', email: '', message: '', submitted: false };
 
   handleSubmit = e => {
-    fetch('/', {
+    fetch('/?no-cache=1', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
@@ -56,6 +56,7 @@ class ContactForm extends React.Component {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <input type="hidden" name="bot-field" />
 
         <p>
