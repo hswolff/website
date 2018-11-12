@@ -1,4 +1,4 @@
-import { css } from 'emotion';
+import { css, injectGlobal } from 'emotion';
 import { darken, lighten } from 'polished';
 
 const background = '#fff';
@@ -8,6 +8,12 @@ export const color = {
   title: '#212121',
   titleLighter: lighten(0.4, '#212121'),
 };
+
+export function setupGlobalStyles() {
+  injectGlobal`
+
+  `;
+}
 
 const breakpoints = {
   // Numerical values will result in a min-width query
@@ -19,9 +25,13 @@ const breakpoints = {
   phone: 'only screen and (max-width: 500px)',
 };
 
+export const variable = {
+  content: 720,
+};
+
 export const mainContent = css`
   margin: 0 auto 30px;
-  max-width: 720px;
+  max-width: ${variable.content}px;
   @media ${breakpoints.phone} {
     margin-left: 20px;
     margin-right: 20px;

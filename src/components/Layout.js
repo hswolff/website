@@ -5,9 +5,11 @@ import { StaticQuery, graphql } from 'gatsby';
 import 'prismjs/themes/prism.css';
 
 import '../utils/analytics';
-import { mainContent } from '../utils/css';
+import { mainContent, setupGlobalStyles } from '../utils/css';
 import Header from './Header';
 import Footer from './Footer';
+
+setupGlobalStyles();
 
 const Layout = ({ children, fullWidth = false }) => (
   <StaticQuery
