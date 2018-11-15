@@ -10,7 +10,7 @@ import { mainContent } from '../utils/css';
 const BlogPage = ({ data }) => {
   const { latest } = data;
   return (
-    <Layout fullWidth>
+    <Layout>
       <Helmet title="Blog" />
       <div className={mainContent}>
         <BlogListItem {...latest.edges[0].node} />

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 import { DateTime } from 'luxon';
 import { lighten } from 'polished';
-import { color } from '../utils/css';
+import { color, mediaQueries } from '../utils/css';
 
 export default function BlogListItem(props) {
   const {
@@ -94,11 +94,13 @@ const BaseTitle = styled('h2')`
       ${({ asPage }) => !asPage && 'opacity: 1;'};
     }
   }
-  ${({ asPage }) => asPage && 'margin-top: 10px;'};
 `;
 
 const FooterItem = styled('div')`
   flex: 0 0 auto;
+  ${mediaQueries.phone(css`
+    flex: auto;
+  `)};
 `;
 
 const FooterLinks = styled('div')`

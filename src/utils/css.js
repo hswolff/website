@@ -1,6 +1,15 @@
 import { css, injectGlobal } from 'emotion';
 import { darken, lighten } from 'polished';
 
+// https://coolors.co/04080f-507dbc-a1c6ea-bbd1ea-dae3e5
+export const palette = {
+  dark: '#04080f',
+  primary: '#507dbc',
+  secondary: '#a1c6ea',
+  info: '#bbd1ea',
+  light: '#dae3e5',
+};
+
 const background = '#fff';
 export const color = {
   background,

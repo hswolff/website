@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 import Helmet from 'react-helmet';
 import { color } from '../utils/css';
 import Layout from '../components/Layout';
@@ -30,7 +30,7 @@ export default ({ pageContext }) => {
   return (
     <Layout>
       <Helmet title="Blog" />
-      <BlogListNavigation {...navProps} />
+      <BlogListNavigation {...navProps} className={css({ marginTop: 0 })} />
       {group.map(({ node }) => (
         <BlogListItem key={node.fileAbsolutePath} {...node} />
       ))}
@@ -46,8 +46,10 @@ const BlogListNavigation = ({
   pageCount,
   last,
   nextUrl,
+  className,
 }) => (
   <div
+    className={className}
     css={`
       margin: 40px 0;
       display: flex;
