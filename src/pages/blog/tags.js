@@ -14,7 +14,7 @@ export default function AllTagsPageTemplate({
   return (
     <Layout>
       <Helmet title="All Tags" />
-      <h1>Tags</h1>
+      <h1>Blog Tags</h1>
       <ul className="tags">
         {Object.keys(tags).map(tagName => {
           const tag = tags[tagName];

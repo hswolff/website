@@ -17,7 +17,7 @@ export default function Footer() {
           ${mainContent};
         `}
       >
-        <LinkContainer>
+        <LinkContainer css={{ display: 'none' }}>
           <Column>
             <Link to="/blog/">Blog</Link>
             <Link to="/blog/category/code/">Code</Link>
@@ -46,8 +46,6 @@ export default function Footer() {
           <span>A laugh a day keeps the doctor away.</span>
           <br />
           <span>This is not professional medical advice.</span>
-          <br />
-          <a href="https://github.com/hswolff/website">Source</a>
         </div>
       </div>
     </footer>

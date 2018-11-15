@@ -22,7 +22,7 @@ export default class BlogArchive extends Component {
     return (
       <Layout>
         <Helmet title="Blog Archive" />
-        <h1>Archive</h1>
+        <h1>Blog Archive</h1>
         {_.map(years, year => (
           <div key={year}>
             <h2

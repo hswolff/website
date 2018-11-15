@@ -1,7 +1,22 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { css } from 'emotion';
+import { css, cx } from 'emotion';
+import {
+  FaTwitter,
+  FaRss,
+  FaToolbox,
+  FaUser,
+  FaYoutube,
+  FaPodcast,
+  FaGithub,
+  FaEnvelope,
+  FaMicrophone,
+  FaAlignJustify,
+  FaBox,
+  FaCode,
+} from 'react-icons/fa';
 import { color, mediaQueries } from '../utils/css';
+import styled from 'react-emotion';
 
 export default () => (
   <nav
@@ -67,26 +82,105 @@ export default () => (
         margin-top: 20px;
       `}
     >
-      <NavLink to="/blog/">Blog</NavLink>
-      <NavLink to="/projects/">Projects</NavLink>
-      <NavLink to="/about/">About</NavLink>
+      <NavLink to="/blog/">
+        <FaAlignJustify color="black" /> Blog
+      </NavLink>
+      <SubNavLinks>
+        <NavLink href="http://feeds.feedburner.com/harrywolff/zOZJ">
+          <FaRss color="black" /> RSS
+        </NavLink>
+        {/* <NavLink to="/blog/category/code/">
+          <FaCircle size="0.5rem" color="black" />
+          Code
+        </NavLink>
+        <NavLink to="/blog/category/career/">
+          <FaCircle size="0.5rem" color="black" />
+          Career
+        </NavLink>
+        <NavLink to="/blog/category/personal/">
+          <FaCircle size="0.5rem" color="black" />
+          Personal
+        </NavLink>
+        <NavLink to="/blog/tags/">Tags</NavLink> */}
+        <NavLink to="/blog/archive/">
+          <FaBox color="black" /> Archive
+        </NavLink>
+      </SubNavLinks>
+      <NavLink to="/projects/">
+        <FaToolbox color="black" />
+        Projects
+      </NavLink>
+      <SubNavLinks>
+        <NavLink href="https://www.youtube.com/user/hswolff">
+          <FaYoutube color="black" /> YouTube
+        </NavLink>
+        <NavLink href="https://theconsolelog.com/">
+          <FaPodcast color="black" /> Podcast
+        </NavLink>
+        <NavLink href="https://github.com/hswolff">
+          <FaGithub color="black" /> Open Source
+        </NavLink>
+      </SubNavLinks>
+      <NavLink to="/about/">
+        <FaUser color="black" /> About
+      </NavLink>
+      <SubNavLinks>
+        <NavLink to="/about/contact-me/">
+          <FaEnvelope color="black" /> Contact Me
+        </NavLink>
+        <NavLink to="/about/talks/">
+          <FaMicrophone color="black" /> Talks
+        </NavLink>
+        <NavLink href="https://twitter.com/hswolff">
+          <FaTwitter color="black" /> @hswolff
+        </NavLink>
+      </SubNavLinks>
+      <NavLink
+        href="https://github.com/hswolff/website"
+        className={css`
+          font-size: 0.7rem;
+          margin-top: 1.5rem;
+        `}
+      >
+        <FaCode color="black" /> Source
+      </NavLink>
     </div>
   </nav>
 );
 
 const NavLink = props => {
   return React.createElement(props.href ? 'a' : Link, {
-    className: css`
-      color: ${color.titleLighter};
-      transition: color ease 0.3s;
-      box-shadow: none;
-      margin: 0.2rem 0;
-      font-size: 0.9rem;
-      &:hover {
-        opacity: 0.5;
-        text-decoration: underline;
-      }
-    `,
     ...props,
+    className: cx(
+      css`
+        color: ${color.titleLighter};
+        transition: color ease 0.3s;
+        box-shadow: none;
+        margin: 0.2rem 0;
+        font-size: 0.9rem;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        svg {
+          margin-right: 5px;
+        }
+
+        &:hover {
+          opacity: 0.5;
+          text-decoration: underline;
+        }
+      `,
+      props.className
+    ),
   });
 };
+
+const SubNavLinks = styled('div')`
+  margin-left: 10px;
+  a {
+    font-size: 0.8rem;
+  }
+`;
