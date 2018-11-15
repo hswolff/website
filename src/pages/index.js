@@ -1,8 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
-import { DateTime } from 'luxon';
 import Layout from '../components/Layout';
+import BlogListItem from '../components/BlogListItem';
 
 const IndexPage = props => {
   const { allMarkdownRemark } = props.data;
@@ -28,25 +28,15 @@ const IndexPage = props => {
         news from the past week and what it means for you.
       </p>
       <p>
-        I also <Link to="/blog/">blog</Link>! Have a look at my latest post:
+        I also <Link to="/blog/">blog</Link>! Have a look at my latest posts:
       </p>
-      <ul>
-        {edges.map(({ node }) => (
-          <li key={node.fileAbsolutePath}>
-            <Link to={node.fields.url}>{node.frontmatter.title}</Link>{' '}
-            <small>
-              ({DateTime.fromISO(node.frontmatter.date).toFormat('L/d/yy')})
-            </small>
-          </li>
-        ))}
-      </ul>
-      <p>
-        I&apos;m active on <a href="https://twitter.com/hswolff">Twitter</a>,{' '}
-        <a href="http://instagram.com/hswolff">Instagram</a>,{' '}
-        <a href="https://github.com/hswolff">GitHub</a>, and many other{' '}
-        <Link to="/about/">social networks</Link>.
-      </p>
-      <p>Thanks for stopping by!</p>
+      {edges.map(({ node }) => (
+        <BlogListItem key={node.fileAbsolutePath} {...node} />
+      ))}
+
+      <div css={{ textAlign: 'left', margin: '20px auto' }}>
+        <Link to="/blog/page/1/">All Posts</Link>
+      </div>
     </Layout>
   );
 };
@@ -56,7 +46,7 @@ export default IndexPage;
 export const pageQuery = graphql`
   query AllPosts {
     allMarkdownRemark(
-      limit: 1
+      limit: 3
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fileAbsolutePath: { regex: "/_posts/" } }
     ) {

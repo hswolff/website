@@ -82,7 +82,7 @@ export default () => (
         margin-top: 20px;
       `}
     >
-      <NavLink to="/blog/">
+      <NavLink to="/blog/page/1/">
         <FaAlignJustify color="black" /> Blog
       </NavLink>
       <SubNavLinks>
