@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     title: 'Harry Wolff',
-    description: 'Personal site of Harry Wolff (hswolff).',
+    description:
+      'Personal site of Harry Wolff (hswolff). Find articles on JavaScript, videos about code, and stories of my life.',
     siteUrl: 'http://hswolff.com',
     keywords:
       'javascript, programming, code, personal, career, tutorial, technology, blog',
