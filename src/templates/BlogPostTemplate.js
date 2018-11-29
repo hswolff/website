@@ -1,21 +1,22 @@
 import React from 'react';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { injectGlobal } from 'emotion';
 import Layout from '../components/Layout';
 import BlogListItem from '../components/BlogListItem';
 import Disqus from '../components/Disqus';
+import SEO from '../components/SEO';
 
 export default function PostTemplate({ data: { markdownRemark } }) {
   const {
     html,
+    excerpt,
     frontmatter: { title, slug },
     fields: { url },
   } = markdownRemark;
 
   return (
     <Layout>
-      <Helmet title={title} />
+      <SEO title={title} description={excerpt} isBlogPost />
       <BlogListItem asPage {...markdownRemark} />
       <div
         css={`
