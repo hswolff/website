@@ -6,6 +6,7 @@ export default function SEO({
   title: titleProp,
   description: descriptionProp,
   postSlug,
+  image: imageProp,
   isBlogPost,
 }) {
   return (
@@ -25,7 +26,8 @@ export default function SEO({
       render={({ site: { siteMetadata } }) => {
         const title = titleProp || siteMetadata.title;
         const description = descriptionProp || siteMetadata.description;
-        const image = 'https://hswolff.com/images/profile-large.jpg';
+        const image =
+          imageProp || 'https://hswolff.com/images/profile-large.jpg';
         let url = siteMetadata.siteUrl;
         if (postSlug) {
           url += postSlug;
