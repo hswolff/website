@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby';
 export default function SEO({
   title: titleProp,
   description: descriptionProp,
+  postSlug,
   isBlogPost,
 }) {
   return (
@@ -25,6 +26,10 @@ export default function SEO({
         const title = titleProp || siteMetadata.title;
         const description = descriptionProp || siteMetadata.description;
         const image = 'https://hswolff.com/images/profile-large.jpg';
+        let url = siteMetadata.siteUrl;
+        if (postSlug) {
+          url += postSlug;
+        }
         return (
           <Helmet titleTemplate={`%s | ${siteMetadata.title}`}>
             <meta charSet="utf-8" />
@@ -46,7 +51,7 @@ export default function SEO({
             {/* <!-- Open Graph data --> */}
             <meta property="og:title" content={title} />
             {isBlogPost && <meta property="og:type" content="article" />}
-            <meta property="og:url" content="http://hswolff.com/" />
+            <meta property="og:url" content={url} />
             <meta property="og:image" content={image} />
             <meta property="og:description" content={description} />
             <meta property="og:site_name" content={siteMetadata.title} />

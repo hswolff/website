@@ -16,7 +16,7 @@ export default function PostTemplate({ data: { markdownRemark } }) {
 
   return (
     <Layout>
-      <SEO title={title} description={excerpt} isBlogPost />
+      <SEO title={title} description={excerpt} postSlug={url} isBlogPost />
       <BlogListItem asPage {...markdownRemark} />
       <div
         css={`
