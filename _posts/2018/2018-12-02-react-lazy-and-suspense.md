@@ -75,7 +75,7 @@ Now that we've defined our code-split location we now have some homework to do t
 
 We have to call the `import()` function, wait for the `Promise` to resolve, and then take that value and render that in our component.
 
-It's a lot of book-keeping that stinks. In the sense that it's redundant and error prone.
+It's a lot of book-keeping which tends to be redundant and error prone.
 
 It looks more or less like this to fully lazily load that component.
 
@@ -142,7 +142,7 @@ So then why are we talking about `React.lazy`?
 
 One main drawback of `react-loadable` is that it works on a per-component basis. What I mean by that is for every individual component that you may want to lazily load you have to define its own discrete loading state. Sure you can use a common component so that all your loading states look the same but that's the issue - you're going to see a loading state for every individual component that is lazily loading.
 
-So if I had multiple lazily loaded components it's possible I may say three, or four, or nine-thousand spinners on my page before all those extra JS bundles are downloaded, parsed, and executed.
+So if I had multiple lazily loaded components it's possible I may see three, or four, or nine-thousand spinners on my page before all those extra JS bundles are downloaded, parsed, and executed.
 
 That's not the best user experience.
 
@@ -200,6 +200,10 @@ function App() {
 }
 
 // AnotherLazyComponent.js (imagine in another file)
+const AndYetAnotherLazyComponent = React.lazy(() =>
+  import('./AndYetAnotherLazyComponent')
+);
+
 function AnotherLazyComponent() {
   return (
     <div>
@@ -239,7 +243,7 @@ In this example we've broken up our fallback handling into two separate `Susepen
 
 What this also means, which is even more powerful and exciting, is if `AnotherLazyComponent` takes a long time to load it will no longer affect the rest of the components being rendered. We've essentially cordoned off `AnotherLazyComponent` and all its children and prevented its lagginess and supreme laziness from slowing down the rest of our application.
 
-React will show "Sorry for our laziness" until all its children have loaded and rendered, but while that is going on it will show `Description` if it is loaded and rendered.
+React will show "Sorry for our laziness" until `AnotherLazyComponent` and its children have loaded and rendered, but React will show `Description` as soon as it is loaded and rendered - and _not wait for `AnotherLazyComponent`_.
 
 Compare this to the previous example without the second `Suspense` component. In that scenario React would have waited for **every** lazily loaded child component to load and render before showing anything.
 
