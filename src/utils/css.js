@@ -18,9 +18,23 @@ export const color = {
   titleLighter: lighten(0.4, '#212121'),
 };
 
+// videoWrapper
+// Hack from https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
 export function setupGlobalStyles() {
   injectGlobal`
-
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
   `;
 }
 

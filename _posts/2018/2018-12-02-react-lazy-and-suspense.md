@@ -15,7 +15,9 @@ So back to the topic at hand: `React.lazy` lets you lazily load components via c
 
 And before I delve into lines and lines of text, let me give you the fun option of watching me teach you in video form. I'm entertaining, educational, and above all else it keeps with the spirit of this topic. You can be lazy and rest your mind and let me dance around your computer screen in video form.
 
+<div class="videoWrapper">
 <iframe width="560" height="315" src="//www.youtube.com/embed/SGSAPfjOHBM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 # Code-splitting
 

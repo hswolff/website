@@ -101,11 +101,17 @@ And in fact, if you're tired of having to read words on a page, you can even go 
 
 I have three videos that give you a great introduction to learning about Hooks.
 
+<div class="videoWrapper">
 <iframe width="560" height="315" src="//www.youtube.com/embed/jd8R0a2Ur8Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
+<div class="videoWrapper">
 <iframe width="560" height="315" src="//www.youtube.com/embed/fnT5b2u1PHE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
+<div class="videoWrapper">
 <iframe width="560" height="315" src="//www.youtube.com/embed/YKmiLcXiMMo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 React Hooks are a set of primitive APIs that allow you to, uh, _hook into_ React from your Function Component.
 
