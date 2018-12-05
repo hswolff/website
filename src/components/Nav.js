@@ -17,6 +17,7 @@ import {
 } from 'react-icons/fa';
 import { color, mediaQueries } from '../utils/css';
 import styled from 'react-emotion';
+import { darken } from 'polished';
 
 export default () => (
   <nav
@@ -83,56 +84,56 @@ export default () => (
       `}
     >
       <NavLink to="/blog/page/1/">
-        <FaAlignJustify color="black" /> Blog
+        <FaAlignJustify /> Blog
       </NavLink>
       <SubNavLinks>
         <NavLink href="http://feeds.feedburner.com/harrywolff/zOZJ">
-          <FaRss color="black" /> RSS
+          <FaRss /> RSS
         </NavLink>
         {/* <NavLink to="/blog/category/code/">
-          <FaCircle size="0.5rem" color="black" />
+          <FaCircle size="0.5rem" />
           Code
         </NavLink>
         <NavLink to="/blog/category/career/">
-          <FaCircle size="0.5rem" color="black" />
+          <FaCircle size="0.5rem" />
           Career
         </NavLink>
         <NavLink to="/blog/category/personal/">
-          <FaCircle size="0.5rem" color="black" />
+          <FaCircle size="0.5rem" />
           Personal
         </NavLink>
         <NavLink to="/blog/tags/">Tags</NavLink> */}
         <NavLink to="/blog/archive/">
-          <FaBox color="black" /> Archive
+          <FaBox /> Archive
         </NavLink>
       </SubNavLinks>
       <NavLink to="/projects/">
-        <FaToolbox color="black" />
+        <FaToolbox />
         Projects
       </NavLink>
       <SubNavLinks>
         <NavLink href="https://www.youtube.com/user/hswolff">
-          <FaYoutube color="black" /> YouTube
+          <FaYoutube /> YouTube
         </NavLink>
         <NavLink href="https://theconsolelog.com/">
-          <FaPodcast color="black" /> Podcast
+          <FaPodcast /> Podcast
         </NavLink>
         <NavLink href="https://github.com/hswolff">
-          <FaGithub color="black" /> Open Source
+          <FaGithub /> Open Source
         </NavLink>
       </SubNavLinks>
       <NavLink to="/about/">
-        <FaUser color="black" /> About
+        <FaUser /> About
       </NavLink>
       <SubNavLinks>
         <NavLink to="/about/contact-me/">
-          <FaEnvelope color="black" /> Contact Me
+          <FaEnvelope /> Contact Me
         </NavLink>
         <NavLink to="/about/talks/">
-          <FaMicrophone color="black" /> Talks
+          <FaMicrophone /> Talks
         </NavLink>
         <NavLink href="https://twitter.com/hswolff">
-          <FaTwitter color="black" /> @hswolff
+          <FaTwitter /> @hswolff
         </NavLink>
       </SubNavLinks>
       <NavLink
@@ -142,7 +143,7 @@ export default () => (
           margin-top: 1.5rem;
         `}
       >
-        <FaCode color="black" /> Source
+        <FaCode /> Source
       </NavLink>
     </div>
   </nav>
@@ -153,8 +154,12 @@ const NavLink = props => {
     ...props,
     className: cx(
       css`
-        color: ${color.titleLighter};
-        transition: color ease 0.3s;
+        &,
+        svg {
+          color: ${color.titleLighter};
+          transition: color ease 0.3s;
+        }
+
         box-shadow: none;
         margin: 0.2rem 0;
         font-size: 0.9rem;
@@ -169,8 +174,10 @@ const NavLink = props => {
         }
 
         &:hover {
-          opacity: 0.5;
-          text-decoration: underline;
+          &,
+          svg {
+            color: ${darken(0.8, color.titleLighter)};
+          }
         }
       `,
       props.className
