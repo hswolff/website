@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { injectGlobal } from 'emotion';
 import Layout from '../components/Layout';
 import BlogListItem from '../components/BlogListItem';
 import Disqus from '../components/Disqus';
@@ -21,6 +20,9 @@ export default function PostTemplate({ data: { markdownRemark } }) {
       <div
         css={`
           margin-top: 20px;
+          .anchor {
+            box-shadow: none;
+          }
         `}
         className="blog-post-content"
         dangerouslySetInnerHTML={{ __html: html }}
@@ -39,10 +41,4 @@ export const pageQuery = graphql`
       html
     }
   }
-`;
-
-injectGlobal`
-.anchor {
-  box-shadow: none;
-}
 `;

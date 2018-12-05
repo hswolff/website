@@ -26,7 +26,8 @@ export function setupGlobalStyles() {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
-	height: 0;
+  height: 0;
+  margin: 20px 0;
 }
 .videoWrapper iframe {
 	position: absolute;
