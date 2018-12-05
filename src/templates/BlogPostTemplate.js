@@ -4,6 +4,8 @@ import Layout from '../components/Layout';
 import BlogListItem from '../components/BlogListItem';
 import Disqus from '../components/Disqus';
 import SEO from '../components/SEO';
+import Newsletter from '../components/Newsletter';
+import { css } from 'emotion';
 
 export default function PostTemplate({ data: { markdownRemark } }) {
   const {
@@ -17,6 +19,12 @@ export default function PostTemplate({ data: { markdownRemark } }) {
     <Layout>
       <SEO title={title} description={excerpt} postSlug={url} isBlogPost />
       <BlogListItem asPage {...markdownRemark} />
+      <Newsletter
+        className={css`
+          margin: 20px 0;
+        `}
+      />
+
       <div
         css={`
           margin-top: 20px;
