@@ -25,7 +25,7 @@ If you're interested in watching this in video form I got you covered! Check out
 
 # January
 
-#### [Prettier 1.10](https://prettier.io/blog/2018/01/10/1.10.0.html)
+### [Prettier 1.10](https://prettier.io/blog/2018/01/10/1.10.0.html)
 
 Prettier, everyone's favorite JavaScript code formatter, started the year with their 1.10 release. This release introduced the Prettier plugin API allowing 3rd party devs to extend the functionality of Prettier.
 
