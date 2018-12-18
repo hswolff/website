@@ -209,11 +209,11 @@ Another popular CSS-in-JS library. One of the fastest and smallest around. Did a
 
 And TypeScript ends the year at 3.2. Again, slow and steady wins the race and TypeScript nails that to a T.
 
-# [Flutter 1.0: Google’s Portable UI Toolkit](https://developers.googleblog.com/2018/12/flutter-10-googles-portable-ui-toolkit.html)
+### [Flutter 1.0: Google’s Portable UI Toolkit](https://developers.googleblog.com/2018/12/flutter-10-googles-portable-ui-toolkit.html)
 
 Essentialy Google's answer to React Native. It'll be interesting to see how this grows in popularity over the upcoming months.
 
-# [WordPress 5.0 “Bebo”](https://wordpress.org/news/2018/12/bebo/)
+### [WordPress 5.0 “Bebo”](https://wordpress.org/news/2018/12/bebo/)
 
 Why's this here? Well WordPress rewrote their editor entirely in React. A big bet on a bold future. Excited to play around with it and see how WordPress continues its foray into more usages of JavaScript.
 
