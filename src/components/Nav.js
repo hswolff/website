@@ -81,6 +81,7 @@ export default () => (
         display: flex;
         flex-direction: column;
         margin-top: 20px;
+        font-size: 0.9rem;
       `}
     >
       <NavLink to="/blog/page/1/">
@@ -136,6 +137,38 @@ export default () => (
           <FaTwitter /> @hswolff
         </NavLink>
       </SubNavLinks>
+      <div
+        css={`
+          margin: 2rem 0 1.5rem;
+          font-size: 0.8rem;
+          p {
+            margin: 0;
+          }
+        `}
+      >
+        <p>Want to stay updated?</p>
+        <p>Join my newsletter!</p>
+        <form
+          action="https://tinyletter.com/hswolff"
+          method="post"
+          target="popupwindow"
+          onSubmit="window.open('https://tinyletter.com/hswolff', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+        >
+          <div css={''}>
+            <input
+              type="text"
+              name="email"
+              id="tlemail"
+              placeholder="Email address"
+              css={`
+                margin-bottom: 5px;
+              `}
+            />
+            <input type="hidden" defaultValue={1} name="embed" />
+            <button type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
       <NavLink
         href="https://github.com/hswolff/website"
         className={css`
@@ -162,7 +195,6 @@ const NavLink = props => {
 
         box-shadow: none;
         margin: 0.2rem 0;
-        font-size: 0.9rem;
 
         display: flex;
         flex-direction: row;

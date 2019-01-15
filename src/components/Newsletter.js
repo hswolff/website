@@ -44,7 +44,7 @@ export default function Newsletter({ className }) {
             `}
           />
           <input type="hidden" defaultValue={1} name="embed" />
-          <input type="submit" defaultValue="Subscribe" />
+          <button type="submit">Subscribe</button>
         </div>
       </form>
     </div>
