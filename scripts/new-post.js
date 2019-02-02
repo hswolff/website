@@ -48,7 +48,6 @@ slug: ${slug}
 date: ${date}
 category: ${category}
 tags:
-  - music
 ---
 `
   );
