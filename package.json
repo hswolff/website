@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "new": "node ./scripts/new-post.js",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "lint": "eslint ."
