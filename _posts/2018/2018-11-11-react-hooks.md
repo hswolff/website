@@ -13,10 +13,6 @@ Sorry, had to yell that a few times to get it out of my system.
 
 I definitely find React Hooks to be one of the most exciting new features that has hit React in a long time. I don't think I've been this excited about a new feature since React Fragments and that was way back in the initial React v16.0.0 release..._last year_. So I guess that means I haven't been excited about React for an entire year? That's not true, but if it gets you to read the rest of this post then let's say it is.
 
-Before we move on to talking about what are React Hooks and why you should be as excited as I am I need to give you a friendly disclaimer. _React Hooks is currently an experimental proposal and you can find the canonical documentation for the entire feature on the [official React docs](https://reactjs.org/docs/hooks-intro.html)_. The React core team is soliciting feedback on their initial proposal and nothing is set in stone until it is!
-
-So, with that out of the way, let's get excited (but not too excited, cuz things can still change, and I don't want to set you up for dissapointment later if it turns out React Hooks was a bad idea and I wasted your time and mine by talking about a feature that will never see its way to production even though Facebook is currently using React Hooks in production but that doesn't mean you should use it in production yet. If you read that entire sentence in one breath, congrats, it's how I imagined saying it in my head.)
-
 # What is React Hooks?
 
 Let's steal from the official docs as they say it best:
@@ -297,9 +293,7 @@ Funny how things change.
 
 # When can I use Hooks?
 
-Well, they're currently released in React `v16.7.0-alpha`...so not yet. If you want to play around with them then install that version of React and React DOM: `npm install --save react@v16.7.0-alpha react-dom@v16.7.0-alpha` and you'll be on your merry way.
-
-The React team is getting feedback from the community so far on the design and after incorporating any changes that they find make Hooks better I do expect it to be included in the final version of `16.7.0`. When will that be final? Sometime in the future. I wish I knew. I bet the React core team wish they knew as well.
+Today! They are officially released in React `v16.8.0`. If you want to play around with them then install that version of React and React DOM: `npm install --save react@v16.8.0 react-dom@v16.8.0` and you'll be on your merry way.
 
 # Conclusion
 
