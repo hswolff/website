@@ -1,6 +1,6 @@
 ---
-title: Getting Started with TypeScript
-slug: getting-started-with-typescript
+title: Setting Up TypeScript
+slug: setting-up-typescript
 date: 2019-03-10
 category: code
 tags:
