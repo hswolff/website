@@ -14,6 +14,7 @@ import {
   FaAlignJustify,
   FaBox,
   FaCode,
+  FaStar,
 } from 'react-icons/fa';
 import { color, mediaQueries } from '../utils/css';
 import styled from 'react-emotion';
@@ -121,6 +122,9 @@ export default () => (
         </NavLink>
         <NavLink href="https://github.com/hswolff">
           <FaGithub /> Open Source
+        </NavLink>
+        <NavLink href="https://www.patreon.com/hswolff">
+          <FaStar /> Patreon
         </NavLink>
       </SubNavLinks>
       <NavLink to="/about/">
