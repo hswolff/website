@@ -28,7 +28,7 @@ const IndexPage = props => {
         news from the past week and what it means for you.
       </p>
       <p>
-        I also <Link to="/blog/">blog</Link>! Have a look at my latest posts:
+        I also <Link to="/blog/">blog</Link>! Have a look at my latest posts 👇
       </p>
       {edges.map(({ node }) => (
         <BlogListItem key={node.fileAbsolutePath} {...node} />
