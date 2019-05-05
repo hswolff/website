@@ -24,7 +24,7 @@ export const color = {
 export const globalStyles = css`
   .videoWrapper {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 50%;
     padding-top: 25px;
     height: 0;
     margin: 20px 0;
