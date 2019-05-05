@@ -16,7 +16,7 @@ import {
   FaCode,
   FaStar,
 } from 'react-icons/fa';
-import { color, mediaQueries } from '../utils/css';
+import { color, mediaQueries, mq } from '../utils/css';
 import styled from 'react-emotion';
 import { darken } from 'polished';
 
@@ -140,15 +140,27 @@ export default () => (
         <NavLink href="https://twitter.com/hswolff">
           <FaTwitter /> @hswolff
         </NavLink>
+        <NavLink href="https://github.com/hswolff/website">
+          <FaCode /> Source
+        </NavLink>
       </SubNavLinks>
       <div
-        css={`
-          margin: 2rem 0 1.5rem;
-          font-size: 0.8rem;
-          p {
-            margin: 0;
-          }
-        `}
+        css={cx(
+          css`
+            margin: 2rem 0 1.5rem;
+            font-size: 0.8rem;
+            p {
+              margin: 0;
+            }
+          `,
+          css(
+            mq({
+              '&, input': {
+                textAlign: ['left', 'center'],
+              },
+            })
+          )
+        )}
       >
         <p>Want to stay updated?</p>
         <p>Join my newsletter!</p>
@@ -156,9 +168,20 @@ export default () => (
           action="https://tinyletter.com/hswolff"
           method="post"
           target="popupwindow"
-          onSubmit="window.open('https://tinyletter.com/hswolff', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+          onSubmit={() => {
+            window.open(
+              'https://tinyletter.com/hswolff',
+              'popupwindow',
+              'scrollbars=yes,width=800,height=600'
+            );
+          }}
         >
-          <div css={''}>
+          <div
+            css={cx(`
+              display: flex;
+              flex-direction: column;
+            `)}
+          >
             <input
               type="text"
               name="email"
@@ -173,15 +196,6 @@ export default () => (
           </div>
         </form>
       </div>
-      <NavLink
-        href="https://github.com/hswolff/website"
-        className={css`
-          font-size: 0.7rem;
-          margin-top: 1.5rem;
-        `}
-      >
-        <FaCode /> Source
-      </NavLink>
     </div>
   </nav>
 );
@@ -202,7 +216,6 @@ const NavLink = props => {
 
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
         align-items: center;
 
         svg {
@@ -216,13 +229,20 @@ const NavLink = props => {
           }
         }
       `,
+      css(
+        mq({
+          justifyContent: ['flex-start', 'center'],
+        })
+      ),
       props.className
     ),
   });
 };
 
 const SubNavLinks = styled('div')`
-  margin-left: 10px;
+  ${mq({
+    marginLeft: ['10px', 0],
+  })}
   a {
     font-size: 0.8rem;
   }

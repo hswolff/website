@@ -1,4 +1,5 @@
 import { css, injectGlobal } from 'emotion';
+import facepaint from 'facepaint';
 import { darken, lighten } from 'polished';
 
 // https://coolors.co/04080f-507dbc-a1c6ea-bbd1ea-dae3e5
@@ -48,6 +49,13 @@ const breakpoints = {
   // String values will be used as is
   phone: 'only screen and (max-width: 500px)',
 };
+
+export const mq = facepaint([
+  `@media ${breakpoints.phone}`,
+  ...Object.keys(breakpoints)
+    .filter(key => key !== 'phone')
+    .map(key => `@media (min-width: ${breakpoints[key]}px`),
+]);
 
 export const variable = {
   content: 720,

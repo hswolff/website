@@ -24,7 +24,13 @@ export default function Newsletter({ className }) {
         action="https://tinyletter.com/hswolff"
         method="post"
         target="popupwindow"
-        onSubmit="window.open('https://tinyletter.com/hswolff', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"
+        onSubmit={() => {
+          window.open(
+            'https://tinyletter.com/hswolff',
+            'popupwindow',
+            'scrollbars=yes,width=800,height=600'
+          );
+        }}
       >
         {/* <p>
           <label htmlFor="tlemail">Enter your email address</label>
