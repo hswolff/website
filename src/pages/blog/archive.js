@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import { Link, graphql } from 'gatsby';
+import { css } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { DateTime } from 'luxon';
 import Layout from '../../components/Layout';
@@ -26,7 +27,7 @@ export default class BlogArchive extends Component {
         {_.map(years, year => (
           <div key={year}>
             <h2
-              css={`
+              css={css`
                 cursor: pointer;
                 opacity: ${this.state[year] ? '1' : '0.6'};
                 transition: ease-in-out 0.2s opacity;

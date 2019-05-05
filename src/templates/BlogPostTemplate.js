@@ -5,7 +5,7 @@ import BlogListItem from '../components/BlogListItem';
 import Disqus from '../components/Disqus';
 import SEO from '../components/SEO';
 import Newsletter from '../components/Newsletter';
-import { css } from 'emotion';
+import { css } from '@emotion/core';
 
 export default function PostTemplate({ data: { markdownRemark } }) {
   const {
@@ -26,13 +26,15 @@ export default function PostTemplate({ data: { markdownRemark } }) {
       />
 
       <div
-        css={`
-          margin-top: 20px;
-          .anchor {
-            box-shadow: none;
-          }
-        `}
         className="blog-post-content"
+        css={[
+          css`
+            margin-top: 20px;
+            .anchor {
+              box-shadow: none;
+            }
+          `,
+        ]}
         dangerouslySetInnerHTML={{ __html: html }}
       />
 

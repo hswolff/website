@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { css } from '@emotion/core';
 import Layout from '../components/Layout';
 
 export default function AboutPage() {
@@ -28,7 +29,7 @@ export default function AboutPage() {
         Such as:
       </p>
       <div
-        css={`
+        css={css`
           a {
             box-shadow: none;
             & + a {

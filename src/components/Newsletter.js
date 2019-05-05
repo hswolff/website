@@ -1,18 +1,20 @@
 import React from 'react';
 import { color, mq } from '../utils/css';
-import { css, cx } from 'emotion';
+import { css } from '@emotion/core';
 
 export default function Newsletter({ className }) {
   return (
     <div
-      className={className}
-      css={`
-        border-width: 1px;
-        border-style: solid;
-        border-color: ${color.titleLighter};
-        padding: 5px 10px;
-        border-radius: 4px;
-      `}
+      css={[
+        css`
+          border-width: 1px;
+          border-style: solid;
+          border-color: ${color.titleLighter};
+          padding: 5px 10px;
+          border-radius: 4px;
+        `,
+        className,
+      ]}
     >
       <div>
         <p>I have a newsletter! ✍</p>
@@ -34,7 +36,7 @@ export default function Newsletter({ className }) {
         }}
       >
         <div
-          css={cx(
+          css={[
             css`
               display: flex;
             `,
@@ -42,15 +44,15 @@ export default function Newsletter({ className }) {
               mq({
                 flexDirection: ['row', 'column'],
               })
-            )
-          )}
+            ),
+          ]}
         >
           <input
             type="text"
             name="email"
             id="tlemail"
             placeholder="Email address"
-            css={`
+            css={css`
               margin-right: 20px;
             `}
           />

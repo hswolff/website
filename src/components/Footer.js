@@ -1,19 +1,20 @@
 import React from 'react';
 import { mainContent, color } from '../utils/css';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import { Link } from '@reach/router';
 
 export default function Footer() {
   return (
     <footer
-      css={`
+      css={css`
         padding-top: 1.45rem;
         text-align: center;
         border-top: 1px solid ${color.divider};
       `}
     >
       <div
-        css={`
+        css={css`
           ${mainContent};
         `}
       >

@@ -3,19 +3,18 @@ import React from 'react';
 import 'prismjs/themes/prism.css';
 
 import '../utils/analytics';
-import { setupGlobalStyles, mediaQueries, variable } from '../utils/css';
+import { css, Global } from '@emotion/core';
+import { globalStyles, mediaQueries, variable } from '../utils/css';
 import Nav from './Nav';
 import Footer from './Footer';
-import { css } from 'emotion';
 import SEO from './SEO';
-
-setupGlobalStyles();
 
 const Layout = ({ children }) => (
   <React.Fragment>
+    <Global styles={globalStyles} />
     <SEO />
     <div
-      css={`
+      css={css`
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
@@ -37,13 +36,13 @@ const Layout = ({ children }) => (
     >
       <Nav />
       <section
-        css={`
+        css={css`
           flex: 1 0 auto;
           max-width: ${variable.content}px;
         `}
       >
         <main
-          css={`
+          css={css`
             h1 {
               margin-top: 0;
             }

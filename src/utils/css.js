@@ -1,4 +1,4 @@
-import { css, injectGlobal } from 'emotion';
+import { css } from '@emotion/core';
 import facepaint from 'facepaint';
 import { darken, lighten } from 'polished';
 
@@ -21,24 +21,22 @@ export const color = {
 
 // videoWrapper
 // Hack from https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
-export function setupGlobalStyles() {
-  injectGlobal`
-.videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-  height: 0;
-  margin: 20px 0;
-}
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-  `;
-}
+export const globalStyles = css`
+  .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin: 20px 0;
+  }
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`;
 
 const breakpoints = {
   // Numerical values will result in a min-width query

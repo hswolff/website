@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import { DateTime } from 'luxon';
 import { lighten } from 'polished';
 import { color, mediaQueries } from '../utils/css';
@@ -15,7 +16,7 @@ export default function BlogListItem(props) {
   const Title = asPage ? BaseTitle.withComponent('h1') : BaseTitle;
   return (
     <div
-      css={`
+      css={css`
         padding: ${asPage ? 0 : '40px'} 0;
         opacity: 0.9;
         transition: opacity 0.1s ease-in-out;
@@ -32,7 +33,7 @@ export default function BlogListItem(props) {
       </Title>
       {!asPage && (
         <div
-          css={`
+          css={css`
             margin: 10px 0;
           `}
         >
@@ -40,7 +41,7 @@ export default function BlogListItem(props) {
         </div>
       )}
       <div
-        css={`
+        css={css`
           display: flex;
           justify-content: flex-start;
           align-items: baseline;
@@ -114,7 +115,7 @@ const FooterLinks = styled('div')`
 
 const FooterSeparator = () => (
   <div
-    css={`
+    css={css`
       padding: 0 10px;
     `}
   >

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import Helmet from 'react-helmet';
 import { color } from '../utils/css';
 import Layout from '../components/Layout';
@@ -49,8 +50,8 @@ const BlogListNavigation = ({
   className,
 }) => (
   <div
-    className={className}
-    css={`
+    css={[
+      css`
       margin: 40px 0;
       display: flex;
       justify-content: space-between;
@@ -58,7 +59,9 @@ const BlogListNavigation = ({
       font-size: 80%;
       &, a {
         color: ${color.titleLighter};
-    `}
+    `,
+      className,
+    ]}
   >
     <NavButton style={{ visibility: isFirstPage ? 'hidden' : 'visible' }}>
       <NavLink

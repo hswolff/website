@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { css, cx } from 'emotion';
+import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 import {
   FaTwitter,
   FaRss,
@@ -17,12 +18,11 @@ import {
   FaStar,
 } from 'react-icons/fa';
 import { color, mediaQueries, mq } from '../utils/css';
-import styled from 'react-emotion';
 import { darken } from 'polished';
 
 export default () => (
   <nav
-    css={`
+    css={css`
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -33,14 +33,14 @@ export default () => (
   >
     <Link
       to="/"
-      css={`
+      css={css`
         display: block;
         box-shadow: none;
       `}
     >
       <img
         src="/images/profile.jpg"
-        css={`
+        css={css`
           display: block;
           height: 100px;
           width: auto;
@@ -50,7 +50,7 @@ export default () => (
       />
     </Link>
     <h1
-      css={`
+      css={css`
         margin: 1.2rem 0 0 0;
         font-size: 1.5rem;
       `}
@@ -69,7 +69,7 @@ export default () => (
       </Link>
     </h1>
     <div
-      css={`
+      css={css`
         margin: 0;
         font-size: 0.8rem;
         color: ${color.titleLighter};
@@ -78,7 +78,7 @@ export default () => (
       You can&apos;t escape my laugh.
     </div>
     <div
-      css={`
+      css={css`
         display: flex;
         flex-direction: column;
         margin-top: 20px;
@@ -89,9 +89,9 @@ export default () => (
         <FaAlignJustify /> Blog
       </NavLink>
       <SubNavLinks>
-        <NavLink href="http://feeds.feedburner.com/harrywolff/zOZJ">
+        <NavLinkAnchor href="http://feeds.feedburner.com/harrywolff/zOZJ">
           <FaRss /> RSS
-        </NavLink>
+        </NavLinkAnchor>
         {/* <NavLink to="/blog/category/code/">
           <FaCircle size="0.5rem" />
           Code
@@ -114,18 +114,18 @@ export default () => (
         Projects
       </NavLink>
       <SubNavLinks>
-        <NavLink href="https://www.youtube.com/user/hswolff">
+        <NavLinkAnchor href="https://www.youtube.com/user/hswolff">
           <FaYoutube /> YouTube
-        </NavLink>
-        <NavLink href="https://theconsolelog.com/">
+        </NavLinkAnchor>
+        <NavLinkAnchor href="https://theconsolelog.com/">
           <FaPodcast /> Podcast
-        </NavLink>
-        <NavLink href="https://github.com/hswolff">
+        </NavLinkAnchor>
+        <NavLinkAnchor href="https://github.com/hswolff">
           <FaGithub /> Open Source
-        </NavLink>
-        <NavLink href="https://www.patreon.com/hswolff">
+        </NavLinkAnchor>
+        <NavLinkAnchor href="https://www.patreon.com/hswolff">
           <FaStar /> Patreon
-        </NavLink>
+        </NavLinkAnchor>
       </SubNavLinks>
       <NavLink to="/about/">
         <FaUser /> About
@@ -137,15 +137,15 @@ export default () => (
         <NavLink to="/about/talks/">
           <FaMicrophone /> Talks
         </NavLink>
-        <NavLink href="https://twitter.com/hswolff">
+        <NavLinkAnchor href="https://twitter.com/hswolff">
           <FaTwitter /> @hswolff
-        </NavLink>
-        <NavLink href="https://github.com/hswolff/website">
+        </NavLinkAnchor>
+        <NavLinkAnchor href="https://github.com/hswolff/website">
           <FaCode /> Source
-        </NavLink>
+        </NavLinkAnchor>
       </SubNavLinks>
       <div
-        css={cx(
+        css={[
           css`
             margin: 2rem 0 1.5rem;
             font-size: 0.8rem;
@@ -159,8 +159,8 @@ export default () => (
                 textAlign: ['left', 'center'],
               },
             })
-          )
-        )}
+          ),
+        ]}
       >
         <p>Want to stay updated?</p>
         <p>Join my newsletter!</p>
@@ -177,17 +177,17 @@ export default () => (
           }}
         >
           <div
-            css={cx(`
+            css={css`
               display: flex;
               flex-direction: column;
-            `)}
+            `}
           >
             <input
               type="text"
               name="email"
               id="tlemail"
               placeholder="Email address"
-              css={`
+              css={css`
                 margin-bottom: 5px;
               `}
             />
@@ -200,44 +200,36 @@ export default () => (
   </nav>
 );
 
-const NavLink = props => {
-  return React.createElement(props.href ? 'a' : Link, {
-    ...props,
-    className: cx(
-      css`
-        &,
-        svg {
-          color: ${color.titleLighter};
-          transition: color ease 0.3s;
-        }
+const NavLink = styled(Link)`
+  &,
+  svg {
+    color: ${color.titleLighter};
+    transition: color ease 0.3s;
+  }
 
-        box-shadow: none;
-        margin: 0.2rem 0;
+  box-shadow: none;
+  margin: 0.2rem 0;
 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
-        svg {
-          margin-right: 5px;
-        }
+  svg {
+    margin-right: 5px;
+  }
 
-        &:hover {
-          &,
-          svg {
-            color: ${darken(0.8, color.titleLighter)};
-          }
-        }
-      `,
-      css(
-        mq({
-          justifyContent: ['flex-start', 'center'],
-        })
-      ),
-      props.className
-    ),
-  });
-};
+  &:hover {
+    &,
+    svg {
+      color: ${darken(0.8, color.titleLighter)};
+    }
+  }
+  ${mq({
+    justifyContent: ['flex-start', 'center'],
+  })}
+`;
+
+const NavLinkAnchor = NavLink.withComponent('a');
 
 const SubNavLinks = styled('div')`
   ${mq({

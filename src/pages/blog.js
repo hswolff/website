@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
+import { css } from '@emotion/core';
 import _ from 'lodash';
 import { DateTime } from 'luxon';
 import Layout from '../components/Layout';
@@ -26,11 +27,11 @@ const BlogPage = ({ data }) => {
         </div>
       </div>
 
-      <div className={mainContent} css={{ display: 'none' }}>
+      <div css={[mainContent, { display: 'none' }]}>
         <h3>Categories</h3>
       </div>
       <div
-        css={`
+        css={css`
           display: flex;
           justify-content: space-between;
           display: none;
@@ -39,7 +40,7 @@ const BlogPage = ({ data }) => {
         {['code', 'career', 'personal'].map(category => (
           <div
             key={category}
-            css={`
+            css={css`
               width: 30%;
             `}
           >
