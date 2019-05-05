@@ -1,5 +1,6 @@
 import React from 'react';
-import { color } from '../utils/css';
+import { color, mq } from '../utils/css';
+import { css, cx } from 'emotion';
 
 export default function Newsletter({ className }) {
   return (
@@ -32,13 +33,17 @@ export default function Newsletter({ className }) {
           );
         }}
       >
-        {/* <p>
-          <label htmlFor="tlemail">Enter your email address</label>
-        </p> */}
         <div
-          css={`
-            display: flex;
-          `}
+          css={cx(
+            css`
+              display: flex;
+            `,
+            css(
+              mq({
+                flexDirection: ['row', 'column'],
+              })
+            )
+          )}
         >
           <input
             type="text"
@@ -50,7 +55,16 @@ export default function Newsletter({ className }) {
             `}
           />
           <input type="hidden" defaultValue={1} name="embed" />
-          <button type="submit">Subscribe</button>
+          <button
+            type="submit"
+            css={css(
+              mq({
+                marginTop: [0, '20px'],
+              })
+            )}
+          >
+            Subscribe
+          </button>
         </div>
       </form>
     </div>
