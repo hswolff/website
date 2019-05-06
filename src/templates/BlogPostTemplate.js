@@ -20,7 +20,7 @@ export default function PostTemplate({ data: { markdownRemark } }) {
       <SEO title={title} description={excerpt} postSlug={url} isBlogPost />
       <BlogListItem asPage {...markdownRemark} />
       <Newsletter
-        className={css`
+        css={css`
           margin: 20px 0;
         `}
       />

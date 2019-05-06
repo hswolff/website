@@ -13,8 +13,8 @@ export default function Newsletter({ className }) {
           padding: 5px 10px;
           border-radius: 4px;
         `,
-        className,
       ]}
+      className={className}
     >
       <div>
         <p>I have a newsletter! ✍</p>
