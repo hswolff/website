@@ -125,7 +125,7 @@ What Immer returns then is a new version of your update function that is wrapped
 Taking the example from above
 
 ```js
-function updater(state) {
+function updater(draft) {
   draft.team.teamFoo.matthew = {};
 
   draft.team.newTeam = {
