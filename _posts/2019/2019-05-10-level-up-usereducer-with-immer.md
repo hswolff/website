@@ -9,7 +9,9 @@ tags:
   - immer
 ---
 
-If you're just joining us, this post is an add-on to my [Why I Love useReducer](blog/why-i-love-usereducer/) post. If you haven't read that already, I recommend you take a second and have a peek before you continue reading this post!
+If you're just joining us, this post is an add-on to my [Why I Love useReducer](/blog/why-i-love-usereducer/) post. If you haven't read that already, I recommend you take a second and have a peek before you continue reading this post!
+
+And if you want to skip to the third installment of this trilogy then go ahead and check out [How To useContext With useReducer](/blog/how-to-usecontext-with-usereducer)
 
 So, now that we all agree that `useReducer` is the best thing since the wheel, let's talk about how we can make it even better. I'm talking better than a wheel. Like, individually wrapped slices of cheese better.
 
@@ -66,6 +68,10 @@ See my teach you about using Immer in `useReducer`, rather than you read these w
 <div class="videoWrapper">
 <iframe width="560" height="315" src="//www.youtube.com/embed/PjsGz6sNG3g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+# Source Code
+
+[If you want to jump straight to all the code, it's all available on GitHub.](https://github.com/hswolff/youtube/blob/master/videos/why-i-love-usereducer/src/LoginUseReducerImmer.js)
 
 # Immer
 

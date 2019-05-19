@@ -8,6 +8,11 @@ tags:
   - hooks
 ---
 
+This post is the first of a trilogy. Check out the other two posts as well:
+
+- [Level Up useReducer with Immer](/blog/level-up-usereducer-with-immer/)
+- [How To useContext With useReducer](/blog/how-to-usecontext-with-usereducer/)
+
 I didn't realize until recently how much I loved the [React Hook useReducer](https://reactjs.org/docs/hooks-reference.html#usereducer). It's one of those advanced hooks, and while I read the documentation about it and already have a good amount of experience with [Redux](https://redux.js.org/), it took a little while for me to fully understand just how powerful `useReducer` can make your components.
 
 I made a video about this. To show my love for `useReducer`. I encourage you to take a watch. The first 10 minutes are me setting the scene. Together we're building a pretty generic Login Form, one that has been written countless times. In the first half of the video I make the component using multiple `useState` calls, as I normally would with a React Class Component.
@@ -17,6 +22,8 @@ Then at around the 11 minute mark I start migrating my code to use `useReducer` 
 <div class="videoWrapper">
 <iframe width="560" height="315" src="//www.youtube.com/embed/o-nCM1857AQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+[All source code is available on GitHub.](https://github.com/hswolff/youtube/blob/master/videos/why-i-love-usereducer/src/LoginUseReducer.js)
 
 # Why do I love useReducer?
 
