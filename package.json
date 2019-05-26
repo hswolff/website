@@ -30,7 +30,7 @@
     "gatsby-transformer-remark": "^2.3.12",
     "lodash": "^4.17.5",
     "luxon": "^1.15.0",
-    "polished": "^2.3.3",
+    "polished": "^3.4.0",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -38,7 +38,7 @@
     "react-icons": "^3.7.0",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
-    "typography-theme-parnassus": "^0.15.10"
+    "typography-theme-parnassus": "^0.16.19"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
