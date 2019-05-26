@@ -36,6 +36,15 @@ exports.onCreateNode = function({ node, actions }) {
       name: 'categoryUrl',
       value: _.get(categories, [node.frontmatter.category, 'url']),
     });
+
+    createNodeField({
+      name: 'editLink',
+      node,
+      value: `https://github.com/hswolff/website/edit/master${node.fileAbsolutePath.replace(
+        __dirname,
+        ''
+      )}`,
+    });
   }
 };
 

@@ -12,7 +12,7 @@ export default function PostTemplate({ data: { markdownRemark } }) {
     html,
     excerpt,
     frontmatter: { title, slug },
-    fields: { url },
+    fields: { url, editLink },
   } = markdownRemark;
 
   return (
@@ -39,6 +39,14 @@ export default function PostTemplate({ data: { markdownRemark } }) {
       />
 
       <hr />
+      <div
+        css={css`
+          margin: 20px 0 50px;
+          text-align: center;
+        `}
+      >
+        <a href={editLink}>Edit post on GitHub</a>
+      </div>
       <Disqus url={url} identifier={slug} title={title} />
     </Layout>
   );
@@ -49,6 +57,9 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       ...BlogListItemFragment
       html
+      fields {
+        editLink
+      }
     }
   }
 `;
