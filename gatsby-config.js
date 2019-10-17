@@ -34,6 +34,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'content',
+        path: path.join(__dirname, 'content'),
+      },
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: ['gatsby-remark-autolink-headers', 'gatsby-remark-prismjs'],
@@ -92,7 +99,7 @@ module.exports = {
             }
           `,
             output: '/rss.xml',
-            title: 'hswolff'
+            title: 'hswolff',
           },
         ],
       },

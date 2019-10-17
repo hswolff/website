@@ -16,6 +16,7 @@ import {
   FaBox,
   FaCode,
   FaStar,
+  FaDesktop,
 } from 'react-icons/fa';
 import { color, mediaQueries, mq } from '../utils/css';
 import { darken } from 'polished';
@@ -136,6 +137,9 @@ export default () => (
         </NavLink>
         <NavLink to="/about/talks/">
           <FaMicrophone /> Talks
+        </NavLink>
+        <NavLink to="/uses/">
+          <FaDesktop /> Uses
         </NavLink>
         <NavLinkAnchor href="https://twitter.com/hswolff">
           <FaTwitter /> @hswolff

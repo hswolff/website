@@ -12,6 +12,7 @@ export default function BlogListItem(props) {
     frontmatter: { title, date, tags, category },
     timeToRead,
     fields,
+    includeMetaInfo = true,
   } = props;
   const Title = asPage ? BaseTitle.withComponent('h1') : BaseTitle;
   return (
@@ -40,42 +41,46 @@ export default function BlogListItem(props) {
           {props.excerpt}
         </div>
       )}
-      <div
-        css={css`
-          display: flex;
-          justify-content: flex-start;
-          align-items: baseline;
-          font-size: 0.82rem;
-          &,
-          a {
-            color: ${lighten(0.3, color.title)};
-          }
-        `}
-      >
-        <FooterItem>{DateTime.fromISO(date).toFormat('LLLL d, y')}</FooterItem>
-        <FooterSeparator />
-        <FooterLinks>
-          {category && (
-            <span key={category}>
-              <Link to={fields.categoryUrl}>{category}</Link>
-            </span>
-          )}
-        </FooterLinks>
-        <FooterSeparator />
-        <FooterLinks>
-          {(tags || []).map((tag, index) => (
-            <span key={tag}>
-              <Link to={fields.tagsUrls[index]}>{tag}</Link>
-              {index + 1 !== tags.length && ', '}
-            </span>
-          ))}
-        </FooterLinks>
-        {tags && <FooterSeparator />}
-        <FooterItem>
-          Read time {timeToRead} minute
-          {timeToRead > 1 && 's'}
-        </FooterItem>
-      </div>
+      {includeMetaInfo && (
+        <div
+          css={css`
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
+            font-size: 0.82rem;
+            &,
+            a {
+              color: ${lighten(0.3, color.title)};
+            }
+          `}
+        >
+          <FooterItem>
+            {DateTime.fromISO(date).toFormat('LLLL d, y')}
+          </FooterItem>
+          <FooterSeparator />
+          <FooterLinks>
+            {category && (
+              <span key={category}>
+                <Link to={fields.categoryUrl}>{category}</Link>
+              </span>
+            )}
+          </FooterLinks>
+          <FooterSeparator />
+          <FooterLinks>
+            {(tags || []).map((tag, index) => (
+              <span key={tag}>
+                <Link to={fields.tagsUrls[index]}>{tag}</Link>
+                {index + 1 !== tags.length && ', '}
+              </span>
+            ))}
+          </FooterLinks>
+          {tags && <FooterSeparator />}
+          <FooterItem>
+            Read time {timeToRead} minute
+            {timeToRead > 1 && 's'}
+          </FooterItem>
+        </div>
+      )}
     </div>
   );
 }
