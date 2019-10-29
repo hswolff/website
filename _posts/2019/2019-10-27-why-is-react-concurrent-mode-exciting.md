@@ -61,6 +61,12 @@ With Concurrent Mode React can start to render my About page **in memory and whi
 
 The user never sees things load incrementally, it just sees a page all at once. It gives a feeling of responsiveness and speed.
 
+Even more exciting is that Concurrent Mode lets you control how the About page is shown.
+
+Let's say the API call is the slowest part of the entire page. Rather than wait for every piece of data to complete we can tell React to render the About page as soon as we load the image. That means we can show the user the page as soon as our most important data is available, and then only show a loading indicator for the tweets section.
+
+Concurrent Mode lets you control what parts of a page are required and what parts can be deferred. As the data requirements for a page grow in complexity Concurrent Mode lets you take back control of how your page is rendered.
+
 This is what is exciting about Concurrent Mode.
 
 ## What else can I do with Concurrent Mode?
