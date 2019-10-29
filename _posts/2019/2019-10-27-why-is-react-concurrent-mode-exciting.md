@@ -106,3 +106,11 @@ Personally I'm looking forward to playing around with Concurrent mode. I love wh
 The ways in which I can create my React apps are now more flexible and expressive. Perhaps even more fun?
 
 It will be very exciting to see how Concurrent Mode evolves over the next couple of months. I can't wait to get involved.
+
+---
+
+## Video
+
+I've made a more in-depth look into what Concurrent Mode is on my YouTube channel. If you want a bit of a deeper dive then have a watch below!
+
+<iframe src="//www.youtube.com/embed/8_ZjNnUqarg" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
