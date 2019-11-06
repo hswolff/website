@@ -155,6 +155,7 @@ function loginReducer(state, action) {
       return {
         ...state,
         isLoggedIn: false,
+        isLoading: false,
       };
     }
     default:
