@@ -29,7 +29,7 @@ These shortcuts help me change the layout of VSCode, which depending upon what I
 
 ### Toggle Side Bar Visibility: Command ⌘ + B
 
-<video autoplay loop>
+<video controls loop>
 <source src="/images/posts/2019/vscode-pro-tricks/toggle-side-bar.mp4" type="video/mp4" />
 </video>
 
@@ -37,7 +37,7 @@ If I need more horizontal real estate this is my go to move. It hides the side b
 
 ### Toggle Bottom Panel: Command ⌘ + J
 
-<video autoplay loop>
+<video controls loop>
 <source src="/images/posts/2019/vscode-pro-tricks/toggle-bottom-panel.mp4" type="video/mp4" />
 </video>
 
@@ -47,7 +47,7 @@ With these two powers combined I get a full screen window without switching to f
 
 ### Open Terminal: Control ⌃ + `
 
-<video autoplay loop>
+<video controls loop>
 <source src="/images/posts/2019/vscode-pro-tricks/open-terminal.mp4" type="video/mp4" />
 </video>
 
@@ -83,7 +83,7 @@ Also you'll look really cool doing this.
 
 ### Select Multiple Words: Command ⌘ + D
 
-<video autoplay loop>
+<video controls loop>
 <source src="/images/posts/2019/vscode-pro-tricks/select-multiple-words.mp4" type="video/mp4" />
 </video>
 
@@ -95,7 +95,7 @@ Even further, once you've expanded your selection to all the places you want, yo
 
 ### Jump over words: Option ⌥
 
-<video autoplay loop>
+<video controls loop>
 <source src="/images/posts/2019/vscode-pro-tricks/jump-over-words.mp4" type="video/mp4" />
 </video>
 
@@ -113,7 +113,7 @@ This is the super power-up combo that makes me feel like a dark wizard, and I lo
 
 ### Move Line Up or Down: Option ⌥ + Up/Down
 
-<video autoplay loop>
+<video controls loop>
 <source src="/images/posts/2019/vscode-pro-tricks/move-line-up-down.mp4" type="video/mp4" />
 </video>
 
@@ -123,7 +123,7 @@ This trick also works if you select multiple lines. If you have any number of li
 
 ### Multiline Selection: Option ⌥ + Shift ⇧ + L
 
-<video autoplay loop>
+<video controls loop>
 <source src="/images/posts/2019/vscode-pro-tricks/multiline-select.mp4" type="video/mp4" />
 </video>
 
@@ -169,7 +169,7 @@ It's a shortcut to learning shortcuts!
 
 ## Easy prototyping
 
-<video autoplay loop>
+<video controls loop>
 <source src="/images/posts/2019/vscode-pro-tricks/fast-prototyping.mp4" type="video/mp4" />
 </video>
 
