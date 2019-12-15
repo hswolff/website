@@ -8,7 +8,7 @@ import {
   FaToolbox,
   FaUser,
   FaYoutube,
-  FaPodcast,
+  FaRegNewspaper,
   FaGithub,
   FaEnvelope,
   FaMicrophone,
@@ -118,8 +118,8 @@ export default () => (
         <NavLinkAnchor href="https://www.youtube.com/user/hswolff">
           <FaYoutube /> YouTube
         </NavLinkAnchor>
-        <NavLinkAnchor href="https://theconsolelog.com/">
-          <FaPodcast /> Podcast
+        <NavLinkAnchor href="https://tinyletter.com/hswolff/">
+          <FaRegNewspaper /> Newsletter
         </NavLinkAnchor>
         <NavLinkAnchor href="https://github.com/hswolff">
           <FaGithub /> Open Source
