@@ -51,8 +51,8 @@ const breakpoints = {
 export const mq = facepaint([
   `@media ${breakpoints.phone}`,
   ...Object.keys(breakpoints)
-    .filter(key => key !== 'phone')
-    .map(key => `@media (min-width: ${breakpoints[key]}px`),
+    .filter((key) => key !== 'phone')
+    .map((key) => `@media (min-width: ${breakpoints[key]}px`),
 ]);
 
 export const variable = {
@@ -74,7 +74,7 @@ export const mediaQueries = Object.keys(breakpoints).reduce(
     const bpIsString = typeof bpValue === 'string';
     let prefix = bpIsString ? '' : 'min-width:';
     let suffix = bpIsString ? '' : 'px';
-    accumulator[label] = cls =>
+    accumulator[label] = (cls) =>
       css`
         @media ${bpIsString ? bpValue : `(${prefix + bpValue + suffix})`} {
           ${cls};

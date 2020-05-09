@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import BlogListItem from '../components/BlogListItem';
 
-const IndexPage = props => {
+const IndexPage = (props) => {
   const { allMarkdownRemark } = props.data;
   const { edges } = allMarkdownRemark;
   return (

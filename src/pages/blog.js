@@ -37,7 +37,7 @@ const BlogPage = ({ data }) => {
           display: none;
         `}
       >
-        {['code', 'career', 'personal'].map(category => (
+        {['code', 'career', 'personal'].map((category) => (
           <div
             key={category}
             css={css`

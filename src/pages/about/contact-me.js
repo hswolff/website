@@ -18,16 +18,16 @@ export default function ContactMePage() {
   );
 }
 
-const encode = data => {
+const encode = (data) => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
 };
 
 class ContactForm extends React.Component {
   state = { name: '', email: '', message: '', submitted: false };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     fetch('/?no-cache=1', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -37,12 +37,12 @@ class ContactForm extends React.Component {
       }),
     })
       .then(() => this.setState({ submitted: true }))
-      .catch(error => alert(error));
+      .catch((error) => alert(error));
 
     e.preventDefault();
   };
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     const { name, email, message, submitted } = this.state;

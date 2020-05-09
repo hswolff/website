@@ -6,7 +6,7 @@ function addChartbeat() {
   window._sf_async_config.uid = 47740;
   window._sf_async_config.useCanonical = true;
 
-  (function() {
+  (function () {
     function loadChartbeat() {
       window._sf_endpt = new Date().getTime();
       var e = document.createElement('script');
@@ -23,15 +23,15 @@ function addChartbeat() {
     window.onload =
       typeof window.onload != 'function'
         ? loadChartbeat
-        : function() {
-          try {
-            oldonload();
-          } catch (e) {
+        : function () {
+            try {
+              oldonload();
+            } catch (e) {
+              loadChartbeat();
+              throw e;
+            }
             loadChartbeat();
-            throw e;
-          }
-          loadChartbeat();
-        };
+          };
   })();
 }
 

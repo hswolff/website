@@ -24,7 +24,7 @@ export default class BlogArchive extends Component {
       <Layout>
         <Helmet title="Blog Archive" />
         <h1>Blog Archive</h1>
-        {_.map(years, year => (
+        {_.map(years, (year) => (
           <div key={year}>
             <h2
               css={css`
@@ -35,7 +35,9 @@ export default class BlogArchive extends Component {
                   opacity: 1;
                 }
               `}
-              onClick={() => this.setState(state => ({ [year]: !state[year] }))}
+              onClick={() =>
+                this.setState((state) => ({ [year]: !state[year] }))
+              }
             >
               {year}
             </h2>

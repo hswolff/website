@@ -6,7 +6,7 @@ function maybeLoadDisqusScript(shortname, onLoad) {
     onLoad();
     return;
   }
-  window.disqus_config = function() {};
+  window.disqus_config = function () {};
 
   const script = document.createElement('script');
   script.src = `//${shortname}.disqus.com/embed.js`;
@@ -32,7 +32,7 @@ export default class Disqus extends Component {
       maybeLoadDisqusScript(shortname, () => {
         window.DISQUS.reset({
           reload: true,
-          config: function() {
+          config: function () {
             const { location } = window;
             this.page.url = `${location.protocol}//${urlDomain}${url}`;
             this.page.identifier = identifier;
