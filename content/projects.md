@@ -12,12 +12,14 @@ Right now I'm focusing on growing my collection of [YouTube](https://www.youtube
 
 Most of the content is about JavaScript, unsurprisingly. I strongly believe that any educational video should show both the code and the instructor. Having both in view provides a user with more learning cues, resulting in a higher chance of learning what is being taught.
 
-## [Podcast](https://theconsolelog.com/)
-
-I also created a podcast called [The Console Log](https://theconsolelog.com/). It's a weekly news show about...you guessed it, JavaScript!
-
-Every week my co-hosts and I gather around and talk about the latest news items from the past week. We talk about what they are, what their impact is, and what knowledge you can take back to your daily job.
-
 ## [Open Source](https://github.com/hswolff)
 
 I also love creating open source software on [GitHub](https://github.com/hswolff). You can click through to see some projects I'e created. Hopefully they may be of use to you!
+
+# Unmaintained Projects
+
+## [The Console Log Podcast](https://theconsolelog.com/)
+
+I created a podcast called [The Console Log](https://theconsolelog.com/). It was a weekly news show about...you guessed it, JavaScript!
+
+Every week my co-hosts and I gathered around and talk about the latest news items from the past week. We talk about what they are, what their impact is, and what knowledge you can take back to your daily job.
