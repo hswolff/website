@@ -110,7 +110,7 @@ const state = {
   },
 };
 
-const newState = produce(state, draft => {
+const newState = produce(state, (draft) => {
   draft.team.teamFoo.matthew = {};
 
   draft.team.newTeam = {
@@ -157,7 +157,7 @@ That `curriedUpdater` function is roughly equivalent to:
 
 ```js
 const curriedUpdater = (state, ...args) => {
-  return produce(state, draft => {
+  return produce(state, (draft) => {
     updater(draft, ...args);
   });
 };

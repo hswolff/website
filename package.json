@@ -9,7 +9,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "lint": "eslint .",
-    "format": "prettier src/**/* --write"
+    "format": "prettier . --write"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",

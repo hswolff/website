@@ -103,7 +103,7 @@ Adopts OS X UI standards
 
 ## Cons
 
-Paid, $59 for a license
+Paid, \$59 for a license
 Crowded UI
 Lots of buttons
 

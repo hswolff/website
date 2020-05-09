@@ -93,7 +93,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    LoadDescription.then(Description => {
+    LoadDescription.then((Description) => {
       this.setState({ Description: Description.default });
     });
   }

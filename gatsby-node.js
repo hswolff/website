@@ -12,7 +12,7 @@ _.forEach(categories, (catConfig, category) => {
 
 // Lifecycle methods
 
-exports.onCreateNode = function({ node, actions, getNode }) {
+exports.onCreateNode = function ({ node, actions, getNode }) {
   const { createNodeField } = actions;
 
   if (node.internal.type === 'MarkdownRemark') {
@@ -40,7 +40,7 @@ exports.onCreateNode = function({ node, actions, getNode }) {
       node,
       name: 'tagsUrls',
       value: node.frontmatter.tags
-        ? node.frontmatter.tags.map(tag => `/blog/tag/${tag}/`)
+        ? node.frontmatter.tags.map((tag) => `/blog/tag/${tag}/`)
         : [],
     });
 
@@ -69,14 +69,14 @@ exports.onCreateNode = function({ node, actions, getNode }) {
   }
 };
 
-exports.createPages = async function({ actions, graphql }) {
+exports.createPages = async function ({ actions, graphql }) {
   const results = await Promise.all([
     graphql(getMarkdownQuery({ regex: '/_posts/' })),
     // prettier-ignore
     graphql(getMarkdownQuery({ regex: '/\/content\//' })), // eslint-disable-line no-useless-escape
   ]);
 
-  const error = results.filter(r => r.errors);
+  const error = results.filter((r) => r.errors);
   if (error.length) {
     return Promise.reject(error[0].errors);
   }

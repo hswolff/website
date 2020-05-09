@@ -186,7 +186,7 @@ function MyComponent({ userId }) {
     // This is our effect. It fetches data from the GitHub API
     // and then updates our local state when the Fetch resolves.
     () => {
-      fetchGitHubRepos(userId).then(repos => {
+      fetchGitHubRepos(userId).then((repos) => {
         setRepos(repos);
       });
     },
@@ -200,7 +200,7 @@ function MyComponent({ userId }) {
 
   return (
     <div>
-      {repos.map(repo => (
+      {repos.map((repo) => (
         <div>{repo.name}</div>
       ))}
     </div>
@@ -246,14 +246,11 @@ A Custom Hooks is just a function that starts with `use` and contains other Hook
 function useGitHubRepoAPI(userId) {
   const [repos, setRepos] = useState([]);
 
-  useEffect(
-    () => {
-      fetchGitHubRepos(userId).then(repos => {
-        setRepos(repos);
-      });
-    },
-    [userId]
-  );
+  useEffect(() => {
+    fetchGitHubRepos(userId).then((repos) => {
+      setRepos(repos);
+    });
+  }, [userId]);
 
   return repos;
 }
@@ -263,7 +260,7 @@ function MyComponent({ userId }) {
 
   return (
     <div>
-      {repos.map(repo => (
+      {repos.map((repo) => (
         <div>{repo.name}</div>
       ))}
     </div>

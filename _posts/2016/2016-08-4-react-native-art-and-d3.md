@@ -291,8 +291,8 @@ export function createLineGraph({
     // For every x and y-point in our line shape we are given an item from our
     // array which we pass through our scale function so we map the domain value
     // to the range value.
-    .x(d => scaleX(d.time))
-    .y(d => scaleY(d.temperatureMax));
+    .x((d) => scaleX(d.time))
+    .y((d) => scaleY(d.temperatureMax));
 
   return {
     // Pass in our array of data to our line generator to produce the `d={}`
@@ -420,7 +420,7 @@ class WeatherGraph extends Component {
   }
 
   animate(start) {
-    this.animating = requestAnimationFrame(timestamp => {
+    this.animating = requestAnimationFrame((timestamp) => {
       if (!start) {
         start = timestamp;
       }

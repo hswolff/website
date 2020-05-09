@@ -21,7 +21,7 @@ The first is about removing policies and replacing them with principles:
 >
 > NEW PRINCIPLE: If you would think twice about spending this much from your own account, gut-check it with your manager.
 >
-> “I can't tell you how much pain in my life has come from expense reports,” Curtis says. Airbnb’s old policy was a cumbersome one: Charges big and small required approval before they could be submitted. So Curtis tried replacing it with a principle, simple good judgment, using $500 as a rule of thumb for when to get a gut-check. The result? No increase in discretionary spending (but a whole lot of time saved).
+> “I can't tell you how much pain in my life has come from expense reports,” Curtis says. Airbnb’s old policy was a cumbersome one: Charges big and small required approval before they could be submitted. So Curtis tried replacing it with a principle, simple good judgment, using \$500 as a rule of thumb for when to get a gut-check. The result? No increase in discretionary spending (but a whole lot of time saved).
 
 Rather than create a rule for every type of behavior desired Airbnb created guiding principles that afforded individuals the freedom to use their own judgement and not becoming bogged down by endless rule minutiae.
 

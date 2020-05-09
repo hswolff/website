@@ -13,7 +13,7 @@ function promptForInput(question) {
   });
 
   function prompt(resolve) {
-    rl.question(question, answer => {
+    rl.question(question, (answer) => {
       if (!answer) {
         return prompt(resolve);
       }
