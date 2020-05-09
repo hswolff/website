@@ -1,5 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { css } from '@emotion/core';
 import Layout from '../components/Layout';
 

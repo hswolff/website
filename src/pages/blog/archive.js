@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import { Link, graphql } from 'gatsby';
 import { css } from '@emotion/core';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { DateTime } from 'luxon';
 import Layout from '../../components/Layout';
 
