@@ -11,7 +11,7 @@ export default function PageTemplate({ data: { markdownRemark } }) {
   const {
     html,
     excerpt,
-    frontmatter: { title },
+    frontmatter: { title, includeNewsletter = true, comments = true },
     fields: { url, editLink },
   } = markdownRemark;
 
@@ -19,11 +19,13 @@ export default function PageTemplate({ data: { markdownRemark } }) {
     <Layout>
       <SEO title={title} description={excerpt} postSlug={url} isBlogPost />
       <BlogListItem asPage includeMetaInfo={false} {...markdownRemark} />
-      <Newsletter
-        css={css`
-          margin: 20px 0;
-        `}
-      />
+      {includeNewsletter && (
+        <Newsletter
+          css={css`
+            margin: 20px 0;
+          `}
+        />
+      )}
 
       <div
         className="blog-post-content"
@@ -47,7 +49,7 @@ export default function PageTemplate({ data: { markdownRemark } }) {
       >
         <a href={editLink}>Edit post on GitHub</a>
       </div>
-      <Disqus url={url} identifier={url} title={title} />
+      {comments && <Disqus url={url} identifier={url} title={title} />}
     </Layout>
   );
 }
@@ -59,6 +61,8 @@ export const pageQuery = graphql`
       excerpt(pruneLength: 280)
       frontmatter {
         title
+        comments
+        includeNewsletter
       }
       fields {
         url

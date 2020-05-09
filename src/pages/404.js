@@ -1,9 +1,14 @@
 import React from 'react';
 
 const NotFoundPage = () => (
-  <div>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  <div css={{ margin: '0 auto', width: '400px' }}>
+    <h1>Uh oh.</h1>
+    <p>
+      Whatever you expected to be here is not here and it is so...very....sad.
+    </p>
+    <p>
+      <a href="https://twitter.com/hswolff">Tell me about it?</a>
+    </p>
   </div>
 );
 
