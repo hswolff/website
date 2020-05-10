@@ -44,19 +44,16 @@ const breakpoints = {
   medium: 768,
   large: 992,
   xLarge: 1200,
-  // String values will be used as is
-  phone: 'only screen and (max-width: 500px)',
 };
 
 export const mq = facepaint([
-  `@media ${breakpoints.phone}`,
   ...Object.keys(breakpoints)
     .filter((key) => key !== 'phone')
-    .map((key) => `@media (min-width: ${breakpoints[key]}px`),
+    .map((key) => `@media (min-width: ${breakpoints[key]}px)`),
 ]);
 
 export const variable = {
-  content: 720,
+  content: 960,
 };
 
 export const mainContent = css`
@@ -67,20 +64,3 @@ export const mainContent = css`
     margin-right: 20px;
   }
 `;
-
-export const mediaQueries = Object.keys(breakpoints).reduce(
-  (accumulator, label) => {
-    const bpValue = breakpoints[label];
-    const bpIsString = typeof bpValue === 'string';
-    let prefix = bpIsString ? '' : 'min-width:';
-    let suffix = bpIsString ? '' : 'px';
-    accumulator[label] = (cls) =>
-      css`
-        @media ${bpIsString ? bpValue : `(${prefix + bpValue + suffix})`} {
-          ${cls};
-        }
-      `;
-    return accumulator;
-  },
-  {}
-);

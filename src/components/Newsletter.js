@@ -42,7 +42,7 @@ export default function Newsletter({ className }) {
             `,
             css(
               mq({
-                flexDirection: ['row', 'column'],
+                flexDirection: ['column', null, 'row'],
               })
             ),
           ]}
@@ -61,7 +61,7 @@ export default function Newsletter({ className }) {
             type="submit"
             css={css(
               mq({
-                marginTop: [0, '20px'],
+                marginTop: ['20px', null, 0],
               })
             )}
           >

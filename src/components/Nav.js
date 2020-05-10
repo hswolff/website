@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
@@ -18,82 +18,101 @@ import {
   FaStar,
   FaDesktop,
 } from 'react-icons/fa';
-import { color, mediaQueries, mq } from '../utils/css';
+import { color, mq } from '../utils/css';
 import { darken } from 'polished';
 
-export default () => (
-  <nav
-    css={css`
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      ${mediaQueries.phone(css`
-        align-items: center;
-      `)};
-    `}
-  >
-    <Link
-      to="/"
-      css={css`
-        display: block;
-        box-shadow: none;
-      `}
-    >
-      <img
-        src="/images/profile.jpg"
-        css={css`
-          display: block;
-          height: 100px;
-          width: auto;
-          border-radius: 50%;
-          margin: 0;
-        `}
-      />
-    </Link>
-    <h1
-      css={css`
-        margin: 1.2rem 0 0 0;
-        font-size: 1.5rem;
-      `}
+export default function Nav() {
+  const [open, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen((v) => !v);
+
+  return (
+    <nav
+      css={[
+        css`
+          display: flex;
+          flex-direction: column;
+        `,
+        mq({
+          alignItems: ['center', null, 'flex-start'],
+        }),
+      ]}
     >
       <Link
         to="/"
-        css={{
-          color: color.title,
-          boxShadow: 'none',
-          '&:hover': {
-            opacity: 0.8,
-          },
-        }}
+        css={css`
+          display: block;
+          box-shadow: none;
+        `}
       >
-        Harry Wolff
+        <img
+          src="/images/profile.jpg"
+          css={css`
+            display: block;
+            height: 100px;
+            width: auto;
+            border-radius: 50%;
+            margin: 0;
+          `}
+        />
       </Link>
-    </h1>
-    <div
-      css={css`
-        margin: 0;
-        font-size: 0.8rem;
-        color: ${color.titleLighter};
-      `}
-    >
-      You can&apos;t escape my laugh.
-    </div>
-    <div
-      css={css`
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-        font-size: 0.9rem;
-      `}
-    >
-      <NavLink to="/blog/page/1/">
-        <FaAlignJustify /> Blog
-      </NavLink>
-      <SubNavLinks>
-        <NavLinkAnchor href="http://feeds.feedburner.com/harrywolff/zOZJ">
-          <FaRss /> RSS
-        </NavLinkAnchor>
-        {/* <NavLink to="/blog/category/code/">
+      <h1
+        css={css`
+          margin: 1.2rem 0 0 0;
+          font-size: 1.5rem;
+        `}
+      >
+        <Link
+          to="/"
+          css={{
+            color: color.title,
+            boxShadow: 'none',
+            '&:hover': {
+              opacity: 0.8,
+            },
+          }}
+        >
+          Harry Wolff
+        </Link>
+      </h1>
+      <div
+        css={css`
+          margin: 0;
+          font-size: 0.8rem;
+          color: ${color.titleLighter};
+        `}
+      >
+        You can&apos;t escape my laugh.
+      </div>
+      <div
+        css={mq({
+          display: ['block', null, 'none'],
+        })}
+      >
+        <NavLinkDiv onClick={toggleMenu}>
+          <FaAlignJustify /> Open Menu
+        </NavLinkDiv>
+      </div>
+      <div
+        css={[
+          css`
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            font-size: 0.9rem;
+          `,
+          mq({
+            display: [open ? 'block' : 'none', null, 'block'],
+          }),
+        ]}
+      >
+        <NavLink to="/blog/page/1/">
+          <FaAlignJustify /> Blog
+        </NavLink>
+        <SubNavLinks>
+          <NavLinkAnchor href="http://feeds.feedburner.com/harrywolff/zOZJ">
+            <FaRss /> RSS
+          </NavLinkAnchor>
+          {/* <NavLink to="/blog/category/code/">
           <FaCircle size="0.5rem" />
           Code
         </NavLink>
@@ -106,104 +125,53 @@ export default () => (
           Personal
         </NavLink>
         <NavLink to="/blog/tags/">Tags</NavLink> */}
-        <NavLink to="/blog/archive/">
-          <FaBox /> Archive
+          <NavLink to="/blog/archive/">
+            <FaBox /> Archive
+          </NavLink>
+        </SubNavLinks>
+        <NavLink to="/projects/">
+          <FaToolbox />
+          Projects
         </NavLink>
-      </SubNavLinks>
-      <NavLink to="/projects/">
-        <FaToolbox />
-        Projects
-      </NavLink>
-      <SubNavLinks>
-        <NavLinkAnchor href="https://www.youtube.com/user/hswolff">
-          <FaYoutube /> YouTube
-        </NavLinkAnchor>
-        <NavLinkAnchor href="https://tinyletter.com/hswolff/">
-          <FaRegNewspaper /> Newsletter
-        </NavLinkAnchor>
-        <NavLinkAnchor href="https://github.com/hswolff">
-          <FaGithub /> Open Source
-        </NavLinkAnchor>
-        <NavLinkAnchor href="https://www.patreon.com/hswolff">
-          <FaStar /> Patreon
-        </NavLinkAnchor>
-      </SubNavLinks>
-      <NavLink to="/about/">
-        <FaUser /> About
-      </NavLink>
-      <SubNavLinks>
-        <NavLink to="/about/contact-me/">
-          <FaEnvelope /> Contact Me
+        <SubNavLinks>
+          <NavLinkAnchor href="https://www.youtube.com/user/hswolff">
+            <FaYoutube /> YouTube
+          </NavLinkAnchor>
+          <NavLinkAnchor href="https://tinyletter.com/hswolff/">
+            <FaRegNewspaper /> Newsletter
+          </NavLinkAnchor>
+          <NavLinkAnchor href="https://github.com/hswolff">
+            <FaGithub /> Open Source
+          </NavLinkAnchor>
+          <NavLinkAnchor href="https://www.patreon.com/hswolff">
+            <FaStar /> Patreon
+          </NavLinkAnchor>
+        </SubNavLinks>
+        <NavLink to="/about/">
+          <FaUser /> About
         </NavLink>
-        <NavLink to="/about/talks/">
-          <FaMicrophone /> Talks
-        </NavLink>
-        <NavLink to="/uses/">
-          <FaDesktop /> Uses
-        </NavLink>
-        <NavLinkAnchor href="https://twitter.com/hswolff">
-          <FaTwitter /> @hswolff
-        </NavLinkAnchor>
-        <NavLinkAnchor href="https://github.com/hswolff/website">
-          <FaCode /> Source
-        </NavLinkAnchor>
-      </SubNavLinks>
-      <div
-        css={[
-          css`
-            margin: 2rem 0 1.5rem;
-            font-size: 0.8rem;
-            p {
-              margin: 0;
-            }
-          `,
-          css(
-            mq({
-              '&, input': {
-                textAlign: ['left', 'center'],
-              },
-            })
-          ),
-        ]}
-      >
-        <p>Want to stay updated?</p>
-        <p>Join my newsletter!</p>
-        <form
-          action="https://tinyletter.com/hswolff"
-          method="post"
-          target="popupwindow"
-          onSubmit={() => {
-            window.open(
-              'https://tinyletter.com/hswolff',
-              'popupwindow',
-              'scrollbars=yes,width=800,height=600'
-            );
-          }}
-        >
-          <div
-            css={css`
-              display: flex;
-              flex-direction: column;
-            `}
-          >
-            <input
-              type="text"
-              name="email"
-              id="tlemail"
-              placeholder="Email address"
-              css={css`
-                margin-bottom: 5px;
-              `}
-            />
-            <input type="hidden" defaultValue={1} name="embed" />
-            <button type="submit">Subscribe</button>
-          </div>
-        </form>
+        <SubNavLinks>
+          <NavLink to="/about/contact-me/">
+            <FaEnvelope /> Contact Me
+          </NavLink>
+          <NavLink to="/about/talks/">
+            <FaMicrophone /> Talks
+          </NavLink>
+          <NavLink to="/uses/">
+            <FaDesktop /> Uses
+          </NavLink>
+          <NavLinkAnchor href="https://twitter.com/hswolff">
+            <FaTwitter /> @hswolff
+          </NavLinkAnchor>
+          <NavLinkAnchor href="https://github.com/hswolff/website">
+            <FaCode /> Source
+          </NavLinkAnchor>
+        </SubNavLinks>
+        <NavNewsletter />
       </div>
-    </div>
-  </nav>
-);
-
+    </nav>
+  );
+}
 const NavLink = styled(Link)`
   &,
   svg {
@@ -229,17 +197,75 @@ const NavLink = styled(Link)`
     }
   }
   ${mq({
-    justifyContent: ['flex-start', 'center'],
+    justifyContent: ['center', null, 'flex-start'],
   })}
 `;
 
 const NavLinkAnchor = NavLink.withComponent('a');
+const NavLinkDiv = NavLink.withComponent('div');
 
 const SubNavLinks = styled('div')`
   ${mq({
-    marginLeft: ['10px', 0],
+    marginLeft: [0, null, '10px'],
   })}
   a {
     font-size: 0.8rem;
   }
 `;
+
+function NavNewsletter() {
+  return (
+    <div
+      css={[
+        css`
+          margin: 2rem 0 1.5rem;
+          font-size: 0.8rem;
+          p {
+            margin: 0;
+          }
+        `,
+        css(
+          mq({
+            '&, input': {
+              textAlign: ['center', null, 'left'],
+            },
+          })
+        ),
+      ]}
+    >
+      <p>Want to stay updated?</p>
+      <p>Join my newsletter!</p>
+      <form
+        action="https://tinyletter.com/hswolff"
+        method="post"
+        target="popupwindow"
+        onSubmit={() => {
+          window.open(
+            'https://tinyletter.com/hswolff',
+            'popupwindow',
+            'scrollbars=yes,width=800,height=600'
+          );
+        }}
+      >
+        <div
+          css={css`
+            display: flex;
+            flex-direction: column;
+          `}
+        >
+          <input
+            type="text"
+            name="email"
+            id="tlemail"
+            placeholder="Email address"
+            css={css`
+              margin-bottom: 5px;
+            `}
+          />
+          <input type="hidden" defaultValue={1} name="embed" />
+          <button type="submit">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  );
+}

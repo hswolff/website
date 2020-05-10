@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { DateTime } from 'luxon';
 import { lighten } from 'polished';
-import { color, mediaQueries } from '../utils/css';
+import { color, mq } from '../utils/css';
 
 export default function BlogListItem(props) {
   const {
@@ -103,10 +103,9 @@ const BaseTitle = styled('h2')`
 `;
 
 const FooterItem = styled('div')`
-  flex: 0 0 auto;
-  ${mediaQueries.phone(css`
-    flex: auto;
-  `)};
+  ${mq({
+    flex: ['auto', null, '0 0 auto'],
+  })}
 `;
 
 const FooterLinks = styled('div')`
