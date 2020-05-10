@@ -89,7 +89,7 @@ export default function Nav() {
         })}
       >
         <NavLinkDiv onClick={toggleMenu}>
-          <FaAlignJustify /> Open Menu
+          <FaAlignJustify /> <span>Open Menu</span>
         </NavLinkDiv>
       </div>
       <div

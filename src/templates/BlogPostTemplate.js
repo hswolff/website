@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { mq } from '../utils/css';
 import Layout from '../components/Layout';
 import BlogListItem from '../components/BlogListItem';
 import Disqus from '../components/Disqus';
@@ -34,6 +35,11 @@ export default function PostTemplate({ data: { markdownRemark } }) {
               box-shadow: none;
             }
           `,
+          mq({
+            iframe: {
+              width: ['100%', null, '560px'],
+            },
+          }),
         ]}
         dangerouslySetInnerHTML={{ __html: html }}
       />
