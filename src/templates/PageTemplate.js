@@ -11,9 +11,16 @@ export default function PageTemplate({ data: { markdownRemark } }) {
   const {
     html,
     excerpt,
-    frontmatter: { title, includeNewsletter = true, comments = true },
+    frontmatter: {
+      title,
+      includeNewsletter: includeNewsletterProp,
+      comments: commentsProp,
+    },
     fields: { url, editLink },
   } = markdownRemark;
+
+  const includeNewsletter = includeNewsletterProp ?? true;
+  const comments = commentsProp ?? true;
 
   return (
     <Layout>
