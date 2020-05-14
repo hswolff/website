@@ -28,19 +28,15 @@ export default function PostTemplate({ data: { markdownRemark } }) {
 
       <div
         className="blog-post-content"
-        css={[
-          css`
+        css={css`
             margin-top: 20px;
             .anchor {
               box-shadow: none;
             }
-          `,
-          mq({
-            iframe: {
-              width: ['100%', null, '560px'],
-            },
-          }),
-        ]}
+            iframe {
+              100%;
+            }
+          `}
         dangerouslySetInnerHTML={{ __html: html }}
       />
 

@@ -24,8 +24,7 @@ const Layout = ({ children }) => (
           flexDirection: ['column', null, 'row'],
           margin: ['1rem', null, '3rem 1rem', '3rem auto'],
           nav: {
-            margin: ['0 0 2rem', null, '0 4rem 0 0'],
-            maxWidth: ['100%', null, '200px'],
+            margin: ['0 0 2rem', null, '0 1rem 0 0', '0 3rem 0 0'],
           },
         }),
       ]}
@@ -34,6 +33,7 @@ const Layout = ({ children }) => (
       <section
         css={css`
           flex: 0 1 auto;
+          overflow: auto;
         `}
       >
         <main
