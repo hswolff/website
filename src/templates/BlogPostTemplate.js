@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { mq } from '../utils/css';
 import Layout from '../components/Layout';
 import BlogListItem from '../components/BlogListItem';
 import Disqus from '../components/Disqus';
