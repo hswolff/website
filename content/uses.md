@@ -24,7 +24,7 @@ Last updated: _October 16, 2019_
 - I use the built in Mac Quicktime Player to record my screen
 - I use a Sony a6400 to record myself
 - I use a [Shure VP83 LensHopper](https://www.amazon.com/gp/product/B00DU66WWQ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1) to capture the audio directly into the camera
-- And because the Sony camera doesn 't support a monitor and an external mic I use a [Microphone Stand Extension Plate](https://www.amazon.com/gp/product/B07P8JSV1G/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)
+- And because the Sony camera doesn 't support a monitor and an external mic at the same time I use a [Microphone Stand Extension Plate](https://www.amazon.com/gp/product/B07P8JSV1G/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)
 - I put it all on a [Joby GorillaPod](https://www.amazon.com/gp/product/B003II3FD0/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)
 - I take the two recordings and edit them with [Final Cut Pro X](https://www.apple.com/final-cut-pro/)
 
