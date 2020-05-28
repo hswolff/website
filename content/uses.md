@@ -8,15 +8,15 @@ Wonder no more!
 
 Here is a list of all the fun things that I use on a daily basis.
 
-Last updated: _October 16, 2019_
+Last updated: _May 27, 2020_
 
 # Editor + Terminal
 
 - Visual Studio Code is my current Editor
   - I use a lot of VSCode plugins. [See the full list here.](https://gist.github.com/hswolff/3da81efbbfbfa9b284b441df458033a5)
 - Theme is [Atom One Dark Syntax](https://github.com/andischerer/vscode-theme-atom-one-dark)
-- Using default VSCode font, `Menlo, Monaco, 'Courier New', monospace`
-- iTerm is my terminal
+- Using [Jetbrains Mono](https://www.jetbrains.com/lp/mono/): `'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace`
+- [iTerm2](https://www.iterm2.com/) is my terminal
 - I use a pretty vanilla installation of [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh) for additional terminal functionality
 
 # Recording
@@ -33,3 +33,9 @@ Last updated: _October 16, 2019_
 - My computer is a 15-inch MacBook Pro (Mid 2015, 2.8 GHz Quad-Core Intel Core i7, 16 GB 1600 MHz DDR3)
 - I do not use an external monitor.
 - I have an external Apple Keyboard and external Apple Touchpad
+
+# Video Tour
+
+I recorded a fun video showcasing my recording setup. It's from October 2019 so may be a little outdated, but hopefully you find it useful!
+
+<iframe src="//www.youtube.com/embed/VeSahw3jFYw" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
