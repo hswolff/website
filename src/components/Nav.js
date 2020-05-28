@@ -137,7 +137,7 @@ export default function Nav() {
           <NavLinkAnchor href="https://www.youtube.com/user/hswolff">
             <FaYoutube /> YouTube
           </NavLinkAnchor>
-          <NavLinkAnchor href="https://tinyletter.com/hswolff/">
+          <NavLinkAnchor href="/newsletter/">
             <FaRegNewspaper /> Newsletter
           </NavLinkAnchor>
           <NavLinkAnchor href="https://github.com/hswolff">

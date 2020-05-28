@@ -18,3 +18,5 @@ This includes new library releases, long tutorials, and general frontend discuss
 And that's it!
 
 I hope to have you join!
+
+<iframe src="//www.youtube.com/embed/eMU-7yB8-8M" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
