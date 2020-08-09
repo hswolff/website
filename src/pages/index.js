@@ -23,11 +23,6 @@ const IndexPage = (props) => {
         entertaining.
       </p>
       <p>
-        I also host a weekly podcast called{' '}
-        <a href="http://theconsolelog.com/">The Console Log</a>. We talk about
-        news from the past week and what it means for you.
-      </p>
-      <p>
         I also <Link to="/blog/">blog</Link>! Have a look at my latest posts 👇
       </p>
       {edges.map(({ node }) => (
