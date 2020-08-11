@@ -87,7 +87,7 @@ Emotion is my favorite CSS-in-JS library nowadays. It lets me be hyper productiv
 
 To store data I've gone back to basics and just rely on vanilla React Context. Most of my data needs are simple enough that a plain Context provider will handily cover my needs.
 
-If I do find my data structures getting complex then I will always turn to [Immer][https://immerjs.github.io/immer/] as an easy to update my state.
+If I do find my data structures getting complex then I will always turn to [Immer](https://immerjs.github.io/immer/) as an easy to update my state.
 
 Check out my videos about Context and Immer to gain more of an idea of how I like to use them:
 
