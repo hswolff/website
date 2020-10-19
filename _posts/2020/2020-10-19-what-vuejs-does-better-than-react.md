@@ -301,7 +301,21 @@ For event handler directives (`v-on`) there's a whole slew of modifiers:
 
 If you wanted to do this in React you'd either make a helper function or a custom component. Which is fine, but doesn't feel as clean compared to directive modifiers.
 
-There's many more modifiers. Some of the coolest ones are [key modifiers](https://v3.vuejs.org/guide/events.html#key-modifiers):
+I am curious if someone could make a Babel JSX superset so you could write code like:
+
+```javascript
+<form onSubmit.prevent={onSubmit} />
+```
+
+And it would transform to:
+
+```javascript
+React.createElement(form, { onSubmit: preventWrapper(onSubmit) });
+```
+
+It's not in the ethos of React, but I still think it's a super neat productivity win.
+
+There's many more Vue.js modifiers. Some of the coolest ones are [key modifiers](https://v3.vuejs.org/guide/events.html#key-modifiers):
 
 ```html
 <!-- only call `submit()` when the `key` is `Enter` -->
