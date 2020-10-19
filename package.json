@@ -27,6 +27,7 @@
     "gatsby-plugin-typography": "^2.2.13",
     "gatsby-remark-autolink-headers": "^2.0.16",
     "gatsby-remark-prismjs": "^3.2.9",
+    "gatsby-remark-table-of-contents": "^0.1.1",
     "gatsby-source-filesystem": "^2.0.37",
     "gatsby-transformer-remark": "^2.3.12",
     "lodash": "^4.17.5",
