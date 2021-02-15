@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import {
@@ -37,23 +37,24 @@ export default function Nav() {
         }),
       ]}
     >
-      <Link
-        to="/"
-        css={css`
-          display: block;
-          box-shadow: none;
-        `}
-      >
-        <img
-          src="/images/profile.jpg"
+      <Link href="/" passHref>
+        <a
           css={css`
             display: block;
-            height: 100px;
-            width: auto;
-            border-radius: 50%;
-            margin: 0;
+            box-shadow: none;
           `}
-        />
+        >
+          <img
+            src="/images/profile.jpg"
+            css={css`
+              display: block;
+              height: 100px;
+              width: auto;
+              border-radius: 50%;
+              margin: 0;
+            `}
+          />
+        </a>
       </Link>
       <h1
         css={css`
@@ -61,17 +62,18 @@ export default function Nav() {
           font-size: 1.5rem;
         `}
       >
-        <Link
-          to="/"
-          css={{
-            color: color.title,
-            boxShadow: 'none',
-            '&:hover': {
-              opacity: 0.8,
-            },
-          }}
-        >
-          Harry Wolff
+        <Link href="/" passHref>
+          <a
+            css={{
+              color: color.title,
+              boxShadow: 'none',
+              '&:hover': {
+                opacity: 0.8,
+              },
+            }}
+          >
+            Harry Wolff
+          </a>
         </Link>
       </h1>
       <div
@@ -105,34 +107,40 @@ export default function Nav() {
           }),
         ]}
       >
-        <NavLink to="/blog/page/1/">
-          <FaAlignJustify /> Blog
-        </NavLink>
+        <Link href="/blog/page/1/" passHref>
+          <NavLink>
+            <FaAlignJustify /> Blog
+          </NavLink>
+        </Link>
         <SubNavLinks>
           <NavLinkAnchor href="http://feeds.feedburner.com/harrywolff/zOZJ">
             <FaRss /> RSS
           </NavLinkAnchor>
-          {/* <NavLink to="/blog/category/code/">
+          {/* <Link href="/blog/category/code/">
           <FaCircle size="0.5rem" />
           Code
-        </NavLink>
-        <NavLink to="/blog/category/career/">
+        </Link>
+        <Link href="/blog/category/career/">
           <FaCircle size="0.5rem" />
           Career
-        </NavLink>
-        <NavLink to="/blog/category/personal/">
+        </Link>
+        <Link href="/blog/category/personal/">
           <FaCircle size="0.5rem" />
           Personal
-        </NavLink>
-        <NavLink to="/blog/tags/">Tags</NavLink> */}
-          <NavLink to="/blog/archive/">
-            <FaBox /> Archive
-          </NavLink>
+        </Link>
+        <Link href="/blog/tags/">Tags</Link> */}
+          <Link href="/blog/archive/" passHref>
+            <NavLink>
+              <FaBox /> Archive
+            </NavLink>
+          </Link>
         </SubNavLinks>
-        <NavLink to="/projects/">
-          <FaToolbox />
-          Projects
-        </NavLink>
+        <Link href="/projects/" passHref>
+          <NavLink>
+            <FaToolbox />
+            Projects
+          </NavLink>
+        </Link>
         <SubNavLinks>
           <NavLinkAnchor href="https://www.youtube.com/user/hswolff">
             <FaYoutube /> YouTube
@@ -147,19 +155,27 @@ export default function Nav() {
             <FaStar /> Patreon
           </NavLinkAnchor>
         </SubNavLinks>
-        <NavLink to="/about/">
-          <FaUser /> About
-        </NavLink>
+        <Link href="/about/" passHref>
+          <NavLink>
+            <FaUser /> About
+          </NavLink>
+        </Link>
         <SubNavLinks>
-          <NavLink to="/about/contact-me/">
-            <FaEnvelope /> Contact Me
-          </NavLink>
-          <NavLink to="/about/talks/">
-            <FaMicrophone /> Talks
-          </NavLink>
-          <NavLink to="/uses/">
-            <FaDesktop /> Uses
-          </NavLink>
+          <Link href="/about/contact-me/" passHref>
+            <NavLink>
+              <FaEnvelope /> Contact Me
+            </NavLink>
+          </Link>
+          <Link href="/about/talks/" passHref>
+            <NavLink>
+              <FaMicrophone /> Talks
+            </NavLink>
+          </Link>
+          <Link href="/uses/" passHref>
+            <NavLink>
+              <FaDesktop /> Uses
+            </NavLink>
+          </Link>
           <NavLinkAnchor href="https://twitter.com/hswolff">
             <FaTwitter /> @hswolff
           </NavLinkAnchor>
@@ -172,7 +188,7 @@ export default function Nav() {
     </nav>
   );
 }
-const NavLink = styled(Link)`
+const NavLink = styled('a')`
   &,
   svg {
     color: ${color.titleLighter};

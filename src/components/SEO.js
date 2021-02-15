@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
 
 export default function SEO({
   title: titleProp,
@@ -9,20 +8,7 @@ export default function SEO({
   image: imageProp,
   isBlogPost,
 }) {
-  const {
-    site: { siteMetadata },
-  } = useStaticQuery(graphql`
-    query LayoutData {
-      site {
-        siteMetadata {
-          title
-          description
-          siteUrl
-          keywords
-        }
-      }
-    }
-  `);
+  const siteMetadata = {};
 
   const title = titleProp || siteMetadata.title;
   const description = descriptionProp || siteMetadata.description;

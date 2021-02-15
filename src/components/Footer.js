@@ -2,7 +2,7 @@ import React from 'react';
 import { mainContent, color } from '../utils/css';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { Link } from '@reach/router';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -20,26 +20,46 @@ export default function Footer() {
       >
         <LinkContainer css={{ display: 'none' }}>
           <Column>
-            <Link to="/blog/">Blog</Link>
-            <Link to="/blog/category/code/">Code</Link>
-            <Link to="/blog/category/career/">Career</Link>
-            <Link to="/blog/category/personal/">Personal</Link>
-            <Link to="/blog/tags/">Tags</Link>
-            <Link to="/blog/archive/">Archive</Link>
+            <Link href="/blog/">
+              <a>Blog</a>
+            </Link>
+            <Link href="/blog/category/code/">
+              <a>Code</a>
+            </Link>
+            <Link href="/blog/category/career/">
+              <a>Career</a>
+            </Link>
+            <Link href="/blog/category/personal/">
+              <a>Personal</a>
+            </Link>
+            <Link href="/blog/tags/">
+              <a>Tags</a>
+            </Link>
+            <Link href="/blog/archive/">
+              <a>Archive</a>
+            </Link>
             <a href="http://feeds.feedburner.com/harrywolff/zOZJ">Subscribe</a>
           </Column>
           <Column>
-            <Link to="/projects/">Projects</Link>
+            <Link href="/projects/">
+              <a>Projects</a>
+            </Link>
             <a href="https://www.youtube.com/user/hswolff">YouTube</a>
             <a href="https://theconsolelog.com/">Podcast</a>
             <a href="https://github.com/hswolff">Open Source</a>
-            {/* <Link to="/projects/newsletter/">Newsletter</Link> */}
+            {/* <Link href="/projects/newsletter/"><a>Newsletter</a></Link> */}
           </Column>
           <Column>
-            <Link to="/about/">About</Link>
-            <Link to="/about/contact-me/">Contact Me</Link>
-            <Link to="/about/talks/">Talks</Link>
-            {/* <Link to="/about/social/">Social</Link> */}
+            <Link href="/about/">
+              <a>About</a>
+            </Link>
+            <Link href="/about/contact-me/">
+              <a>Contact Me</a>
+            </Link>
+            <Link href="/about/talks/">
+              <a>Talks</a>
+            </Link>
+            {/* <Link href="/about/social/"><a>Social</a></Link> */}
             <a href="https://twitter.com/hswolff">Twitter</a>
           </Column>
         </LinkContainer>

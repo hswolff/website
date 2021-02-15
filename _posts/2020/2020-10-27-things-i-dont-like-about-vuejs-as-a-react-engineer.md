@@ -4,6 +4,8 @@ slug: things-i-dont-like-about-vuejs-as-a-react-engineer
 date: 2020-10-27
 category: code
 tags:
+  - vue.js
+  - react
 ---
 
 This blog post is a follow up from my last article [What Vue.js Does Better Than React](/blog/what-vuejs-does-better-than-react/).
@@ -14,9 +16,7 @@ Let's take a dive into all the things that I think React does better than Vue.js
 
 Notable preface: I've used React professionally for the past 5 years, so it's obviously my UI framework of choice. I've tried to take as close to an objective stance on these points, but I'm sure you'll see my subjectivism poking through.
 
-```toc
-# This code block gets replaced with the TOC
-```
+## Table of Contents
 
 ## [Templates](https://v3.vuejs.org/guide/template-syntax.html)
 

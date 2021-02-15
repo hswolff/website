@@ -2,9 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Layout from '../../components/Layout';
 import BlogListItem from '../../components/BlogListItem';
-import { graphql } from 'gatsby';
 
-export default function TalksPage({ data: { allMarkdownRemark } }) {
+export default function TalksPage({ pages = [] }) {
   return (
     <Layout>
       <Helmet title="Talks" />
@@ -16,24 +15,24 @@ export default function TalksPage({ data: { allMarkdownRemark } }) {
 
       <p>The following is a collection of talks that I have given.</p>
 
-      {allMarkdownRemark.edges.map(({ node }) => (
+      {pages.map(({ node }) => (
         <BlogListItem key={node.fileAbsolutePath} {...node} />
       ))}
     </Layout>
   );
 }
 
-export const pageQuery = graphql`
-  query Talks {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: "talk" } } }
-    ) {
-      edges {
-        node {
-          ...BlogListItemFragment
-        }
-      }
-    }
-  }
-`;
+// export const pageQuery = graphql`
+//   query Talks {
+//     allMarkdownRemark(
+//       sort: { fields: [frontmatter___date], order: DESC }
+//       filter: { frontmatter: { tags: { in: "talk" } } }
+//     ) {
+//       edges {
+//         node {
+//           ...BlogListItemFragment
+//         }
+//       }
+//     }
+//   }
+// `;

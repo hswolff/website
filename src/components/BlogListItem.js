@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import Link from 'next/link';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { DateTime } from 'luxon';
@@ -30,7 +30,13 @@ export default function BlogListItem(props) {
       `}
     >
       <Title asPage={asPage}>
-        {asPage ? title : <Link to={fields.url}>{title}</Link>}
+        {asPage ? (
+          title
+        ) : (
+          <Link href={fields.url}>
+            <a>{title}</a>
+          </Link>
+        )}
       </Title>
       {!asPage && (
         <div
@@ -61,7 +67,9 @@ export default function BlogListItem(props) {
           <FooterLinks>
             {category && (
               <span key={category}>
-                <Link to={fields.categoryUrl}>{category}</Link>
+                <Link href={'' ?? fields.categoryUrl}>
+                  <a>{category}</a>
+                </Link>
               </span>
             )}
           </FooterLinks>
@@ -69,7 +77,9 @@ export default function BlogListItem(props) {
           <FooterLinks>
             {(tags || []).map((tag, index) => (
               <span key={tag}>
-                <Link to={fields.tagsUrls[index]}>{tag}</Link>
+                <Link href={'' ?? fields.tagsUrls[index]}>
+                  <a>{tag}</a>
+                </Link>
                 {index + 1 !== tags.length && ', '}
               </span>
             ))}
@@ -126,23 +136,3 @@ const FooterSeparator = () => (
     &bull;
   </div>
 );
-
-export const query = graphql`
-  fragment BlogListItemFragment on MarkdownRemark {
-    fileAbsolutePath
-    excerpt(pruneLength: 280)
-    timeToRead
-    frontmatter {
-      title
-      slug
-      date
-      category
-      tags
-    }
-    fields {
-      url
-      tagsUrls
-      categoryUrl
-    }
-  }
-`;

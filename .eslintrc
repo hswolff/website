@@ -1,28 +1,28 @@
 {
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "env": {
     "browser": true,
-    "es6": true,
+    "es2020": true,
     "node": true
   },
   "extends": [
     "plugin:prettier/recommended",
     "prettier/react",
     "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "parserOptions": {
     "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
       "jsx": true
     },
-    "ecmaVersion": 8,
+    "ecmaVersion": 11,
     "sourceType": "module"
   },
   "globals": {
     "graphql": true
   },
-  "plugins": ["react"],
+  "plugins": ["react", "plugin:@typescript-eslint/recommended"],
   "settings": {
     "react": {
       "version": "16.3.0"

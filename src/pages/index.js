@@ -1,12 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link, graphql } from 'gatsby';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import BlogListItem from '../components/BlogListItem';
 
 const IndexPage = (props) => {
-  const { allMarkdownRemark } = props.data;
-  const { edges } = allMarkdownRemark;
+  // const { allMarkdownRemark } = props.data;
+  // const { edges } = allMarkdownRemark;
+  const edges = [];
   return (
     <Layout>
       <Helmet title="Home" />
@@ -23,33 +24,23 @@ const IndexPage = (props) => {
         entertaining.
       </p>
       <p>
-        I also <Link to="/blog/">blog</Link>! Have a look at my latest posts 👇
+        I also{' '}
+        <Link href="/blog/">
+          <a>blog</a>
+        </Link>
+        ! Have a look at my latest posts 👇
       </p>
       {edges.map(({ node }) => (
         <BlogListItem key={node.fileAbsolutePath} {...node} />
       ))}
 
       <div css={{ textAlign: 'left', margin: '20px auto' }}>
-        <Link to="/blog/page/1/">All Posts</Link>
+        <Link href="/blog/page/1/">
+          <a>All Posts</a>
+        </Link>
       </div>
     </Layout>
   );
 };
 
 export default IndexPage;
-
-export const pageQuery = graphql`
-  query AllPosts {
-    allMarkdownRemark(
-      limit: 3
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/_posts/" } }
-    ) {
-      edges {
-        node {
-          ...BlogListItemFragment
-        }
-      }
-    }
-  }
-`;

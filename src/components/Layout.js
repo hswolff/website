@@ -1,17 +1,14 @@
 import React from 'react';
 
-import 'prismjs/themes/prism.css';
-
 import '../utils/analytics';
-import { css, Global } from '@emotion/core';
-import { globalStyles, variable, mq } from '../utils/css';
+import { css } from '@emotion/core';
+import { variable, mq } from '../utils/css';
 import Nav from './Nav';
 import Footer from './Footer';
 import SEO from './SEO';
 
 const Layout = ({ children }) => (
-  <React.Fragment>
-    <Global styles={globalStyles} />
+  <>
     <SEO />
     <div
       css={[
@@ -48,7 +45,7 @@ const Layout = ({ children }) => (
         <Footer />
       </section>
     </div>
-  </React.Fragment>
+  </>
 );
 
 export default Layout;
