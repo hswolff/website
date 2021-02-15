@@ -8,7 +8,7 @@ Wonder no more!
 
 Here is a list of all the fun things that I use on a daily basis.
 
-Last updated: _May 27, 2020_
+Last updated: _February 14, 2021_
 
 # Editor + Terminal
 
@@ -30,8 +30,9 @@ Last updated: _May 27, 2020_
 
 # Desk Setup
 
-- My computer is a 15-inch MacBook Pro (Mid 2015, 2.8 GHz Quad-Core Intel Core i7, 16 GB 1600 MHz DDR3)
-- I do not use an external monitor.
+- My computer is a 15-inch MacBook Pro (2018, 2.2 6-Core Intel Core i7, 16 GB 2400 MHz DDR4)
+- External monitor, Lenovo P27h ThinkVision USB-C Monitor 27" (1440p)
+- Rain Design iLevel2 Laptop Stand
 - I have an external Apple Keyboard and external Apple Touchpad
 
 # Video Tour
