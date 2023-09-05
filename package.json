@@ -1,6 +1,5 @@
 {
   "name": "astro",
-  "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
@@ -9,7 +8,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "format:check": "prettier --plugin-search-dir=. --check .",
-    "format": "prettier --plugin-search-dir=. --write ."
+    "format": "prettier --plugin-search-dir=. --write .",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@astrojs/mdx": "^1.0.0",
@@ -18,6 +18,10 @@
     "astro": "^3.0.7"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^6.6.0",
+    "eslint": "^8.48.0",
+    "eslint-plugin-astro": "^0.29.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0"
   }
