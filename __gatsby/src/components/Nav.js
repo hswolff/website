@@ -229,7 +229,7 @@ function NavNewsletter() {
             '&, input': {
               textAlign: ['center', null, 'left'],
             },
-          })
+          }),
         ),
       ]}
     >
@@ -243,7 +243,7 @@ function NavNewsletter() {
           window.open(
             'https://tinyletter.com/hswolff',
             'popupwindow',
-            'scrollbars=yes,width=800,height=600'
+            'scrollbars=yes,width=800,height=600',
           );
         }}
       >

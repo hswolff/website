@@ -8,15 +8,15 @@ import Layout from '../../components/Layout';
 
 export default class BlogArchive extends Component {
   state = {
-    '2018': true,
-    '2017': true,
+    2018: true,
+    2017: true,
   };
 
   render() {
     const { allMarkdownRemark } = this.props.data;
     const { edges } = allMarkdownRemark;
     const groups = _.groupBy(edges, ({ node }) =>
-      DateTime.fromISO(node.frontmatter.date).toFormat('y')
+      DateTime.fromISO(node.frontmatter.date).toFormat('y'),
     );
     const years = Object.keys(groups).sort((a, b) => b - a);
 
