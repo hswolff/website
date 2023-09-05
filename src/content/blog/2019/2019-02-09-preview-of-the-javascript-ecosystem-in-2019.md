@@ -4,6 +4,7 @@ slug: preview-of-the-javascript-ecosystem-in-2019
 date: 2019-02-09
 category: code
 tags:
+  - javascript
 ---
 
 I’m not really in the business of telling the future however I do think it would be fun to mirror all of my [year](/blog/javascript-year-in-review-2018/) in [review](/blog/react-year-in-review-2018/) posts with one that looks forward to the year to come.
