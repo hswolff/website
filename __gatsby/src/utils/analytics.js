@@ -15,7 +15,7 @@ function addChartbeat() {
       e.setAttribute(
         'src',
         ('https:' == document.location.protocol ? 'https://' : 'http://') +
-          'static.chartbeat.com/js/chartbeat.js'
+          'static.chartbeat.com/js/chartbeat.js',
       );
       document.body.appendChild(e);
     }

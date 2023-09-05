@@ -74,7 +74,7 @@ class Greeting extends React.Component {
     name: '',
   };
 
-  onChange = (name) => {
+  onChange = name => {
     this.setState({ name });
   };
 

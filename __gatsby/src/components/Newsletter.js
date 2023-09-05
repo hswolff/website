@@ -31,7 +31,7 @@ export default function Newsletter({ className }) {
           window.open(
             'https://tinyletter.com/hswolff',
             'popupwindow',
-            'scrollbars=yes,width=800,height=600'
+            'scrollbars=yes,width=800,height=600',
           );
         }}
       >
@@ -43,7 +43,7 @@ export default function Newsletter({ className }) {
             css(
               mq({
                 flexDirection: ['column', null, 'row'],
-              })
+              }),
             ),
           ]}
         >
@@ -62,7 +62,7 @@ export default function Newsletter({ className }) {
             css={css(
               mq({
                 marginTop: ['20px', null, 0],
-              })
+              }),
             )}
           >
             Subscribe

@@ -21,7 +21,7 @@ exports.onCreateNode = function ({ node, actions, getNode }) {
       node,
       value: `https://github.com/hswolff/website/edit/master${node.fileAbsolutePath.replace(
         __dirname,
-        ''
+        '',
       )}`,
     });
   }
@@ -188,7 +188,7 @@ function createBlogPostPages({ edges, createPage }) {
 
 function createCategoryPages({ createPage }) {
   const categoryTemplate = path.resolve(
-    'src/templates/CategoryListTemplate.js'
+    'src/templates/CategoryListTemplate.js',
   );
 
   _.forEach(categories, ({ category, url }) => {

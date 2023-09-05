@@ -52,7 +52,7 @@ function TodoPage({ todos, dispatch, isLoggedIn }) {
   return (
     <div className="todoContainer">
       <h2>Todos</h2>
-      {todos.map((item) => (
+      {todos.map(item => (
         <TodoItem
           key={item.title}
           dispatch={dispatch}

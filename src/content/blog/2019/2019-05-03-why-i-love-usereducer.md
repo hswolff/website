@@ -65,7 +65,7 @@ function LoginUseState() {
   const [error, setError] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const onSubmit = async (e) => {
+  const onSubmit = async e => {
     e.preventDefault();
 
     setError('');
@@ -103,7 +103,7 @@ function LoginUseReducer() {
   const [state, dispatch] = useReducer(loginReducer, initialState);
   const { username, password, isLoading, error, isLoggedIn } = state;
 
-  const onSubmit = async (e) => {
+  const onSubmit = async e => {
     e.preventDefault();
 
     dispatch({ type: 'login' });

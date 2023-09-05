@@ -7,12 +7,18 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format:check": "prettier --plugin-search-dir=. --check .",
+    "format": "prettier --plugin-search-dir=. --write ."
   },
   "dependencies": {
     "@astrojs/mdx": "^1.0.0",
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
     "astro": "^3.0.7"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0"
   }
 }
