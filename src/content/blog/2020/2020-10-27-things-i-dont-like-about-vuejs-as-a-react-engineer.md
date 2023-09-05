@@ -4,6 +4,8 @@ slug: things-i-dont-like-about-vuejs-as-a-react-engineer
 date: 2020-10-27
 category: code
 tags:
+  - reactjs
+  - vuejs
 ---
 
 This blog post is a follow up from my last article [What Vue.js Does Better Than React](/blog/what-vuejs-does-better-than-react/).
