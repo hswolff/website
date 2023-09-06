@@ -1,6 +1,6 @@
 ---
 title: Building Hacker News With Angularjs
-slug: building-hacker-news-with-angularjs
+postSlug: building-hacker-news-with-angularjs
 date: 2014-10-09T01:39:53.069Z
 category: code
 tags:

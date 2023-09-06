@@ -1,6 +1,6 @@
 ---
 title: Guest on FreeCodeCamp Podcast
-slug: guest-on-freecodecamp-podcast
+postSlug: guest-on-freecodecamp-podcast
 date: 2019-10-07
 category: personal
 tags:

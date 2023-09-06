@@ -1,6 +1,6 @@
 ---
 title: Prune Remote Git Branches
-slug: prune-remote-git-branches
+postSlug: prune-remote-git-branches
 date: 2011-10-13T11:41:06.000Z
 category: code
 tags:

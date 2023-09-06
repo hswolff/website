@@ -1,6 +1,6 @@
 ---
 title: How To useContext With useReducer
-slug: how-to-usecontext-with-usereducer
+postSlug: how-to-usecontext-with-usereducer
 date: 2019-05-19
 category: code
 tags:

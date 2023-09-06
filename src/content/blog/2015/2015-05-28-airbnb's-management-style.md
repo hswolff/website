@@ -1,6 +1,6 @@
 ---
 title: Airbnb's Management Style
-slug: airbnb-s-management-style
+postSlug: airbnb-s-management-style
 date: 2015-05-28T02:23:57.306Z
 category: career
 tags:

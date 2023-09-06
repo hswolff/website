@@ -1,6 +1,6 @@
 ---
 title: React Hooks
-slug: react-hooks
+postSlug: react-hooks
 date: 2018-11-11
 category: code
 tags:

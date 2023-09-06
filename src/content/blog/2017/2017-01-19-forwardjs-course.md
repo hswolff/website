@@ -1,6 +1,6 @@
 ---
 title: ForwardJS Course
-slug: forwardjs-course
+postSlug: forwardjs-course
 date: 2017-01-19
 category: code
 tags:

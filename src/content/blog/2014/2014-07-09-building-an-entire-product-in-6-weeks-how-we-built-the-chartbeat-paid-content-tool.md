@@ -1,6 +1,6 @@
 ---
 title: Building an Entire Product in 6 Weeks (How we built the Chartbeat Paid Content Tool)
-slug: building-an-entire-product-in-6-weeks-how-we-built-the-chartbeat-paid-content-tool
+postSlug: building-an-entire-product-in-6-weeks-how-we-built-the-chartbeat-paid-content-tool
 date: 2014-07-09T14:40:04.938Z
 category: personal
 ---

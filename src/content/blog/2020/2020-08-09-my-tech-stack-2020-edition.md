@@ -1,6 +1,6 @@
 ---
 title: My Tech Stack (2020 Edition)
-slug: my-tech-stack-2020-edition
+postSlug: my-tech-stack-2020-edition
 date: 2020-08-09
 category: code
 tags:
@@ -25,9 +25,7 @@ I made a video about it that you can watch right here.
 
 However if you prefer the format of spoken word, then keep on reading.
 
-```toc
-# This code block gets replaced with the TOC
-```
+## Table of contents
 
 ---
 

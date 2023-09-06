@@ -1,6 +1,6 @@
 ---
 title: Introducing Reptar 2.0.0
-slug: introducing-reptar
+postSlug: introducing-reptar
 date: 2016-10-21
 category: code
 tags:

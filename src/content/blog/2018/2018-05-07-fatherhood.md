@@ -1,6 +1,6 @@
 ---
 title: Fatherhood
-slug: fatherhood
+postSlug: fatherhood
 date: 2018-05-07
 category: personal
 ---

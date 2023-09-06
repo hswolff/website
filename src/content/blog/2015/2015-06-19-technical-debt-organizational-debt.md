@@ -1,6 +1,6 @@
 ---
 title: Technical Debt, Organizational Debt
-slug: technical-debt-organizational-debt
+postSlug: technical-debt-organizational-debt
 date: 2015-06-19T01:02:06.914Z
 category: career
 ---

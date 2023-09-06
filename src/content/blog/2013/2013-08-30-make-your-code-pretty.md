@@ -1,6 +1,6 @@
 ---
 title: Make Your Code Pretty
-slug: make-your-code-pretty
+postSlug: make-your-code-pretty
 date: 2013-08-30T09:32:24.000Z
 category: code
 tags:

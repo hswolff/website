@@ -1,6 +1,6 @@
 ---
 title: Preview of the JavaScript Ecosystem in 2019
-slug: preview-of-the-javascript-ecosystem-in-2019
+postSlug: preview-of-the-javascript-ecosystem-in-2019
 date: 2019-02-09
 category: code
 tags:

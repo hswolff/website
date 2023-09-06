@@ -1,6 +1,6 @@
 ---
 title: The Best Mac Git Gui
-slug: the-best-mac-git-gui
+postSlug: the-best-mac-git-gui
 date: 2012-01-30T14:51:43.000Z
 category: code
 tags:

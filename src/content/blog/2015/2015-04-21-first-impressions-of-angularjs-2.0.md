@@ -1,6 +1,6 @@
 ---
 title: First Impressions of AngularJS 2.0
-slug: first-impressions-of-angularjs-2-0
+postSlug: first-impressions-of-angularjs-2-0
 date: 2015-04-21T13:28:54.142Z
 category: code
 tags:

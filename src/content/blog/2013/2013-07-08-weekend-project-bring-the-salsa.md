@@ -1,6 +1,6 @@
 ---
 title: 'Weekend Project: Bring The Salsa'
-slug: weekend-project-bring-the-salsa
+postSlug: weekend-project-bring-the-salsa
 date: 2013-07-08T21:48:26.000Z
 category: personal
 tags:

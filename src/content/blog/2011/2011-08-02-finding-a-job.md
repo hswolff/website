@@ -1,6 +1,6 @@
 ---
 title: How To Find A Tech Job
-slug: finding-a-job
+postSlug: finding-a-job
 date: 2011-08-02T18:33:29.000Z
 category: career
 ---

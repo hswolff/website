@@ -1,6 +1,6 @@
 ---
 title: 'Taming The Jungle: Working With New Code'
-slug: taming-the-jungle
+postSlug: taming-the-jungle
 date: 2013-06-27T13:07:05.000Z
 updated: 2013-07-03T09:35:35.000Z
 category: work

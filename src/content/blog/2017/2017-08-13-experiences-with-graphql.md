@@ -1,6 +1,6 @@
 ---
 title: Experiences With GraphQL
-slug: experiences-with-graphql
+postSlug: experiences-with-graphql
 date: 2017-08-13
 category: code
 tags:

@@ -1,6 +1,6 @@
 ---
 title: The Modern Front-end Workflow - From Start to Finish
-slug: the-modern-front-end-workflow-from-start-to-finish
+postSlug: the-modern-front-end-workflow-from-start-to-finish
 date: 2014-01-30T18:00:00.000Z
 category: code
 tags:

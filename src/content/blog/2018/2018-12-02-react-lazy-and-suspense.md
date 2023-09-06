@@ -1,6 +1,6 @@
 ---
 title: Use React.lazy and Suspense to Code-Split Your App
-slug: react-lazy-and-suspense
+postSlug: react-lazy-and-suspense
 date: 2018-12-02
 category: code
 tags:

@@ -1,7 +1,7 @@
 ---
 title: 'Creating My First Atom Package: tree-view-extended'
 date: 2017-04-18
-slug: atom-package-tree-view-extended
+postSlug: atom-package-tree-view-extended
 category: code
 tags:
   - atom

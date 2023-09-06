@@ -1,6 +1,6 @@
 ---
 title: React Native ART and D3
-slug: react-native-art-and-d3
+postSlug: react-native-art-and-d3
 date: 2016-08-05T03:59:27.372Z
 category: code
 tags:

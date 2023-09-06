@@ -1,6 +1,6 @@
 ---
 title: Setting Up TypeScript
-slug: setting-up-typescript
+postSlug: setting-up-typescript
 date: 2019-03-10
 category: code
 tags:

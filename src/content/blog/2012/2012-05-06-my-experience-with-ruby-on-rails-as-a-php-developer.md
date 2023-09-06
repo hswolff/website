@@ -1,6 +1,6 @@
 ---
 title: My Experience with Ruby On Rails as a PHP Developer
-slug: my-experience-with-ruby-on-rails-as-a-php-developer
+postSlug: my-experience-with-ruby-on-rails-as-a-php-developer
 date: 2012-05-06T20:43:26.000Z
 category: code
 tags:

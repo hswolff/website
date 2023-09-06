@@ -1,6 +1,6 @@
 ---
 title: Why Is React Concurrent Mode Exciting?
-slug: why-is-react-concurrent-mode-exciting
+postSlug: why-is-react-concurrent-mode-exciting
 date: 2019-10-27
 category: code
 tags:
