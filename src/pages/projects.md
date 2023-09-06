@@ -1,5 +1,6 @@
 ---
-layout: ../layouts/AboutLayout.astro
+layout: ../layouts/PageLayout.astro
+activeNav: projects
 title: Projects
 comments: false
 includeNewsletter: false
