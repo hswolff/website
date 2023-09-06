@@ -1,5 +1,6 @@
 ---
-layout: ../layouts/AboutLayout.astro
+layout: ../layouts/PageLayout.astro
+activeNav: newsletter
 title: Newsletter
 comments: false
 ---

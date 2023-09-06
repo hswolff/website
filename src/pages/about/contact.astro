@@ -1,0 +1,13 @@
+---
+import PageLayout from '@layouts/PageLayout.astro';
+import ContactForm from '@components/ContactForm';
+---
+
+<PageLayout title="Contact">
+  Want to get in touch?
+  <br /><br />
+   Send me a DM on Twitter or use the form below.
+  <br /><br />
+
+  <ContactForm client:load />
+</PageLayout>

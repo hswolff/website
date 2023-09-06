@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '@layouts/PageLayout.astro';
+import getPostsByTag from '@utils/getPostsByTag';
+import getSortedPosts from '@utils/getSortedPosts';
+import slugify from '@utils/slugify';
+import Card from '@components/Card';
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+const tagPosts = getPostsByTag(posts, 'talk');
+
+const sortTagsPost = getSortedPosts(tagPosts);
+---
+
+<PageLayout title="Talks">
+  I've had the great opportunity to talk at a couple of conferences and Meetups
+  over the years. The following is a collection of talks that I have given.
+  {
+    sortTagsPost.map(({ data }) => (
+      <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+    ))
+  }
+</PageLayout>
