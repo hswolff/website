@@ -1,6 +1,6 @@
 ---
 title: The Bridge to Teaching Redux
-slug: the-bridge-to-teaching-redux
+postSlug: the-bridge-to-teaching-redux
 date: 2017-03-30
 category: code
 tags:

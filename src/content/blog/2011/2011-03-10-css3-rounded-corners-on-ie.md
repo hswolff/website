@@ -1,6 +1,6 @@
 ---
 title: CSS3 Rounded Corners On IE
-slug: css3-rounded-corners-on-ie
+postSlug: css3-rounded-corners-on-ie
 date: 2011-03-10T12:53:44.000Z
 category: code
 tags:

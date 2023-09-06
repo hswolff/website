@@ -1,6 +1,6 @@
 ---
 title: Smarter Express Routing
-slug: smarter-express-routing
+postSlug: smarter-express-routing
 date: 2014-01-12T04:01:13.907Z
 category: code
 tags:

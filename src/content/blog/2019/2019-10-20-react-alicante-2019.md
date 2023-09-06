@@ -1,6 +1,6 @@
 ---
 title: React Alicante 2019
-slug: react-alicante-2019
+postSlug: react-alicante-2019
 date: 2019-10-20
 category: code
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Don't Deal With It, Fix It
-slug: dont-deal-with-it-fix-it
+postSlug: dont-deal-with-it-fix-it
 date: 2014-04-23T01:31:07.691Z
 updated: 2014-04-28T03:04:44.251Z
 category: career

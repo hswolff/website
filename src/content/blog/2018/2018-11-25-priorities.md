@@ -1,6 +1,6 @@
 ---
 title: Priorities
-slug: priorities
+postSlug: priorities
 date: 2018-11-25
 category: career
 ---

@@ -1,6 +1,6 @@
 ---
 title: Essential Atom Packages
-slug: essential-atom-packages
+postSlug: essential-atom-packages
 date: 2015-02-25T04:30:16.059Z
 category: code
 tags:

@@ -1,6 +1,6 @@
 ---
 title: My Favorite Sublime Text 2 Plugins aka Packages
-slug: my-favorite-sublime-text-2-plugins-aka-packages
+postSlug: my-favorite-sublime-text-2-plugins-aka-packages
 date: 2012-07-26T08:14:01.000Z
 category: code
 tags:

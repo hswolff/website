@@ -1,6 +1,6 @@
 ---
 title: What is TypeScript?
-slug: what-is-typescript
+postSlug: what-is-typescript
 date: 2019-02-18
 category: code
 tags:

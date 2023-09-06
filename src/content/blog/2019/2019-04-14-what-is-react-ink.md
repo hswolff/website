@@ -1,6 +1,6 @@
 ---
 title: What is React Ink?
-slug: what-is-react-ink
+postSlug: what-is-react-ink
 date: 2019-04-14
 category: code
 tags:

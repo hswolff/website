@@ -1,6 +1,6 @@
 ---
 title: Why I Love useReducer
-slug: why-i-love-usereducer
+postSlug: why-i-love-usereducer
 date: 2019-05-03
 category: code
 tags:

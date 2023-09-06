@@ -1,6 +1,6 @@
 ---
 title: React Native NYC Meetup
-slug: react-native-nyc-meetup
+postSlug: react-native-nyc-meetup
 date: 2017-01-25
 category: code
 tags:

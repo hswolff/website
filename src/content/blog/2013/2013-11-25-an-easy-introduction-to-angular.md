@@ -1,6 +1,6 @@
 ---
 title: An easy introduction to AngularJS
-slug: what-is-angularjs-and-why-is-it-awesome
+postSlug: what-is-angularjs-and-why-is-it-awesome
 date: 2013-11-25T12:00:39.000Z
 category: code
 tags:

@@ -1,6 +1,6 @@
 ---
 title: Level Up useReducer with Immer
-slug: level-up-usereducer-with-immer
+postSlug: level-up-usereducer-with-immer
 date: 2019-05-10
 category: code
 tags:

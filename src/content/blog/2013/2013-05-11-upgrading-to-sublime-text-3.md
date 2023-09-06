@@ -1,6 +1,6 @@
 ---
 title: Upgrading to Sublime Text 3
-slug: upgrading-to-sublime-text-3
+postSlug: upgrading-to-sublime-text-3
 date: 2013-05-11T22:15:29.000Z
 category: code
 tags:

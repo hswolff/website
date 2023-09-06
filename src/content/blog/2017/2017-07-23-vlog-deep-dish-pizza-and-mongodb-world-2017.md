@@ -1,6 +1,6 @@
 ---
 title: 'Vlog: Deep Dish Pizza and MongoDB World 2017'
-slug: vlog-deep-dish-pizza-and-mongodb-world-2017
+postSlug: vlog-deep-dish-pizza-and-mongodb-world-2017
 date: 2017-07-23
 category: personal
 tags:

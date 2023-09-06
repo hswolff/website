@@ -1,6 +1,6 @@
 ---
 title: 'My First App: Jot'
-slug: my-first-app-jot
+postSlug: my-first-app-jot
 date: 2013-02-11T09:00:47.000Z
 category: personal
 tags:

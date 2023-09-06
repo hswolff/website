@@ -1,6 +1,6 @@
 ---
 title: My Experience with PHP Frameworks - Yii, CodeIgniter, and Symfony
-slug: my-experience-with-php-frameworks-yii-codeignitor-and-symfony
+postSlug: my-experience-with-php-frameworks-yii-codeignitor-and-symfony
 date: 2011-09-26T00:12:45.000Z
 category: code
 tags:

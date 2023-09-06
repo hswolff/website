@@ -1,6 +1,6 @@
 ---
 title: React Native ART Presentation
-slug: react-native-art-presentation
+postSlug: react-native-art-presentation
 date: 2016-12-19
 category: code
 tags:

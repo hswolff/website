@@ -1,6 +1,6 @@
 ---
 title: React Year in Review 2018
-slug: react-year-in-review-2018
+postSlug: react-year-in-review-2018
 date: 2018-12-22
 category: code
 tags:

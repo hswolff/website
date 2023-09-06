@@ -4,6 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import remarkToc from 'remark-toc';
 import remarkCollapse from 'remark-collapse';
 import tailwind from '@astrojs/tailwind';
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,6 +17,7 @@ export default defineConfig({
         applyBaseStyles: false,
       },
     }),
+    react(),
   ],
   markdown: {
     remarkPlugins: [
@@ -32,5 +34,10 @@ export default defineConfig({
       wrap: true,
     },
     extendDefaultPlugins: true,
+  },
+  vite: {
+    optimizeDeps: {
+      exclude: ['@resvg/resvg-js'],
+    },
   },
 });

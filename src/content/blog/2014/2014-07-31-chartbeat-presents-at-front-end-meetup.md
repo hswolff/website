@@ -1,6 +1,6 @@
 ---
 title: Chartbeat Presents at Front-end Meetup
-slug: chartbeat-presents-at-front-end-meetup
+postSlug: chartbeat-presents-at-front-end-meetup
 date: 2014-07-31T17:26:28.763Z
 category: code
 tags:

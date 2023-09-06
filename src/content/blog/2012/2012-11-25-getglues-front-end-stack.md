@@ -1,6 +1,6 @@
 ---
 title: GetGlue's Front End Stack
-slug: getglues-front-end-stack
+postSlug: getglues-front-end-stack
 date: 2012-11-25T11:53:00.000Z
 category: code
 tags:

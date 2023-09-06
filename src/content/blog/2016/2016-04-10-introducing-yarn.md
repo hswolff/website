@@ -1,6 +1,6 @@
 ---
 title: Introducing Yarn
-slug: introducing-yarn
+postSlug: introducing-yarn
 date: 2016-04-10T21:34:46.217Z
 category: code
 tags:

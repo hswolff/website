@@ -1,6 +1,6 @@
 ---
 title: React Native
-slug: react-native
+postSlug: react-native
 date: 2016-06-29T01:14:36.432Z
 category: code
 tags:

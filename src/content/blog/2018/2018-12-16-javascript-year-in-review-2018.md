@@ -1,6 +1,6 @@
 ---
 title: JavaScript Year in Review 2018
-slug: javascript-year-in-review-2018
+postSlug: javascript-year-in-review-2018
 date: 2018-12-16
 category: code
 tags:

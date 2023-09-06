@@ -1,6 +1,6 @@
 ---
 title: What Vue.js Does Better Than React
-slug: what-vuejs-does-better-than-react
+postSlug: what-vuejs-does-better-than-react
 date: 2020-10-19
 category: code
 tags:
@@ -18,9 +18,7 @@ After delving deep into the Vue.js docs and playing around with Vue.js (note: I 
 
 Ultimately I hope that React ~~steals~~ is inspired by these things that Vue.js does and starts doing them as well.
 
-```toc
-# This code block gets replaced with the TOC
-```
+## Table of contents
 
 ## Different Philosophies
 

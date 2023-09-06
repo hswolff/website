@@ -1,6 +1,6 @@
 ---
 title: Pro VSCode Tricks
-slug: pro-vscode-tricks
+postSlug: pro-vscode-tricks
 date: 2019-12-07
 category: code
 tags:

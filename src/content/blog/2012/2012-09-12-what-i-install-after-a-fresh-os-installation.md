@@ -1,6 +1,6 @@
 ---
 title: What I Install After A Fresh OS Installation
-slug: what-i-install-after-a-fresh-os-installation
+postSlug: what-i-install-after-a-fresh-os-installation
 date: 2012-09-12T09:26:43.000Z
 category: personal
 ---
