@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 let hasLoaded = false;
 function maybeLoadDisqusScript(shortname, onLoad) {
