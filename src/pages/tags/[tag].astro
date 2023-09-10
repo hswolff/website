@@ -47,7 +47,7 @@ const sortTagsPost = getSortedPosts(tagPosts);
     <ul>
       {
         sortTagsPost.map(({ data }) => (
-          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+          <Card href={`/blog/${slugify(data)}`} frontmatter={data} />
         ))
       }
     </ul>

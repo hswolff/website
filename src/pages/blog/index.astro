@@ -1,6 +1,6 @@
 ---
 import { SITE } from '@config';
-import Posts from '@layouts/Posts.astro';
+import Blog from '@layouts/Blog.astro';
 import getSortedPosts from '@utils/getSortedPosts';
 import getPageNumbers from '@utils/getPageNumbers';
 
@@ -15,4 +15,4 @@ const totalPages = getPageNumbers(sortedPosts.length);
 const paginatedPosts = sortedPosts.slice(0, SITE.postPerPage);
 ---
 
-<Posts posts={paginatedPosts} pageNum={1} totalPages={totalPages.length} />
+<Blog posts={paginatedPosts} pageNum={1} totalPages={totalPages.length} />
