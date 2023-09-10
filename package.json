@@ -21,8 +21,10 @@
     "@types/react-dom": "^18.2.7",
     "astro": "^3.0.7",
     "fuse.js": "^6.6.2",
+    "markdown-it": "^13.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sanitize-html": "^2.11.0",
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
