@@ -2,6 +2,7 @@ export type Site = {
   website: string;
   author: string;
   desc: string;
+  keywords: string;
   title: string;
   ogImage: string;
   lightAndDarkMode: boolean;
