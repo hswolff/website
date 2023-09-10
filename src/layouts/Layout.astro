@@ -8,6 +8,7 @@ export interface Props {
   title?: string;
   author?: string;
   description?: string;
+  keywords?: string;
   ogImage?: string;
   canonicalURL?: string;
 }
@@ -16,6 +17,7 @@ const {
   title = SITE.title,
   author = SITE.author,
   description = SITE.desc,
+  keywords = SITE.keywords,
   ogImage = SITE.ogImage,
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
 } = Astro.props;
@@ -31,7 +33,6 @@ const socialImageURL = new URL(
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
@@ -39,6 +40,7 @@ const socialImageURL = new URL(
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
     <meta name="author" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
@@ -54,6 +56,10 @@ const socialImageURL = new URL(
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
+    <meta name="twitter:creator" content="@hswolff" />
+    <meta name="twitter:site" content="@hswolff" />
+
+    <slot name="head" />
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -3,9 +3,11 @@ import type { Site, SocialObjects } from './types';
 export const SITE: Site = {
   website: 'https://hswolff.com/',
   author: 'Harry Wolff',
-  desc: 'A minimal, responsive and SEO-friendly Astro blog theme.',
   title: 'Harry Wolff',
-  ogImage: 'astropaper-og.jpg',
+  desc: 'Personal site of Harry Wolff (hswolff). Find articles on JavaScript, videos about code, and stories of my life.',
+  keywords:
+    'javascript, programming, code, personal, career, tutorial, technology, blog',
+  ogImage: 'images/profile-large.jpg',
   lightAndDarkMode: true,
   postPerPage: 7,
 };
