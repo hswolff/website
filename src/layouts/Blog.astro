@@ -1,33 +1,33 @@
 ---
-import { SITE } from "@config";
-import Layout from "@layouts/Layout.astro";
-import Main from "@layouts/Main.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
-import Card from "@components/Card";
-import LinkButton from "@components/LinkButton.astro";
-import slugify from "@utils/slugify";
-import type { CollectionEntry } from "astro:content";
+import { SITE } from '@config';
+import Layout from '@layouts/Layout.astro';
+import Main from '@layouts/Main.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Card from '@components/Card';
+import LinkButton from '@components/LinkButton.astro';
+import slugify from '@utils/slugify';
+import type { CollectionEntry } from 'astro:content';
 
 export interface Props {
   pageNum: number;
   totalPages: number;
-  posts: CollectionEntry<"blog">[];
+  posts: CollectionEntry<'blog'>[];
 }
 
 const { pageNum, totalPages, posts } = Astro.props;
 
-const prev = pageNum > 1 ? "" : "disabled";
-const next = pageNum < totalPages ? "" : "disabled";
+const prev = pageNum > 1 ? '' : 'disabled';
+const next = pageNum < totalPages ? '' : 'disabled';
 ---
 
 <Layout title={`Posts | ${SITE.title}`}>
-  <Header activeNav="posts" />
+  <Header activeNav="blog" />
   <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
     <ul>
       {
         posts.map(({ data }) => (
-          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+          <Card href={`/blog/${slugify(data)}`} frontmatter={data} />
         ))
       }
     </ul>
@@ -37,8 +37,8 @@ const next = pageNum < totalPages ? "" : "disabled";
     totalPages > 1 && (
       <nav class="pagination-wrapper" aria-label="Pagination">
         <LinkButton
-          disabled={prev === "disabled"}
-          href={`/posts${pageNum - 1 !== 1 ? "/" + (pageNum - 1) : ""}`}
+          disabled={prev === 'disabled'}
+          href={`/blog${pageNum - 1 !== 1 ? '/' + (pageNum - 1) : ''}`}
           className={`mr-4 select-none ${prev}`}
           ariaLabel="Previous"
         >
@@ -48,8 +48,8 @@ const next = pageNum < totalPages ? "" : "disabled";
           Prev
         </LinkButton>
         <LinkButton
-          disabled={next === "disabled"}
-          href={`/posts/${pageNum + 1}`}
+          disabled={next === 'disabled'}
+          href={`/blog/${pageNum + 1}`}
           className={`ml-4 select-none ${next}`}
           ariaLabel="Next"
         >

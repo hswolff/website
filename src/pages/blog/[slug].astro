@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
-import Posts from '@layouts/Posts.astro';
-import PostDetails from '@layouts/PostDetails.astro';
+import Blog from '@layouts/Blog.astro';
+import BlogDetail from '@layouts/BlogDetail.astro';
 import getSortedPosts from '@utils/getSortedPosts';
 import getPageNumbers from '@utils/getPageNumbers';
 import slugify from '@utils/slugify';
@@ -47,9 +47,9 @@ const paginatedPosts = sortedPosts.slice(startPost, lastPost);
 
 {
   post ? (
-    <PostDetails post={post} />
+    <BlogDetail post={post} />
   ) : (
-    <Posts
+    <Blog
       posts={paginatedPosts}
       pageNum={currentPage}
       totalPages={totalPages.length}
