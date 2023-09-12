@@ -14,10 +14,9 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const { title, author, description, ogImage, canonicalURL, date, tags } =
-  post.data;
+const { title, description, ogImage, canonicalURL, date, tags } = post.data;
 
-const { Content } = await post.render();
+const { Content, remarkPluginFrontmatter } = await post.render();
 
 const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   .href;
@@ -25,7 +24,6 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
 
 <Layout
   title={title}
-  author={author}
   description={description}
   ogImage={ogUrl}
   canonicalURL={canonicalURL}
@@ -48,7 +46,12 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   </div>
   <main id="main-content">
     <h1 class="post-title">{title}</h1>
-    <Datetime datetime={date} size="lg" className="my-2" />
+    <Datetime
+      datetime={date}
+      size="lg"
+      className="my-2"
+      minutesRead={remarkPluginFrontmatter.minutesRead}
+    />
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
