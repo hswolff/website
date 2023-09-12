@@ -6,7 +6,6 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
 export interface Props {
   title?: string;
-  author?: string;
   description?: string;
   keywords?: string;
   ogImage?: string;
@@ -15,7 +14,6 @@ export interface Props {
 
 const {
   title = SITE.title,
-  author = SITE.author,
   description = SITE.desc,
   keywords = SITE.keywords,
   ogImage = SITE.ogImage,
@@ -26,6 +24,8 @@ const socialImageURL = new URL(
   ogImage ? ogImage : SITE.ogImage,
   Astro.url.origin
 ).href;
+
+const author = SITE.author;
 ---
 
 <!doctype html>

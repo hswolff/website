@@ -4,9 +4,15 @@ export interface Props {
   datetime: string | Date;
   size?: 'sm' | 'lg';
   className?: string;
+  minutesRead?: string;
 }
 
-export default function Datetime({ datetime, size = 'sm', className }: Props) {
+export default function Datetime({
+  datetime,
+  size = 'sm',
+  className,
+  minutesRead,
+}: Props) {
   return (
     <div className={`flex items-center space-x-2 opacity-80 ${className}`}>
       <svg
@@ -21,13 +27,19 @@ export default function Datetime({ datetime, size = 'sm', className }: Props) {
       </svg>
       <span className="sr-only">Posted on:</span>
       <span className={`italic ${size === 'sm' ? 'text-sm' : 'text-base'}`}>
-        <FormattedDatetime datetime={datetime} />
+        <FormattedDatetime datetime={datetime} minutesRead={minutesRead} />
       </span>
     </div>
   );
 }
 
-const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
+const FormattedDatetime = ({
+  datetime,
+  minutesRead,
+}: {
+  datetime: string | Date;
+  minutesRead?: string;
+}) => {
   const myDatetime = new Date(datetime);
 
   const date = myDatetime.toLocaleDateString(LOCALE, {
@@ -44,6 +56,13 @@ const FormattedDatetime = ({ datetime }: { datetime: string | Date }) => {
   return (
     <>
       {date}
+      {minutesRead && (
+        <>
+          <span aria-hidden="true"> | </span>
+          <span className="sr-only">&nbsp;at&nbsp;</span>
+          {minutesRead}
+        </>
+      )}
       {/* <span aria-hidden="true"> | </span>
       <span className="sr-only">&nbsp;at&nbsp;</span>
       {time} */}
