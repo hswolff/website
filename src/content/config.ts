@@ -1,26 +1,8 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
 import { blogSchema } from './_schemas';
-
-const defaultBlog = defineCollection({
-  // Type-check frontmatter using a schema
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    // Transform string to Date object
-    pubDate: z
-      .string()
-      .or(z.date())
-      .transform(val => new Date(val)),
-    updatedDate: z
-      .string()
-      .optional()
-      .transform(str => (str ? new Date(str) : undefined)),
-    heroImage: z.string().optional(),
-  }),
-});
 
 const blog = defineCollection({
   schema: blogSchema,
 });
 
-export const collections = { 'default-blog': defaultBlog, blog };
+export const collections = { blog };
