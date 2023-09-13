@@ -10,7 +10,7 @@ import { remarkExcerpt } from './plugins/remark-excerpt';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://hswolff.com',
   integrations: [
     mdx(),
     sitemap(),
