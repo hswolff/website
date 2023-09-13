@@ -14,6 +14,12 @@ During the day I [work](http://www.linkedin.com/in/hswolff 'LinkedIn') at [Mongo
 
 I'm pretty damn social, so you can find me on most social networks. Such as:
 
+<!--
+I also have given some talks. <a href="/about/talks">Check them out.</a>
+
+<a href="https://github.com/hswolff/website">Find the source code for this blog here.</a>
+-->
+
 <div class="external-networks">
 <style>
     .external-networks a {
