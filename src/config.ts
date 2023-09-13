@@ -9,7 +9,7 @@ export const SITE: Site = {
     'javascript, programming, code, personal, career, tutorial, technology, blog',
   ogImage: 'images/profile-large.jpg',
   lightAndDarkMode: true,
-  postPerPage: 7,
+  postPerPage: 10,
 };
 
 export const LOCALE = ['en-EN']; // set to [] to use the environment default
