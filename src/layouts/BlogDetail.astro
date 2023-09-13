@@ -14,7 +14,7 @@ export interface Props {
 
 const { post } = Astro.props;
 
-const { title, ogImage, canonicalURL, date, tags } = post.data;
+const { title, ogImage, canonicalURL, date, tags, category } = post.data;
 
 const { Content, remarkPluginFrontmatter } = await post.render();
 
@@ -34,8 +34,8 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
     <button
       class="focus-outline mb-2 mt-8 flex hover:opacity-75"
       onclick="
-      history.back()
-      "
+            history.back()
+            "
     >
       <svg xmlns="http://www.w3.org/2000/svg"
         ><path
@@ -51,6 +51,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
       size="lg"
       className="my-2"
       minutesRead={remarkPluginFrontmatter.minutesRead}
+      category={category}
     />
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />

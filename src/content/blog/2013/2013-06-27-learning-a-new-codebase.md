@@ -3,7 +3,7 @@ title: 'Taming The Jungle: Working With New Code'
 postSlug: taming-the-jungle
 date: 2013-06-27T13:07:05.000Z
 updated: 2013-07-03T09:35:35.000Z
-category: work
+category: code
 ---
 
 <p>An undervalued skill of the common developer lies in their ability to navigate and explore a new code base.  Although not the most glamorous or fun task, it is the one that almost always consumes most of a developers working hours.</p>
