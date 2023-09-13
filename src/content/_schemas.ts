@@ -17,6 +17,10 @@ export const blogSchema = z
     postSlug: z.string(),
     tags: z.array(z.string()).optional(),
     draft: z.boolean().optional(),
+    featured: z.boolean().optional(),
+    ogImage: z.string().optional(),
+    description: z.string().optional(),
+    canonicalURL: z.string().optional(),
   })
   .strict();
 

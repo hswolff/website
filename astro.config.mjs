@@ -6,6 +6,7 @@ import remarkCollapse from 'remark-collapse';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 import { remarkReadingTime } from './plugins/remark-reading-time';
+import { remarkExcerpt } from './plugins/remark-excerpt';
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,6 +31,7 @@ export default defineConfig({
         },
       ],
       remarkReadingTime,
+      remarkExcerpt,
     ],
     shikiConfig: {
       theme: 'one-dark-pro',
