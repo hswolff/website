@@ -1,5 +1,7 @@
 import { z } from 'astro:content';
 
+export const blogCategoryEnumValues = ['code', 'personal', 'career'] as const;
+
 export const blogSchema = z
   .object({
     title: z.string(),
@@ -13,7 +15,7 @@ export const blogSchema = z
       .or(z.date())
       .transform(val => new Date(val))
       .optional(),
-    category: z.string(),
+    category: z.enum(blogCategoryEnumValues),
     postSlug: z.string(),
     tags: z.array(z.string()).optional(),
     draft: z.boolean().optional(),

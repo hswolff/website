@@ -8,7 +8,7 @@ export interface Props {
 }
 
 export default function Card({ href, frontmatter, secHeading = true }: Props) {
-  const { title, date } = frontmatter;
+  const { title, date, category } = frontmatter;
   return (
     <li className="my-6">
       <a
@@ -25,7 +25,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
           </h3>
         )}
       </a>
-      <Datetime datetime={date} />
+      <Datetime datetime={date} category={category} />
     </li>
   );
 }

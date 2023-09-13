@@ -1,0 +1,54 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import Main from '@layouts/Main.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Card from '@components/Card';
+import getPostsByCategory from '@utils/getPostsByCategory';
+import slugify from '@utils/slugify';
+import { SITE } from '@config';
+import getSortedPosts from '@utils/getSortedPosts';
+import { blogCategoryEnumValues } from '@content/_schemas';
+
+export interface Props {
+  post: CollectionEntry<'blog'>;
+  category: string;
+}
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return blogCategoryEnumValues.map(category => {
+    return {
+      params: { category },
+      props: { category },
+    };
+  });
+}
+
+const { category } = Astro.props;
+
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+const categoryPosts = getPostsByCategory(posts, category);
+
+const sortedPosts = getSortedPosts(categoryPosts);
+---
+
+<Layout title={`Category:${category} | ${SITE.title}`}>
+  <Header />
+  <Main
+    pageTitle={`Category:${category}`}
+    pageDesc={`All the articles with the category "${category}".`}
+  >
+    <ul>
+      {
+        sortedPosts.map(({ data }) => (
+          <Card href={`/blog/${slugify(data)}`} frontmatter={data} />
+        ))
+      }
+    </ul>
+  </Main>
+  <Footer />
+</Layout>
