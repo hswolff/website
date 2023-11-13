@@ -60,16 +60,11 @@ const { activeNav } = Astro.props;
               Blog
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="/blog/tags/" class={activeNav === 'tags' ? 'active' : ''}>
               Tags
             </a>
-          </li>
-          <li>
-            <a href="/about/" class={activeNav === 'about' ? 'active' : ''}>
-              About
-            </a>
-          </li>
+          </li> -->
           <li>
             <a
               href="/projects/"
@@ -84,11 +79,16 @@ const { activeNav } = Astro.props;
             </a>
           </li>
           <li>
+            <a href="/about/" class={activeNav === 'about' ? 'active' : ''}>
+              About
+            </a>
+          </li>
+          <li>
             <LinkButton
               href="/search"
               className={`focus-outline p-3 sm:p-1 ${
                 activeNav === 'search' ? 'active' : ''
-              }`}
+              } flex`}
               ariaLabel="search"
               title="Search"
             >
