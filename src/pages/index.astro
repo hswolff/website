@@ -8,6 +8,7 @@ import Hr from '@components/Hr.astro';
 import Card from '@components/Card';
 import getSortedPosts from '@utils/getSortedPosts';
 import slugify from '@utils/slugify';
+import { LOGO_IMAGE } from '@config';
 
 const posts = await getCollection('blog');
 
@@ -21,19 +22,34 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
     <section id="hero">
       <h1>Howdy 👋</h1>
 
-      <p>My name is Harry Wolff and welcome to my website!</p>
-      <p>
-        I&apos;m a software engineering manager currently working at{' '}
-        <a href="http://mongodb.com/">MongoDB</a>.
-      </p>
-      <p>
-        I have a <a href="https://www.youtube.com/user/hswolff">YouTube</a>{' '}
-         channel. I make videos about JavaScript, React, and everything related
-        to the web. I&apos;ve been told it&apos;s entertaining.
-      </p>
-      <p>
-        I also <a href="/blog/">blog</a>! Have a look at my latest posts 👇
-      </p>
+      <div class="flex flex-col-reverse sm:flex-row">
+        <div>
+          <p>My name is Harry Wolff and welcome to my website!</p>
+          <p>
+            I&apos;m a software engineering manager currently working at{' '}
+            <a href="http://mongodb.com/">MongoDB</a>.
+          </p>
+          <p>
+            I have a <a href="https://www.youtube.com/user/hswolff">YouTube</a>{
+              ' '
+            }
+             channel. I make videos about JavaScript, React, and everything
+            related to the web. I&apos;ve been told it&apos;s entertaining.
+          </p>
+          <p>
+            I also <a href="/blog/">blog</a>! Have a look at my latest posts 👇
+          </p>
+        </div>
+
+        <div class="mt-4 sm:my-auto">
+          <img
+            src="/images/profile.jpg"
+            alt="Harry Wolff Profile"
+            width={LOGO_IMAGE.width}
+            height={LOGO_IMAGE.height}
+          />
+        </div>
+      </div>
     </section>
 
     <Hr />
