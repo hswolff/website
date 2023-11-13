@@ -32,7 +32,7 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
         to the web. I&apos;ve been told it&apos;s entertaining.
       </p>
       <p>
-        I also <a href="/blog">blog</a>! Have a look at my latest posts 👇
+        I also <a href="/blog/">blog</a>! Have a look at my latest posts 👇
       </p>
     </section>
 
@@ -46,7 +46,7 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
             <ul>
               {featuredPosts.map(({ data }) => (
                 <Card
-                  href={`/blog/${slugify(data)}`}
+                  href={`/blog/${slugify(data)}/`}
                   frontmatter={data}
                   secHeading={false}
                 />
@@ -66,7 +66,7 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
             ({ data }, index) =>
               index < 4 && (
                 <Card
-                  href={`/blog/${slugify(data)}`}
+                  href={`/blog/${slugify(data)}/`}
                   frontmatter={data}
                   secHeading={false}
                 />
@@ -75,7 +75,7 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
         }
       </ul>
       <div class="all-posts-btn-wrapper">
-        <LinkButton href="/blog">
+        <LinkButton href="/blog/">
           All Posts
           <svg xmlns="http://www.w3.org/2000/svg"
             ><path
