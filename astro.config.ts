@@ -5,6 +5,7 @@ import remarkToc from 'remark-toc';
 import remarkCollapse from 'remark-collapse';
 import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
+import vercel from '@astrojs/vercel/serverless';
 import { remarkReadingTime } from './plugins/remark-reading-time';
 import { remarkExcerpt } from './plugins/remark-excerpt';
 
@@ -43,4 +44,10 @@ export default defineConfig({
     },
   },
   scopedStyleStrategy: 'where',
+  output: 'server',
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+  }),
 });
