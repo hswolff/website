@@ -2,6 +2,7 @@
 import { SITE } from '@config';
 import { GoogleAnalytics } from '@astrolib/analytics';
 import '@styles/base.css';
+import { ViewTransitions } from 'astro:transitions';
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -73,6 +74,9 @@ const author = SITE.author;
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap"
       rel="stylesheet"
     />
+
+    <meta name="theme-color" content="" />
+
     {
       // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
       // include google-site-verification tag in the heading
@@ -85,10 +89,12 @@ const author = SITE.author;
       )
     }
 
+    <ViewTransitions />
+
     <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body>
     <slot />
+    <GoogleAnalytics id="UA-12625863-1" />
   </body>
-  <GoogleAnalytics id="UA-12625863-1" />
 </html>

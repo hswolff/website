@@ -33,6 +33,7 @@
   "devDependencies": {
     "@resvg/resvg-js": "^2.4.1",
     "@tailwindcss/typography": "^0.5.9",
+    "@types/github-slugger": "^2.0.0",
     "@typescript-eslint/parser": "^6.6.0",
     "eslint": "^8.48.0",
     "eslint-plugin-astro": "^0.29.0",
@@ -41,7 +42,7 @@
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0",
     "remark-collapse": "^0.1.2",
-    "remark-toc": "^8.0.1",
+    "remark-toc": "^9.0.0",
     "satori": "^0.10.4"
   }
 }

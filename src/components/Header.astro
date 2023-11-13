@@ -14,7 +14,7 @@ const { activeNav } = Astro.props;
   <a id="skip-to-content" href="#main-content">Skip to content</a>
   <div class="nav-container">
     <div class="top-nav-wrap">
-      <a href="/" class="logo">
+      <a href="/" class="logo whitespace-nowrap">
         {
           LOGO_IMAGE.enable ? (
             <img
@@ -149,7 +149,7 @@ const { activeNav } = Astro.props;
   }
 
   nav {
-    @apply flex w-full flex-col items-center bg-skin-fill sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0;
+    @apply flex w-full flex-col items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0;
   }
   nav ul {
     @apply mt-4 grid w-44 grid-cols-2 grid-rows-4 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-5 sm:gap-y-0;
@@ -160,11 +160,11 @@ const { activeNav } = Astro.props;
   nav ul li a {
     @apply w-full px-4 py-3 text-center font-medium hover:text-skin-accent sm:my-0 sm:px-2 sm:py-1;
   }
-  nav ul li:nth-child(4) a {
+  nav ul li:nth-last-child(2) a {
     @apply w-auto;
   }
-  nav ul li:nth-child(4),
-  nav ul li:nth-child(5) {
+  nav ul li:nth-last-child(1),
+  nav ul li:nth-last-child(2) {
     @apply col-span-1;
   }
   nav a.active {
@@ -202,19 +202,26 @@ const { activeNav } = Astro.props;
 </style>
 
 <script>
-  // Toggle menu
-  const menuBtn = document.querySelector('.hamburger-menu');
-  const menuIcon = document.querySelector('.menu-icon');
-  const menuItems = document.querySelector('#menu-items');
+  function toggleNav() {
+    // Toggle menu
+    const menuBtn = document.querySelector('.hamburger-menu');
+    const menuIcon = document.querySelector('.menu-icon');
+    const menuItems = document.querySelector('#menu-items');
 
-  menuBtn?.addEventListener('click', () => {
-    const menuExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-    menuIcon?.classList.toggle('is-active');
-    menuBtn.setAttribute('aria-expanded', menuExpanded ? 'false' : 'true');
-    menuBtn.setAttribute(
-      'aria-label',
-      menuExpanded ? 'Open Menu' : 'Close Menu'
-    );
-    menuItems?.classList.toggle('display-none');
-  });
+    menuBtn?.addEventListener('click', () => {
+      const menuExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuIcon?.classList.toggle('is-active');
+      menuBtn.setAttribute('aria-expanded', menuExpanded ? 'false' : 'true');
+      menuBtn.setAttribute(
+        'aria-label',
+        menuExpanded ? 'Open Menu' : 'Close Menu'
+      );
+      menuItems?.classList.toggle('display-none');
+    });
+  }
+
+  toggleNav();
+
+  // Runs on view transitions navigation
+  document.addEventListener('astro:after-swap', toggleNav);
 </script>
