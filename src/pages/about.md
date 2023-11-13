@@ -12,7 +12,12 @@ I currently live in New York City with my wife and son. We've been in NYC for ov
 
 During the day I [work](http://www.linkedin.com/in/hswolff 'LinkedIn') at [MongoDB](http://mongodb.com/) where I'm a Lead Engineer, leading a team of engineers to make coffee into code. It's an overused expression, but some days it truly feels as simple as that.
 
-I'm pretty damn social, so you can find me on most social networks. Such as:
+<img
+    src="/images/profile.jpg"
+    alt="Harry Wolff Profile"
+/>
+
+<!-- I'm pretty damn social, so you can find me on most social networks. Such as: -->
 
 <!--
 I also have given some talks. <a href="/about/talks">Check them out.</a>
@@ -20,7 +25,7 @@ I also have given some talks. <a href="/about/talks">Check them out.</a>
 <a href="https://github.com/hswolff/website">Find the source code for this blog here.</a>
 -->
 
-<div class="external-networks">
+<!-- <div class="external-networks">
 <style>
     .external-networks a {
         box-shadow: none;
@@ -50,4 +55,4 @@ I also have given some talks. <a href="/about/talks">Check them out.</a>
     <a href="http://www.linkedin.com/in/hswolff" title="LinkedIn">
         <img src="/images/external-networks/linkedin.png" alt="LinkedIn" />
     </a>
-</div>
+</div> -->
