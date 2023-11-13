@@ -1,5 +1,6 @@
 ---
 import { SITE } from '@config';
+import { GoogleAnalytics } from '@astrolib/analytics';
 import '@styles/base.css';
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
@@ -89,4 +90,5 @@ const author = SITE.author;
   <body>
     <slot />
   </body>
+  <GoogleAnalytics id="UA-12625863-1" />
 </html>
