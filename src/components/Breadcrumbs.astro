@@ -32,7 +32,20 @@ breadcrumbList[0] === 'posts' &&
           </li>
         ) : (
           <li>
-            <a href={`/${breadcrumb}`}>{breadcrumb}</a>
+            {breadcrumb === 'category' ? (
+              <span class="capitalize">{breadcrumb}</span>
+            ) : (
+              <a
+                href={
+                  breadcrumb.startsWith('blog')
+                    ? `/${breadcrumb}/`
+                    : `/blog/${breadcrumb}/`
+                }
+              >
+                {breadcrumb}
+              </a>
+            )}
+
             <span aria-hidden="true">&nbsp;&gt;&nbsp;</span>
           </li>
         )
