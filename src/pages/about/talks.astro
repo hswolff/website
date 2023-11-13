@@ -18,7 +18,7 @@ const sortTagsPost = getSortedPosts(tagPosts);
   over the years. The following is a collection of talks that I have given.
   {
     sortTagsPost.map(({ data }) => (
-      <Card href={`/blog/${slugify(data)}`} frontmatter={data} />
+      <Card href={`/blog/${slugify(data)}/`} frontmatter={data} />
     ))
   }
 </PageLayout>

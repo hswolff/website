@@ -27,7 +27,7 @@ const next = pageNum < totalPages ? '' : 'disabled';
     <ul>
       {
         posts.map(({ data }) => (
-          <Card href={`/blog/${slugify(data)}`} frontmatter={data} />
+          <Card href={`/blog/${slugify(data)}/`} frontmatter={data} />
         ))
       }
     </ul>
@@ -38,7 +38,7 @@ const next = pageNum < totalPages ? '' : 'disabled';
       <nav class="pagination-wrapper" aria-label="Pagination">
         <LinkButton
           disabled={prev === 'disabled'}
-          href={`/blog${pageNum - 1 !== 1 ? '/' + (pageNum - 1) : ''}`}
+          href={`/blog${pageNum - 1 !== 1 ? '/' + (pageNum - 1) : '/'}`}
           className={`mr-4 select-none ${prev}`}
           ariaLabel="Previous"
         >
@@ -49,7 +49,7 @@ const next = pageNum < totalPages ? '' : 'disabled';
         </LinkButton>
         <LinkButton
           disabled={next === 'disabled'}
-          href={`/blog/${pageNum + 1}`}
+          href={`/blog/${pageNum + 1}/`}
           className={`ml-4 select-none ${next}`}
           ariaLabel="Next"
         >
