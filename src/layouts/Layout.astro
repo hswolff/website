@@ -2,7 +2,7 @@
 import { SITE } from '@config';
 import { GoogleAnalytics } from '@astrolib/analytics';
 import '@styles/base.css';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -89,7 +89,7 @@ const author = SITE.author;
       )
     }
 
-    <ViewTransitions />
+    <ClientRouter />
 
     <script is:inline src="/toggle-theme.js"></script>
   </head>
