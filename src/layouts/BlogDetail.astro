@@ -1,4 +1,5 @@
 ---
+import { render } from 'astro:content';
 import Layout from '@layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
@@ -16,7 +17,7 @@ const { post } = Astro.props;
 
 const { title, ogImage, canonicalURL, date, tags, category } = post.data;
 
-const { Content, remarkPluginFrontmatter } = await post.render();
+const { Content, remarkPluginFrontmatter } = await render(post);
 
 const ogUrl = new URL(ogImage ? ogImage : `${title}.png`, Astro.url.origin)
   .href;
