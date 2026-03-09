@@ -1,0 +1,784 @@
+---
+const SITE_URL = 'https://hswolff.com/dough-maker';
+const APP_STORE_URL = 'https://apps.apple.com/app/id0000000000';
+const WEB_APP_URL = 'https://hswolff.com/dough-maker/app';
+const SUPPORT_EMAIL = 'support@hswolff.com';
+const DEVELOPER_NAME = 'Harry Wolff';
+const ICON_URL = '/images/dough-maker-icon.png';
+
+const pageTitle =
+  'Dough Maker | Dough Calculator App, Baker’s Percentage Tool, and Privacy Policy';
+const pageDescription =
+  'Dough Maker helps you calculate dough formulas, manage recipes, and bake with more consistency. Learn what the app does, why it is useful, and how your data is handled.';
+const canonicalUrl = SITE_URL;
+const ogImage = `${SITE_URL}/og-image.jpg`;
+const lastUpdated = 'March 9, 2026';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta
+      name="keywords"
+      content="Dough Maker, dough calculator app, bread dough calculator, pizza dough calculator, baker's percentage app, dough recipe manager, hydration calculator"
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Dough Maker" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'SoftwareApplication',
+        name: 'Dough Maker',
+        applicationCategory: 'UtilitiesApplication',
+        operatingSystem: 'iOS, Android, Web',
+        description: pageDescription,
+        url: canonicalUrl,
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'USD',
+        },
+        publisher: {
+          '@type': 'Person',
+          name: DEVELOPER_NAME,
+        },
+        featureList: [
+          'Dough formula calculations',
+          'Baker’s percentage support',
+          'Hydration and ingredient adjustments',
+          'Saved recipe library',
+          'User-initiated recipe export',
+        ],
+      })}
+    />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Dough Maker</p>
+          <div class="hero-heading-row">
+            <h1>
+              Calculate dough faster, save recipes, and bake with more
+              consistency.
+            </h1>
+            <img
+              class="brand-mark"
+              src={ICON_URL}
+              alt="Dough Maker app icon"
+              width="192"
+              height="192"
+            />
+          </div>
+          <p class="lede">
+            Dough Maker is a practical dough calculator app for bread and pizza
+            makers who want reliable formulas, cleaner recipe organization, and
+            a faster way to adjust hydration, yeast, and ingredient percentages.
+          </p>
+
+          <div class="cta-row">
+            <a class="button button-primary" href={APP_STORE_URL}
+              >Download on the App Store</a
+            >
+            <!-- <a class="button button-secondary" href={WEB_APP_URL}
+              >Open the Web Version</a
+            > -->
+            <a class="button button-secondary" href="#privacy-policy"
+              >Read the Privacy Policy</a
+            >
+            <a class="text-link" href={`mailto:${SUPPORT_EMAIL}`}
+              >Contact Support</a
+            >
+          </div>
+
+          <ul class="hero-points" aria-label="Key highlights">
+            <li>
+              Built for everyday dough calculations and repeatable results
+            </li>
+            <li>
+              Useful for bread dough, pizza dough, and general baker’s math
+            </li>
+            <li>
+              Includes a recipe library so your formulas stay easy to reuse
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Features</p>
+          <h2>
+            Core features for faster dough planning and repeatable recipes
+          </h2>
+          <p class="section-note">
+            Each feature is designed to reduce manual math and make successful
+            formulas easier to reuse.
+          </p>
+        </div>
+
+        <div class="feature-list">
+          <article class="card">
+            <h3>🥖 Dough calculations with baker’s percentages</h3>
+            <p>
+              Handle core dough math in one place instead of recalculating
+              everything by hand every time you change a formula.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>💧 Hydration and ingredient adjustments</h3>
+            <p>
+              Adjust hydration and supporting ingredients without losing track
+              of how the full formula changes.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>📚 Saved recipes and reusable formulas</h3>
+            <p>
+              Keep your best dough recipes in a library so you can return to
+              them, update them, or duplicate them for new variations.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>📱 Practical mobile workflow</h3>
+            <p>
+              Dough Maker is designed for quick use on mobile, so recipe
+              planning and ingredient checks stay accessible in the kitchen or
+              at the bench.
+            </p>
+          </article>
+          <article class="card">
+            <h3>📤 User-controlled export</h3>
+            <p>
+              Export recipe data when you choose to, instead of relying on a
+              required cloud account or automatic publishing flow.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section faq">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>What is Dough Maker for?</summary>
+            <p>
+              Dough Maker is for calculating dough formulas, adjusting
+              ingredient ratios, and saving recipes so you can bake more
+              consistently.
+            </p>
+          </details>
+
+          <details>
+            <summary>Is Dough Maker only for pizza?</summary>
+            <p>
+              No. It is useful for pizza dough, bread dough, and other workflows
+              that rely on clear ingredient percentages and repeatable formulas.
+            </p>
+          </details>
+
+          <details>
+            <summary>Do I need an account to use the app?</summary>
+            <p>
+              Based on the current implementation, the app is designed around
+              local storage and does not require a user account to save recipe
+              data.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do I contact the developer?</summary>
+            <p>
+              Use <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a> for support,
+              feedback, or privacy-related questions.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section
+        class="section privacy"
+        id="privacy-policy"
+        aria-labelledby="privacy-policy-title"
+      >
+        <div class="section-heading">
+          <p class="eyebrow">Privacy Policy</p>
+          <h2 id="privacy-policy-title">
+            How Dough Maker handles your information
+          </h2>
+          <p class="section-note">Last updated: {lastUpdated}</p>
+        </div>
+
+        <div class="policy">
+          <section>
+            <h3>Overview</h3>
+            <p>
+              This page explains how Dough Maker handles information when you
+              use the app or visit this website. Dough Maker is designed to help
+              you calculate dough formulas and manage recipes with a simple,
+              local-first workflow.
+            </p>
+          </section>
+
+          <section>
+            <h3>Information stored by the app</h3>
+            <p>
+              Dough Maker may store the following information locally on your
+              device:
+            </p>
+            <ul>
+              <li>saved recipes and recipe drafts,</li>
+              <li>
+                app settings such as display preferences and precision settings,
+              </li>
+              <li>local app state related to optional paid feature access.</li>
+            </ul>
+            <p>
+              Based on the current app implementation, this information is
+              stored locally on-device rather than in a user account created
+              with the developer.
+            </p>
+          </section>
+
+          <section>
+            <h3>Information not obviously collected by the current app</h3>
+            <p>
+              Based on the current codebase, Dough Maker does not obviously
+              include a general-purpose analytics SDK, advertising SDK, or
+              account system for routine collection of personal profile data.
+            </p>
+            <p>
+              If that changes in a future release, this policy should be updated
+              to reflect the new behavior before or when that release is made
+              available.
+            </p>
+          </section>
+
+          <section>
+            <h3>Exports and sharing</h3>
+            <p>
+              Dough Maker includes export functionality for recipe data. Export
+              actions are initiated by you. When you choose to export or copy
+              recipe information, you control what you do with that content
+              after export.
+            </p>
+          </section>
+
+          <section>
+            <h3>In-app purchases</h3>
+            <p>
+              Dough Maker may offer optional paid features through in-app
+              purchases. Those transactions are processed by the relevant
+              platform provider, such as Apple or Google, under that provider’s
+              own terms and privacy practices.
+            </p>
+            <p>
+              The app may store local purchase-related status information so it
+              can decide whether paid features should be available on your
+              device.
+            </p>
+          </section>
+
+          <section>
+            <h3>External links</h3>
+            <p>
+              This website or the app may include links to external services
+              such as the App Store, Play Store, or email applications. If you
+              follow those links, your use of those third-party services is
+              governed by their own policies and terms.
+            </p>
+          </section>
+
+          <section>
+            <h3>Children’s privacy</h3>
+            <p>
+              Dough Maker is not specifically directed to children under 13. If
+              you believe a child has provided personal information directly to
+              the developer, contact
+              <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
+            </p>
+          </section>
+
+          <section>
+            <h3>Data retention and deletion</h3>
+            <p>
+              Because recipe and settings data are stored locally on your device
+              in the current implementation, you can generally remove app data
+              by deleting the app or clearing its local data, subject to your
+              device and platform behavior.
+            </p>
+          </section>
+
+          <section>
+            <h3>Policy updates</h3>
+            <p>
+              This privacy policy may be updated from time to time as the app
+              evolves. The latest version will be posted at <a href={SITE_URL}
+                >{SITE_URL}</a
+              > with an updated effective date.
+            </p>
+          </section>
+
+          <section>
+            <h3>Contact</h3>
+            <p>
+              If you have questions about Dough Maker or this privacy policy,
+              contact
+              <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="footer-brand">Dough Maker</p>
+        <p class="footer-copy">
+          A dough calculator app and recipe manager built by {DEVELOPER_NAME}.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href={APP_STORE_URL}>App Store</a>
+        <!-- <a href={WEB_APP_URL}>Web Version</a> -->
+        <a href={`mailto:${SUPPORT_EMAIL}`}>Support</a>
+        <a href="#privacy-policy">Privacy Policy</a>
+      </div>
+
+      <p class="footer-meta">
+        Website URL: <a href={SITE_URL}>{SITE_URL}</a>
+      </p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #fcfbf7;
+    --surface: rgba(255, 255, 255, 0.78);
+    --surface-strong: #fffdf7;
+    --border: rgba(46, 34, 20, 0.12);
+    --text: #1f1a17;
+    --muted: #62574b;
+    --accent: #b85821;
+    --accent-strong: #8c3e10;
+    --accent-soft: #f4e2d4;
+    --shadow: 0 18px 60px rgba(56, 36, 20, 0.12);
+    --radius: 24px;
+    --radius-sm: 18px;
+    --max: 1120px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background:
+      radial-gradient(
+        circle at top left,
+        rgba(243, 210, 184, 0.7),
+        transparent 32%
+      ),
+      linear-gradient(180deg, #fffaf2 0%, var(--bg) 55%, #f7f0e7 100%);
+    color: var(--text);
+    font-family: 'Instrument Sans', 'Avenir Next', 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  main,
+  .site-footer {
+    width: min(calc(100% - 2rem), var(--max));
+    margin: 0 auto;
+  }
+
+  main {
+    padding: 2rem 0 4rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  ul,
+  dl {
+    margin-top: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .hero,
+  .section,
+  .site-footer {
+    position: relative;
+  }
+
+  .hero {
+    padding: 1.5rem 0 2rem;
+  }
+
+  .brand-mark {
+    display: inline-block;
+    flex: 0 0 auto;
+    width: 18em;
+    height: 18em;
+    border-radius: 2rem;
+    box-shadow: 0 18px 42px rgba(32, 138, 239, 0.24);
+  }
+
+  .hero-copy,
+  .card,
+  .policy,
+  .faq-list,
+  .site-footer {
+    backdrop-filter: blur(16px);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+
+  .hero-copy,
+  .policy,
+  .site-footer {
+    border-radius: calc(var(--radius) + 6px);
+  }
+
+  .hero-copy {
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .hero-heading-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero h1 {
+    flex: 0 1 12ch;
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.05em;
+  }
+
+  .hero .lede,
+  .hero .hero-points,
+  .hero .cta-row {
+    max-width: none;
+  }
+
+  .lede,
+  .section-note,
+  .card p,
+  .policy p,
+  .policy li,
+  .faq-list p,
+  .footer-copy,
+  .footer-meta {
+    color: var(--muted);
+    font-size: 1.02rem;
+    line-height: 1.7;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-strong);
+    font-size: 0.84rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 1.75rem;
+    height: 1px;
+    background: currentColor;
+  }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    align-items: center;
+    margin: 1.5rem 0;
+  }
+
+  .button,
+  .text-link {
+    transition:
+      transform 160ms ease,
+      box-shadow 160ms ease,
+      border-color 160ms ease,
+      background-color 160ms ease;
+  }
+
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3rem;
+    padding: 0.85rem 1.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .button:hover,
+  .text-link:hover,
+  details:hover {
+    transform: translateY(-1px);
+  }
+
+  .button-primary {
+    background: var(--accent);
+    color: #fffaf6;
+    box-shadow: 0 12px 30px rgba(184, 88, 33, 0.24);
+  }
+
+  .button-primary:hover {
+    background: var(--accent-strong);
+  }
+
+  .button-secondary {
+    background: var(--surface-strong);
+    border: 1px solid var(--border);
+  }
+
+  .text-link {
+    color: var(--accent-strong);
+    font-weight: 700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  .hero-points {
+    display: grid;
+    gap: 0.8rem;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    list-style: none;
+  }
+
+  .hero-points li {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .hero-points li::before {
+    content: '•';
+    color: var(--accent);
+    font-weight: 800;
+  }
+
+  .section {
+    padding: 1.25rem 0;
+  }
+
+  .section-heading {
+    max-width: 42rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .section h2 {
+    font-size: clamp(1.7rem, 3vw, 2.7rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-list {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .feature-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card {
+    padding: 1.35rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .card h3,
+  .policy h3 {
+    margin-bottom: 0.55rem;
+    font-size: 1.05rem;
+  }
+
+  .policy {
+    padding: 1.75rem;
+  }
+
+  .privacy {
+    scroll-margin-top: 1.25rem;
+  }
+
+  .policy section + section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .policy ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 0.85rem;
+    padding: 1rem;
+    border-radius: calc(var(--radius) + 6px);
+  }
+
+  details {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.62);
+    transition:
+      transform 160ms ease,
+      background-color 160ms ease;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  details p {
+    margin: 0.85rem 0 0;
+  }
+
+  .site-footer {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+  }
+
+  .footer-brand {
+    margin-bottom: 0.2rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-links a {
+    color: var(--accent-strong);
+    font-weight: 700;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  @media (max-width: 920px) {
+    .feature-list {
+      grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+      max-width: 12ch;
+    }
+  }
+
+  @media (max-width: 640px) {
+    main,
+    .site-footer {
+      width: min(calc(100% - 1rem), var(--max));
+    }
+
+    main {
+      padding-top: 0.75rem;
+    }
+
+    .hero-copy,
+    .hero-card,
+    .policy,
+    .site-footer {
+      padding: 1.2rem;
+    }
+
+    .cta-row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .button,
+    .text-link {
+      width: 100%;
+      text-align: center;
+    }
+
+    .hero h1 {
+      flex: none;
+      font-size: clamp(2.2rem, 12vw, 3.2rem);
+    }
+
+    .hero-heading-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .brand-mark {
+      width: 9rem;
+      height: 9rem;
+      border-radius: 1.6rem;
+    }
+  }
+</style>
