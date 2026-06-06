@@ -7,6 +7,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "test": "npm run test:e2e",
+    "test:e2e": "npm run build && node --test tests/e2e/*.test.mjs",
+    "test:e2e:static": "node --test tests/e2e/*.test.mjs",
     "format:check": "prettier --plugin-search-dir=. --check .",
     "format": "prettier --plugin-search-dir=. --write .",
     "lint": "eslint ."
