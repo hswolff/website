@@ -34,6 +34,9 @@ importers:
       '@astrolib/analytics':
         specifier: ^0.6.1
         version: 0.6.1(astro@6.4.4(@types/node@24.13.0)(@vercel/functions@3.6.2)(jiti@1.21.7)(rollup@4.59.0)(yaml@2.9.0))
+      '@fontsource/merriweather':
+        specifier: ^5.2.11
+        version: 5.2.11
       '@types/react':
         specifier: ^19.2.14
         version: 19.2.14
@@ -757,6 +760,12 @@ packages:
         integrity: sha512-iH1B076HoAshH1mLpHMgwdGeTs0CYwL0SPMkGuSebZrwBp16v415e9NZXg2jtrqPVQjf6IANe2Vtlr5KswtcZQ==,
       }
     engines: { node: ^20.19.0 || ^22.13.0 || >=24 }
+
+  '@fontsource/merriweather@5.2.11':
+    resolution:
+      {
+        integrity: sha512-ZiIMeUh5iT8d73o6xlSF8GKgjV5pgiFrufYc5jZTVAfExtWKqM2vQHnsqXSFMv4ELhAcjt6Vf+5T3oVGXhAizQ==,
+      }
 
   '@humanfs/core@0.19.1':
     resolution:
@@ -6051,6 +6060,8 @@ snapshots:
     dependencies:
       '@eslint/core': 1.1.1
       levn: 0.4.1
+
+  '@fontsource/merriweather@5.2.11': {}
 
   '@humanfs/core@0.19.1': {}
 
