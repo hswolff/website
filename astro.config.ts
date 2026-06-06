@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
+import { unified } from '@astrojs/markdown-remark';
 import sitemap from '@astrojs/sitemap';
 import remarkToc from 'remark-toc';
 import remarkCollapse from 'remark-collapse';
@@ -21,17 +22,19 @@ export default defineConfig({
     react(),
   ],
   markdown: {
-    remarkPlugins: [
-      remarkToc,
-      [
-        remarkCollapse,
-        {
-          test: 'Table of contents',
-        },
+    processor: unified({
+      remarkPlugins: [
+        remarkToc,
+        [
+          remarkCollapse,
+          {
+            test: 'Table of contents',
+          },
+        ],
+        remarkReadingTime,
+        remarkExcerpt,
       ],
-      remarkReadingTime,
-      remarkExcerpt,
-    ],
+    }),
     shikiConfig: {
       theme: 'one-dark-pro',
       wrap: true,
